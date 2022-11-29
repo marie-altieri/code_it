@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+puts "Destroying all users................"
+User.destroy_all
+puts "Creating coders........"
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/D4E35AQHvbJhPEMWonQ/profile-framedphoto-shrink_400_400/0/1669122049418?e=1670328000&v=beta&t=d_Yrhytv3qzCDSSKbffENX1snbSepM-znQh2EhvKXPI")
 coder = User.new(first_name: "Marie",
@@ -17,8 +20,7 @@ coder = User.new(first_name: "Marie",
                   language: "HTML, CSS, JavaScript",
                   availability: "ASAP",
                   role: "Coder",
-                  years_of_experience: "1")
-coder.user = user
+                  years_of_experience: 1)
 coder.save
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/C4D03AQEVlDL5vq_uiQ/profile-displayphoto-shrink_400_400/0/1574771820506?e=1675296000&v=beta&t=R-uZByHzgnU9t0hpYwOBZXVs6enpqSMpzgzFJaOryY0")
@@ -32,8 +34,7 @@ coder = User.new(first_name: "Laura",
                   language: "HTML, CSS, JavaScript",
                   availability: "ASAP",
                   role: "Coder",
-                  years_of_experience: "1")
-coder.user = user
+                  years_of_experience: 1)
 coder.save
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/D4E35AQHYpR4e66Rjew/profile-framedphoto-shrink_400_400/0/1669122026532?e=1670328000&v=beta&t=w2qbV26j0kBX3ogFOqiX1djrSmaAJRCzZ3sGkRrl0Wk")
@@ -47,8 +48,7 @@ coder = User.new(first_name: "Victor",
                   language: "HTML, CSS, JavaScript",
                   availability: "ASAP",
                   role: "Coder",
-                  years_of_experience: "1")
-coder.user = user
+                  years_of_experience: 1)
 coder.save
 
 file = URI.open("https://avatars.githubusercontent.com/u/113897359?v=4")
@@ -62,8 +62,7 @@ coder = User.new(first_name: "Daphné",
                   language: "Ruby on Rails, C++",
                   availability: "ASAP",
                   role: "Coder",
-                  years_of_experience: "2")
-coder.user = user
+                  years_of_experience: 2)
 coder.save
 
 file = URI.open("https://avatars.githubusercontent.com/u/70776288?v=4")
@@ -77,6 +76,5 @@ coder = User.new(first_name: "Pedro",
                   language: "Ruby on Rails, JavaScript, SQL",
                   availability: "ASAP",
                   role: "Coder",
-                  years_of_experience: "60")
-coder.user = user
+                  years_of_experience: 60)
 coder.save
