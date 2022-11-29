@@ -1,16 +1,16 @@
 module Companies
   class UsersController < ApplicationController
-    
+
     def index
-      @users = User.all
+      @coders = User.all.where(role: "Coder")
     end
 
     def show
-      @user = User.new
+      @coder = User.find(params[:id])
     end
 
     private
-  
+
     def users_params
       params.require(:user).permit(XXXX)
     end
