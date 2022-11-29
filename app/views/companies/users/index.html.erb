@@ -1,2 +1,10 @@
-<h2>THIS IS A TEST FOR THE PAGE
-COMPANIES/USERS INDEX</h2>
+<% @coders.each do |user| %>
+  <div>
+    <h4><%= user.first_name %> <%= user.last_name %></h4>
+    <p><strong>Username: </strong><%= user.username %></p>
+    <p><strong>Experience: </strong><%= user.experience %></p>
+    <p><strong>Language: </strong><%= user.language %></p>
+    <%= link_to "See More about this coder", companies_user_path(user) %>
+    <p></p>
+  </div>
+<% end %>
