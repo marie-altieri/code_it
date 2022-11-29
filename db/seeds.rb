@@ -7,6 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 puts "Destroying all users................"
 User.destroy_all
+
 puts "Creating coders........"
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/D4E35AQHvbJhPEMWonQ/profile-framedphoto-shrink_400_400/0/1669122049418?e=1670328000&v=beta&t=d_Yrhytv3qzCDSSKbffENX1snbSepM-znQh2EhvKXPI")
@@ -78,3 +79,9 @@ coder = User.new(first_name: "Pedro",
                   role: "Coder",
                   years_of_experience: 60)
 coder.save
+
+file = URI.open("https://avatars.githubusercontent.com/u/70776288?v=4")
+offer = Project.new(
+  description: "",
+                    status: "",
+                    deadline:)
