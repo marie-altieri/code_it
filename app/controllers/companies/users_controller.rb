@@ -1,6 +1,5 @@
 module Companies
   class UsersController < ApplicationController
-
     def index
       @coders = User.all.where(role: "Coder")
     end

@@ -1,6 +1,5 @@
 module Coders
   class UsersController < ApplicationController
-    
     def index
       @users = User.all
     end
@@ -10,7 +9,7 @@ module Coders
     end
 
     private
-  
+
     def users_params
       params.require(:user).permit(XXXX)
     end
