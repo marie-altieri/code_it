@@ -1,1 +1,5 @@
-<%= render "devise/shared/coders_login" %>
+<% if params[:coder].present? %>
+  <%= render "devise/shared/coders_login" %>
+<% else %>
+  <%= render "devise/shared/companies_login" %>
+<% end %>
