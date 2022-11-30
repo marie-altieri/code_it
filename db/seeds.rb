@@ -22,6 +22,7 @@ coder = User.new(first_name: "Marie",
                   availability: "ASAP",
                   role: "Coder",
                   years_of_experience: 1)
+                  coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 coder.save
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/C4D03AQEVlDL5vq_uiQ/profile-displayphoto-shrink_400_400/0/1574771820506?e=1675296000&v=beta&t=R-uZByHzgnU9t0hpYwOBZXVs6enpqSMpzgzFJaOryY0")
@@ -36,6 +37,7 @@ coder = User.new(first_name: "Laura",
                   availability: "ASAP",
                   role: "Coder",
                   years_of_experience: 1)
+                  coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 coder.save
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/D4E35AQHYpR4e66Rjew/profile-framedphoto-shrink_400_400/0/1669122026532?e=1670328000&v=beta&t=w2qbV26j0kBX3ogFOqiX1djrSmaAJRCzZ3sGkRrl0Wk")
@@ -50,6 +52,7 @@ coder = User.new(first_name: "Victor",
                   availability: "ASAP",
                   role: "Coder",
                   years_of_experience: 1)
+                  coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 coder.save
 
 file = URI.open("https://avatars.githubusercontent.com/u/113897359?v=4")
@@ -64,6 +67,7 @@ coder = User.new(first_name: "Daphné",
                   availability: "ASAP",
                   role: "Coder",
                   years_of_experience: 2)
+                  coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 coder.save
 
 file = URI.open("https://avatars.githubusercontent.com/u/70776288?v=4")
@@ -78,6 +82,7 @@ coder = User.new(first_name: "Pedro",
                   availability: "ASAP",
                   role: "Coder",
                   years_of_experience: 60)
+                  coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 coder.save
 
 project = Project.new(deadline: "31/12/2023",
