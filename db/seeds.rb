@@ -82,6 +82,7 @@ coder.save
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/C4D03AQEVlDL5vq_uiQ/profile-displayphoto-shrink_400_400/0/1574771820506?e=1675296000&v=beta&t=R-uZByHzgnU9t0hpYwOBZXVs6enpqSMpzgzFJaOryY0")
 project = Project.new(deadline: "31/12/2023",
+                    name: "Bueno Inc website creation",
                     description: "We are looking for junior full stack developper. We need to create several websites for our client",
                     status: "in progress",
                     created_at: "31/11/2022",
@@ -91,6 +92,7 @@ project.save
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/C4D03AQEVlDL5vq_uiQ/profile-displayphoto-shrink_400_400/0/1574771820506?e=1675296000&v=beta&t=R-uZByHzgnU9t0hpYwOBZXVs6enpqSMpzgzFJaOryY0")
 project = Project.new(deadline: "31/11/2022",
+                    name: "Rails project in IP sector",
                     description: "We are looking for a senior back-end developper specialized in rails",
                     status: "in progress",
                     created_at: "31/11/2022",
@@ -100,6 +102,7 @@ project.save
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/C4D03AQEVlDL5vq_uiQ/profile-displayphoto-shrink_400_400/0/1574771820506?e=1675296000&v=beta&t=R-uZByHzgnU9t0hpYwOBZXVs6enpqSMpzgzFJaOryY0")
 project = Project.new(deadline: "31/12/2024",
+                    name: "Help us to grow  ",
                     description: "We are a young start up looking for junior profile to help us to growth.",
                     status: "in progress",
                     created_at: "31/11/2022",
@@ -109,6 +112,7 @@ project.save
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/C4D03AQEVlDL5vq_uiQ/profile-displayphoto-shrink_400_400/0/1574771820506?e=1675296000&v=beta&t=R-uZByHzgnU9t0hpYwOBZXVs6enpqSMpzgzFJaOryY0")
 project = Project.new(deadline: "31/12/2025",
+                    name: "Big project for big $$$",
                     description: "We need people to code for us, come here we have a lot of money to give you",
                     status: "in progress",
                     created_at: "31/11/2022",
@@ -118,6 +122,7 @@ project.save
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/C4D03AQEVlDL5vq_uiQ/profile-displayphoto-shrink_400_400/0/1574771820506?e=1675296000&v=beta&t=R-uZByHzgnU9t0hpYwOBZXVs6enpqSMpzgzFJaOryY0")
 project = Project.new(deadline: "31/12/2026",
+                    name: "Marie's project for world domination",
                     description: "Our company are looking for young full stack developper to change the world, using our brand new tool that can change people life, inspired by our beloved CEO Marie",
                     status: "in progress",
                     created_at: "31/11/2022",
