@@ -2,7 +2,7 @@
 <%= simple_form_for @project , url: companies_projects_path(@project) do |f| %>
   <%= f.input :coder_id,
               :as => :select,
-              :collection => ["Marie Altieri", "Laura Birkiye", "Victor de Spirlet", "Daphne Lefevre", "Pedro Pan"],
+              :collection => User.all.where(role: "Coder").map {|coder| coder.id},
               prompt: "Choose a coder" %>
   <%= f.input :description,
                 placeholder:" What are you expecting from the coder? " %>
