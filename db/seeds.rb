@@ -81,57 +81,46 @@ coder = User.new(first_name: "Pedro",
 coder.save
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/C4D03AQEVlDL5vq_uiQ/profile-displayphoto-shrink_400_400/0/1574771820506?e=1675296000&v=beta&t=R-uZByHzgnU9t0hpYwOBZXVs6enpqSMpzgzFJaOryY0")
-project = Companies.new(deadline: "31/12/2023",
+project = Project.new(deadline: "31/12/2023",
                     description: "We are looking for junior full stack developper. We need to create several websites for our client",
                     status: "in progress",
                     created_at: "31/11/2022",
                     #updated_at: ""
-                    company_name: "World Leader Inc",
-                    company_id: "1")
-company.save
+                  )
+project.save
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/C4D03AQEVlDL5vq_uiQ/profile-displayphoto-shrink_400_400/0/1574771820506?e=1675296000&v=beta&t=R-uZByHzgnU9t0hpYwOBZXVs6enpqSMpzgzFJaOryY0")
-project = Company.new(deadline: "31/11/2022",
+project = Project.new(deadline: "31/11/2022",
                     description: "We are looking for a senior back-end developper specialized in rails",
                     status: "in progress",
                     created_at: "31/11/2022",
                     #updated_at: ""
-                    company_name: "Super World Star Company",
-                    company_id: "2")
-company.save
+                  )
+project.save
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/C4D03AQEVlDL5vq_uiQ/profile-displayphoto-shrink_400_400/0/1574771820506?e=1675296000&v=beta&t=R-uZByHzgnU9t0hpYwOBZXVs6enpqSMpzgzFJaOryY0")
-project = Company.new(deadline: "31/12/2024",
+project = Project.new(deadline: "31/12/2024",
                     description: "We are a young start up looking for junior profile to help us to growth.",
                     status: "in progress",
                     created_at: "31/11/2022",
                   # updated_at: ""
-                    company_name: "The Crab Hub",
-                    company_id: "3")
-company.save
+                  )
+project.save
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/C4D03AQEVlDL5vq_uiQ/profile-displayphoto-shrink_400_400/0/1574771820506?e=1675296000&v=beta&t=R-uZByHzgnU9t0hpYwOBZXVs6enpqSMpzgzFJaOryY0")
-project = Company.new(deadline: "31/12/2025",
+project = Project.new(deadline: "31/12/2025",
                     description: "We need people to code for us, come here we have a lot of money to give you",
                     status: "in progress",
                     created_at: "31/11/2022",
                     #updated_at: ""
-                    company_name: "The Super Boring Company",
-                    company_id: "4")
-company.save
+                  )
+project.save
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/C4D03AQEVlDL5vq_uiQ/profile-displayphoto-shrink_400_400/0/1574771820506?e=1675296000&v=beta&t=R-uZByHzgnU9t0hpYwOBZXVs6enpqSMpzgzFJaOryY0")
-project = Company.new(deadline: "31/12/2026",
+project = Project.new(deadline: "31/12/2026",
                     description: "Our company are looking for young full stack developper to change the world, using our brand new tool that can change people life, inspired by our beloved CEO Marie",
                     status: "in progress",
                     created_at: "31/11/2022",
                     #updated_at: ""
-                    company_name: "Codit",
-                    company_id: "5")
-company.save
-
-file = URI.open("https://avatars.githubusercontent.com/u/70776288?v=4")
-offer = Project.new(
-  description: "",
-                    status: "",
-                    deadline:)
+                  )
+project.save

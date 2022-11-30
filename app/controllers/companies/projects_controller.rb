@@ -1,12 +1,12 @@
 module Companies
   class ProjectsController < ApplicationController
-  
+
     def index
       @projects = Project.all
     end
 
     def show
-      @project = Project.new
+      @project = Project.find(params[:id])
     end
 
     def new

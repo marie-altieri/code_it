@@ -5,7 +5,7 @@ module Coders
     end
 
     def show
-      @project = Project.new
+      @project = Project.find(params[:id])
     end
 
     private
