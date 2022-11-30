@@ -1,0 +1,10 @@
+<h1> Add a new project </h1>
+<%= simple_form_for @project , url: new_companies_project_path(@project) do |f| %>
+  <%= f.input :company_id,
+              placeholder:" What is the name of your company? " %>
+  <%= f.input :description,
+                placeholder:" What are you expecting from the coder? " %>
+  <%= f.input :deadline %>
+  <%= f.submit "Submit a new offer" %>
+
+<% end %>
