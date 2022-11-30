@@ -24,6 +24,12 @@ module Companies
       end
     end
 
+    def destroy
+      @project = Project.find(params[:id])
+      @project.destroy
+      redirect_to coders_projects_path
+    end
+
     private
 
     def projects_params
