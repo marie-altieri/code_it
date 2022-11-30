@@ -1,7 +1,7 @@
 module Coders
   class ProjectsController < ApplicationController
     def index
-      @projects = Project.all
+      @projects = Project.all.where(coder_id: current_user.id)
     end
 
     def show
