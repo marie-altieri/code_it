@@ -1,11 +1,9 @@
-<h2>THIS IS A TEST FOR THE PAGE
-CODERS/PROJECTS INDEX</h2>
+<h2>Projects</h2>
 <% @projects.each do |project| %>
   <div>
     <p><strong>Description: </strong><%= project.description %></p>
     <p><strong>Deadline: </strong><%= project.deadline %></p>
-    <p><strong>Language: </strong><%= project.language %></p>
-    <%= link_to "See More about this project", coders_project_path(@project) %>
+    <%= link_to "See more about this project", coders_project_path(project) %>
     <p></p>
   </div>
 <% end %>
