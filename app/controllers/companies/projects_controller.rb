@@ -1,6 +1,5 @@
 module Companies
   class ProjectsController < ApplicationController
-    
     def index
       @projects = Project.all
     end
@@ -10,7 +9,7 @@ module Companies
     end
 
     private
-  
+
     def projects_params
       params.require(:project).permit(XXXX)
     end
