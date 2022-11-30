@@ -1,6 +1,6 @@
 module Companies
   class ProjectsController < ApplicationController
-  
+
     def index
       @projects = Project.all
     end
@@ -14,8 +14,9 @@ module Companies
     end
 
     def create
-      @projet = Project.new(projects_params)
+      @project = Project.new(projects_params)
       @project.company_id = current_user.id
+      
       if @project.save
         redirect_to companies_projects_path
       else
@@ -26,7 +27,7 @@ module Companies
     private
 
     def projects_params
-      params.require(:project).permit(XXXX)
+      params.require(:project).permit(:company_id, :description, :deadline)
     end
   end
 end

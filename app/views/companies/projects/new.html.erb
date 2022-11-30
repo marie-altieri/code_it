@@ -1,5 +1,5 @@
 <h1> Add a new project </h1>
-<%= simple_form_for @project , url: new_companies_project_path(@project) do |f| %>
+<%= simple_form_for @project , url: companies_projects_path(@project) do |f| %>
   <%= f.input :company_id,
               placeholder:" What is the name of your company? " %>
   <%= f.input :description,
