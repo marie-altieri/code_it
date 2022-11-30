@@ -15,6 +15,7 @@
 <% @coders.each do |user| %>
   <div>
     <h4><%= user.first_name %> <%= user.last_name %></h4>
+    <%= cl_image_tag user.photo.key, height: 200, width: 200, crop: :fill %>
     <p><strong>Username: </strong><%= user.username %></p>
     <p><strong>Experience: </strong><%= user.experience %></p>
     <p><strong>Language: </strong><%= user.language %></p>

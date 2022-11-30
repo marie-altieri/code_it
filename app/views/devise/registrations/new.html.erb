@@ -46,6 +46,8 @@
                 placeholder: "Do you like apple ? Just tell us something about you :)",
                 input_html: { autocomplete: "description about yourself" }%>
 
+    <%= f.input :photo, as: :file, required: true, autofocus: true %>
+
     <%= f.input :password,
                 required: true,
                 placeholder: "••••••••",
