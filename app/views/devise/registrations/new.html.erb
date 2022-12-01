@@ -4,6 +4,19 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+
+    <%= f.input :first_name,
+                require: true,
+                autofocus: true,
+                placeholder: "Type your first name",
+                input_html: { autocomplete: "first name" }%>
+    
+    <%= f.input :last_name,
+                require: true,
+                autofocus: true,
+                placeholder: "Type your Last name",
+                input_html: { autocomplete: "Last name" }%>
+
     <%= f.input :username,
                 required: true,
                 autofocus: true,
@@ -45,6 +58,19 @@
                 # label: false,
                 placeholder: "Do you like apple ? Just tell us something about you :)",
                 input_html: { autocomplete: "description about yourself" }%>
+
+    <%= f.input :experience,
+                required: false,
+                autofocus: true,
+                # label: false,
+                placeholder: "Tell us about your experience",
+                input_html: { autocomplete: "experience" }%>
+    
+    <%= f.input :availability,
+                required: true,
+                autofocus: true,
+                placeholder: "Please tell us whenever you are free for a job !",
+                input_html: { autocomplete: "availability" }%>
 
     <%= f.input :photo, as: :file, required: true, autofocus: true %>
 

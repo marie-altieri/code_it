@@ -6,22 +6,25 @@
         params[:query],
         class: "form-control",
         id: "search-bar",
-        placeholder: "Find me a coder ..."%>
+        placeholder: "Search by name, username, languages ..."%>
       <%= submit_tag "Search", class: "btn btn-primary", id: "search-button"%>
     <% end %>
   </div>
   <p>
 
+<% if @coders.any? %>
 <% @coders.each do |user| %>
   <div>
     <h4><%= user.first_name %> <%= user.last_name %></h4>
     <%= cl_image_tag user.photo.key, height: 200, width: 200, crop: :fill %>
     <p><strong>Username: </strong><%= user.username %></p>
-    <p><strong>Experience: </strong><%= user.experience %></p>
-    <p><strong>Language: </strong><%= user.language %></p>
+    <p><strong>Experiences: </strong><%= user.experience %></p>
+    <p><strong>Languages: </strong><%= user.language %></p>
     <%= link_to "See More about this coder", companies_user_path(user) %>
     <p></p>
   </div>
 <% end %>
-
+  <% else %>
+  <h2>Profile not found<h2>
+<% end %>
 

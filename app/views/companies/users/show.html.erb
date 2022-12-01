@@ -1,10 +1,17 @@
 <div class="container">
   <h2><%= @coder.first_name %> <%= @coder.last_name %></h2>
+    <%= cl_image_tag @coder.photo.key, height: 200, width: 200, crop: :fill %>
     <p><strong>Username: </strong><%= @coder.username %></p>
     <p><strong>Description: </strong><%= @coder.description %></p>
-    <p><strong>Experience: </strong><%= @coder.experience %></p>
-    <p><strong>Language: </strong><%= @coder.language %></p>
-    <p><strong>Availibility: </strong><%= @coder.availability %></p>
+    <p><strong>Experiences: </strong><%= @coder.experience %></p>
+    <p><strong>Languages: </strong><%= @coder.language %></p>
+    <p><strong>availability: </strong><%= @coder.availability %></p>
     <p><strong>Years of experience: </strong><%= @coder.years_of_experience %></p>
     <p></p>
+  
+  <%= link_to "Back to coder's page", companies_users_path() %>
+<p>
+  <%= link_to "Link to future chat (not working yet)", companies_users_path() %> 
+
+
 </div>
