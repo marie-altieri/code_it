@@ -1,2 +1,16 @@
-<%= link_to "Coder", user_session_path(coder: 1) %>
-<%= link_to "Company", user_session_path %>
+
+<div class= "marron-claire">
+
+  <div class= "bg-home">
+    <div class= "small-content">
+      <div>
+        <%= image_tag "Logo.png", alt: "logo", class: "logo-home" %>
+      </div>
+      <div class= "button-home-coder">
+        <%= image_tag "Home-image.png", alt: "coder", class: "images-coder-company" %>
+        <%= link_to "Coder", user_session_path(coder: 1), class: "link-coder"%>
+        <%= link_to "Company", user_session_path, class: "link-company"%>
+      </div>
+    </div>
+  </div>
+</div>
