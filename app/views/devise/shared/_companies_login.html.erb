@@ -1,11 +1,8 @@
-<div class="container_login">
-  <div class="aside">
-    <h2 id="image_coder">Company Image will be here</h2>
-  </div>
+<div id="container-company">
 
-  <div class="brown_background">
-    <h2 class="top_title">Welcome Back</h2>
-    <h3 class="login_title">Find your perfect match</h3>
+  <div class="login_comp">
+      <h2 class="company_title">Welcome Back</h2>
+      <h3 class="login_company">Find your perfect match</h3>
 
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
       <div class="form-inputs">
@@ -25,6 +22,8 @@
     <% end %>
 
     <%= render "devise/shared/links" %>
-  </div>
+   </div>
+  <div class="img_comp">
+    <%= image_tag "Company.png", alt: "logo", id: "image_company"%>
   </div>
 </div>

@@ -1,0 +1,63 @@
+.container-coder {
+  display: grid;
+  grid-template-columns: 3fr 490px;
+}
+
+.photo_name {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #CCC6BB;
+  padding-top: 40px;
+  align-items: center;
+}
+
+.infos-coder {
+  background-color: #E7E0D9;
+  height: 100vh;
+}
+
+.cv-coder {
+  background-color: #CCC6BB;
+  margin: 20px;
+  padding: 20px;
+}
+
+.descrip {
+  background-color: #CCC6BB;
+  margin: 20px;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+.portof {
+  background-color: #CCC6BB;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+#photo-coder-profile {
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.block2 {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1;
+}
+
+.bouton-show {
+  background-color: #E7E0D9;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #5f5e5b;
+  border-radius: 30px;
+  color: #5f5e5b;
+  margin: 5px;
+  text-decoration: none;
+}

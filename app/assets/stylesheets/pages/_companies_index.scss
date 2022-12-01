@@ -1,12 +1,12 @@
-body{
+body {
   background-color: #CCC6BB;
 }
-.container {
-  // display: flex;
-  // justify-content: space-around;
-  // flex-direction: row;
-}
-.small-content-index-company{
+// .container {
+//   // display: flex;
+//   // justify-content: space-around;
+//   // flex-direction: row;
+// }
+.small-content-index-company {
   background-color: #E9E0D9;
   padding: 40px;
   box-shadow: 1px 1px 3px #CCC6BB;
@@ -17,6 +17,7 @@ body{
 border-radius: 5px;
 border: 1px solid #E9E0D9;
 }
+
 .coders-grid{
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;

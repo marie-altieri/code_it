@@ -1,20 +1,21 @@
 .top_title {
   margin-top: 140px;
 }
+
 .login_title {
   margin-bottom: 50px;
   color: #5f5e5b;
 }
 
 .container_login {
-  height: 100%;
+  height: 100vh;
   display: grid;
   background-color: red;
   grid-template-columns: 1fr 3fr;
 }
 
 .brown_background {
-  background-color: #CCC6BB;
+  background-color: #E9E0D9;
   min-height: 100vh;
   padding-left: 200px;
   padding-right: 200px;
@@ -22,21 +23,21 @@
 
 .aside {
   background: white;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 #image_coder {
-  position: relative;
-  bottom: 0;
+  width: 360px;
+  margin-top: 400px;
 }
 
 #submit-button-login {
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: #E9E0D9;
+  background-color: #5f5e5b;
   padding-left: 90px;
   padding-right: 90px;
-  border: 1 solid #E9E0D9;
+  border: 1 solid #5f5e5b;
   border-radius: 20px;
-  color: #5f5e5b
+  color: white
 }

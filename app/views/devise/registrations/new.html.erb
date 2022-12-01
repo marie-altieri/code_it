@@ -1,4 +1,8 @@
-<h2>Create Your SEXY Profile</h2>
+<div class="container-sign">
+  <div class="form-sign">
+       <%= image_tag "Logo.png", alt: "logo", class: "img-sign" %>
+
+    <h2 class="title-sign">Create your profile</h2>
 <p>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
   <%= f.error_notification %>
@@ -8,55 +12,55 @@
     <%= f.input :first_name,
                 require: true,
                 autofocus: true,
-                placeholder: "Type your first name",
+                placeholder: "What is your first name?",
                 input_html: { autocomplete: "first name" }%>
-    
+
     <%= f.input :last_name,
                 require: true,
                 autofocus: true,
-                placeholder: "Type your Last name",
+                placeholder: "What is your last name?",
                 input_html: { autocomplete: "Last name" }%>
 
     <%= f.input :username,
                 required: true,
                 autofocus: true,
                 # label: false,
-                placeholder: "Type your username here !",
+                placeholder: "Choose a username",
                 input_html: { autocomplete: "username" }%>
 
     <%= f.input :email,
                 required: true,
                 autofocus: true,
                 # label: false,
-                placeholder: "Type your email so we can send you a nice newsletter",
+                placeholder: "What is your email?",
                 input_html: { autocomplete: "email" }%>
 
     <%= f.input :role,
                 require: false,
                 autofocus: true,
                 # label: false,
-                placeholder: "As a God Master Coder what is your role ?",
+                placeholder: "Are you a coder or a company?",
                 input_html: { autocomplete: "coders or companies" }%>
 
     <%= f.input :language,
                 require: false,
                 autofocus: true,
                 # label: false,
-                placeholder: "Choose your programming languages !",
+                placeholder: "What are your language skills?",
                 input_html: { autocomplete: "for coders only" }%>
 
     <%= f.input :years_of_experience,
                 required: false,
                 autofocus: true,
                 # label: false,
-                placeholder: "1 or 60 ? Tell us your level !",
+                placeholder: "How many years of experience do you have?",
                 input_html: { autocomplete: "years_of_experience" }%>
 
     <%= f.input :description,
                 required: false,
                 autofocus: true,
                 # label: false,
-                placeholder: "Do you like apple ? Just tell us something about you :)",
+                placeholder: "Tell us something about yourself!",
                 input_html: { autocomplete: "description about yourself" }%>
 
     <%= f.input :experience,
@@ -65,11 +69,11 @@
                 # label: false,
                 placeholder: "Tell us about your experience",
                 input_html: { autocomplete: "experience" }%>
-    
+
     <%= f.input :availability,
                 required: true,
                 autofocus: true,
-                placeholder: "Please tell us whenever you are free for a job !",
+                placeholder: "Please tell us whenever you are free for a job!",
                 input_html: { autocomplete: "availability" }%>
 
     <%= f.input :photo, as: :file, required: true, autofocus: true %>
@@ -87,8 +91,10 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "Sign up", id: "submit-button-sign" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+  </div>
+</div>
