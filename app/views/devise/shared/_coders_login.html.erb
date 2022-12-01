@@ -1,10 +1,9 @@
 <div class="container_login">
   <div class="aside">
-    <h2 id="image_coder">Image will be here</h2>
+    <h2 id="image_coder">Coder Image will be here</h2>
   </div>
 
   <div class="brown_background">
-  <div class="content_brown">
     <h2 class="top_title">Welcome Back</h2>
     <h3 class="login_title">Find your perfect match</h3>
 
@@ -17,11 +16,11 @@
         <%= f.input :password,
                 required: false,
                 input_html: { autocomplete: "current-password" } %>
+      </div>
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-    </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Log in" %>
+      <%= f.button :submit, "Log in", id: "submit-button-login"%>
     </div>
     <% end %>
 
