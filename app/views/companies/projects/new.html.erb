@@ -4,7 +4,9 @@
                 placeholder:"What is the name of your project?" %>
   <%= f.input :coder_id,
               :as => :select,
-              :collection => User.all.where(role: "Coder").map {|coder| coder.id},
+              :collection => User.all.where(role: "Coder"),
+              :label_method => :full_name,
+              :value_method => :id,
               prompt: "Choose a coder" %>
   <%= f.input :description,
                 placeholder:" What are you expecting from the coder? " %>
