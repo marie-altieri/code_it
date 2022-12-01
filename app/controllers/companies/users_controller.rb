@@ -17,7 +17,7 @@ module Companies
     private
 
     def users_params
-      params.require(:user).permit(:first_name, :last_name, :username, :photo)
+      params.require(:user).permit(:first_name, :last_name, :username)
     end
   end
 end
