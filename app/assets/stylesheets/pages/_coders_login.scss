@@ -1,0 +1,32 @@
+.top_title {
+  margin-top: 20px;
+}
+.login_title {
+}
+
+.container_login {
+  height: 100%;
+  display: grid;
+  background-color: red;
+  grid-template-columns: 1fr 3fr;
+}
+
+.brown_background {
+  background-color: #CCC6BB;
+  min-height: 100vh;
+}
+
+.content_brown {
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.aside {
+  background: white;
+  min-height: 100vh;
+}
+
+#image_coder {
+  position: relative;
+  bottom: 0;
+}

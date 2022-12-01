@@ -8,4 +8,12 @@ class ApplicationController < ActionController::Base
                                       keys: %i[first_name last_name username password email description experience language availability role
                                                years_of_experience photo])
   end
+
+  def after_sign_in_path_for(user)
+    if user.role == "Coder"
+      coders_projects_path
+    else
+      companies_users_path
+    end
+  end
 end
