@@ -11,20 +11,23 @@
     <% end %>
   </div>
   <p>
-
-<% if @coders.any? %>
-<% @coders.each do |user| %>
-  <div>
-    <h4><%= user.first_name %> <%= user.last_name %></h4>
-    <%= cl_image_tag user.photo.key, height: 200, width: 200, crop: :fill %>
-    <p><strong>Username: </strong><%= user.username %></p>
-    <p><strong>Experiences: </strong><%= user.experience %></p>
-    <p><strong>Languages: </strong><%= user.language %></p>
-    <%= link_to "See More about this coder", companies_user_path(user) %>
-    <p></p>
+ <div class= "coders-grid">
+    <% if @coders.any? %>
+    <% @coders.each do |user| %>
+      <div class= "small-content-index-company">
+        <div class="text-center name-picture" >
+          <h4><%= user.first_name %> <%= user.last_name %></h4>
+          <%= cl_image_tag user.photo.key, height: 200, width: 200, crop: :fill, class: "image-company-index"%>
+        </div>
+        <p><strong>Username: </strong><%= user.username %></p>
+        <p><strong>Experiences: </strong><%= user.experience %></p>
+        <p><strong>Languages: </strong><%= user.language %></p>
+        <%= link_to "See More about this coder", companies_user_path(user), class: "see-more"%>
+        <p></p>
+      </div>
+    <% end %>
+      <% else %>
+      <h2>Profile not found<h2>
+    <% end %>
   </div>
-<% end %>
-  <% else %>
-  <h2>Profile not found<h2>
-<% end %>
-
+</div>
