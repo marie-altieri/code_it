@@ -18,9 +18,9 @@ coder = User.new(first_name: "Marie",
                   username: "marie-altieri",
                   password: "123456",
                   email: "marie.altieri@hotmail.fr",
-                  description: "La pratique de l’équitation à haut niveau et les études de marketing me permettent de développer des compétences complémentaires qui me seront très utiles dans la vie professionnelle. Le perfectionnisme, la persévérance, la volonté, la remise en question, la créativité, le travail d’équipe et l’envie d’apprendre et de toujours se surpasser. Le respect des autres et de l’environnement fait partie intégrante de ma personnalité.",
+                  description: "CEO of Code It. I founded the company to help people and give orders to my team",
                   experience: "Full Stack Developper, thanks to Le Wagon",
-                  language: "HTML, CSS, JavaScript",
+                  language: "HTML, CSS, JavaScript, Python",
                   availability: "ASAP",
                   role: "Coder",
                   years_of_experience: 1)
@@ -34,7 +34,7 @@ coder = User.new(first_name: "Laura",
                   password: "123456",
                   email: "laura.birkiye@gmail.com",
                   description: "La pratique de l’équitation à haut niveau et les études de marketing me permettent de développer des compétences complémentaires qui me seront très utiles dans la vie professionnelle. Le perfectionnisme, la persévérance, la volonté, la remise en question, la créativité, le travail d’équipe et l’envie d’apprendre et de toujours se surpasser. Le respect des autres et de l’environnement fait partie intégrante de ma personnalité.",
-                  experience: "Full Stack Developper, thanks to Le Wagon",
+                  experience: "Full Stack Developper, 9+ years of front-end experience",
                   language: "HTML, CSS, JavaScript",
                   availability: "ASAP",
                   role: "Coder",
@@ -87,6 +87,21 @@ coder = User.new(first_name: "Pedro",
                   coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 coder.save
 
+file = URI.open("https://media-exp1.licdn.com/dms/image/D4E35AQE0g9CHlUyAoQ/profile-framedphoto-shrink_800_800/0/1664454106154?e=1670511600&v=beta&t=bAkx5DboMXoKsl0Mfkq5tUootYGDRmF9ZOOj6vjawYE")
+company = User.new(first_name: "Stan",
+                  last_name: "Stanistan",
+                  username: "stan-coder-pro",
+                  password: "123456",
+                  email: "stan@gmail.com",
+                  description: "God Master Coder, Full Stack Developper, I don't like front-end and I make funny jokes.",
+                  experience: "Teacher at Le Wagon",
+                  language: "HTML, CSS, JavaScript, C++, Java, Rails, Ruby",
+                  availability: "ASAP",
+                  role: "Company",
+                  years_of_experience: 1)
+                  company.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+company.save
+
 project = Project.new(deadline: "31/12/2023",
                     name: "Bueno Inc website creation",
                     description: "We are looking for junior full stack developper. We need to create several websites for our client",
@@ -132,20 +147,3 @@ project = Project.new(deadline: "31/12/2026",
                   )
 project.save
 
-
-
-
-file = URI.open("https://media-exp1.licdn.com/dms/image/D4E35AQHvbJhPEMWonQ/profile-framedphoto-shrink_400_400/0/1669122049418?e=1670328000&v=beta&t=d_Yrhytv3qzCDSSKbffENX1snbSepM-znQh2EhvKXPI")
-company = User.new(first_name: "Stan",
-                  last_name: "Stanistan",
-                  username: "stan-coder-pro",
-                  password: "123456",
-                  email: "test@test.com",
-                  description: "La pratique de l’équitation à haut niveau et les études de marketing me permettent de développer des compétences complémentaires qui me seront très utiles dans la vie professionnelle. Le perfectionnisme, la persévérance, la volonté, la remise en question, la créativité, le travail d’équipe et l’envie d’apprendre et de toujours se surpasser. Le respect des autres et de l’environnement fait partie intégrante de ma personnalité.",
-                  experience: "Full Stack Developper, thanks to Le Wagon",
-                  language: "HTML, CSS, JavaScript",
-                  availability: "ASAP",
-                  role: "Company",
-                  years_of_experience: 1)
-                  company.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-company.save

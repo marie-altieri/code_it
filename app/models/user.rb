@@ -3,11 +3,11 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-         
+
   ROLES = ['Coder', 'Company']
 
   has_one_attached :photo
-  validates :first_name, :last_name, :username, :email, :photo, :password, :password_confirmation, :availability, presence: true
+  validates :first_name, :last_name, :username, :email, :photo, :password, :availability, presence: true
 
   def full_name
     "#{first_name} #{last_name}"
