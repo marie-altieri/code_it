@@ -1,20 +1,30 @@
-<h2>Log in COMPANY</h2>
+<div class="container_login">
+  <div class="aside">
+    <h2 id="image_coder">Company Image will be here</h2>
+  </div>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
+  <div class="brown_background">
+    <h2 class="top_title">Welcome Back</h2>
+    <h3 class="login_title">Find your perfect match</h3>
+
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email,
                 required: false,
                 autofocus: true,
                 input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
+        <%= f.input :password,
                 required: false,
                 input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
+      </div>
+        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
+    <div class="form-actions">
+      <%= f.button :submit, "Log in", id: "submit-button-login"%>
+    </div>
+    <% end %>
 
-<%= render "devise/shared/links" %>
+    <%= render "devise/shared/links" %>
+  </div>
+  </div>
+</div>
