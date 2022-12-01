@@ -1,0 +1,40 @@
+body{
+  background-color: #CCC6BB;
+}
+.container {
+  // display: flex;
+  // justify-content: space-around;
+  // flex-direction: row;
+}
+.small-content-index-company{
+  background-color: #E9E0D9;
+  padding: 40px;
+  box-shadow: 1px 1px 3px #CCC6BB;
+  position: relative;
+}
+
+.image-company-index{
+border-radius: 5px;
+border: 1px solid #E9E0D9;
+}
+.coders-grid{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-gap: 20px;
+}
+
+.name-picture{
+  margin-bottom: 20px;
+}
+
+.see-more{
+  text-decoration: none;
+color: #CCC6BB;
+border: 1px solid #CCC6BB;
+border-radius: 1px;
+padding: 5px;
+background-color: #1F1D1C;
+position: absolute;
+left: 99px;
+bottom: -16px;
+}
