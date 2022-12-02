@@ -1,5 +1,5 @@
 body {
-  background-color: #CCC6BB;
+  background-color: #F5F5F5;
 }
 // .container {
 //   // display: flex;
@@ -7,15 +7,28 @@ body {
 //   // flex-direction: row;
 // }
 .small-content-index-company {
-  background-color: #E9E0D9;
-  padding: 40px;
+
+  background-color: #E6DCD1;
+  padding: 30px;
   box-shadow: 1px 1px 3px #CCC6BB;
   position: relative;
+
+margin-bottom: 20px;
+border-radius: 5px;
+p{
+  text-decoration: none;
+  color: black;
+}
+strong{
+  font-family: 'Hind', sans-serif;
+font-weight: 700;
+}
 }
 
 .image-company-index{
 border-radius: 5px;
-border: 1px solid #E9E0D9;
+border: #F5F5F5,
+
 }
 
 .coders-grid{
@@ -24,18 +37,75 @@ grid-template-columns: 1fr 1fr 1fr;
 grid-gap: 20px;
 }
 
+.custom-links {
+  text-decoration: none;
+}
+
 .name-picture{
   margin-bottom: 20px;
+  a {
+    text-decoration: none;
+  }
+  h4{
+    text-decoration: none;
+  color: black;
+  font-family: 'Hind', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
 }
 
 .see-more{
-  text-decoration: none;
-color: #CCC6BB;
-border: 1px solid #CCC6BB;
+text-decoration: none;
+color: black;
+border: 1px solid #B2885F;
 border-radius: 1px;
-padding: 5px;
-background-color: #1F1D1C;
-position: absolute;
-left: 99px;
-bottom: -16px;
+padding: 7px;
+background-color: #B2885F;
+border-radius: 5px;
+// box-shadow: 1px 1px 3px  black;
+}
+
+.see-more:hover{
+  color: black;
+  background-color: #CCC6BB;
+  transition: 0,3s;
+  border: 1px solid black
+
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: #F5F5F5;
+  }
+  .coders-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+#search-bar{
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  border-right: none;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  border: 1px solid #CCC6BB;
+  color:#CCC6BB ;
+
+}
+
+#search-button{
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  border-left: none;
+background-color: #CCC6BB;
+color: black;
+height: 38px;
+border: 1px solid #CCC6BB;
+margin-top: 15px;
+
+
+
 }
