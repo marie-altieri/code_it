@@ -6,7 +6,9 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up,
                                       keys: %i[first_name last_name username password email description experience language availability role
-                                               years_of_experience photo])
+                                              years_of_experience photo])
+    devise_parameter_sanitizer.permit(:account_update, keys: %i[username description experience language availability
+                                              years_of_experience password])
   end
 
   def after_sign_in_path_for(user)
