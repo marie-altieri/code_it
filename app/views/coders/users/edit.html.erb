@@ -1,0 +1,55 @@
+<h3>Edit your profile</h3>
+
+<%= simple_form_for(@coder, url: coders_user_path(@coder), local: true, html: { method: :patch }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+
+    <%= f.input :username,
+                required: true,
+                autofocus: true,
+                # label: false,
+                placeholder: "Choose a username",
+                input_html: { autocomplete: "username" }%>
+
+    <%= f.input :language,
+                require: false,
+                autofocus: true,
+                # label: false,
+                placeholder: "What are your language skills?",
+                input_html: { autocomplete: "for coders only" }%>
+
+    <%= f.input :years_of_experience,
+                required: false,
+                autofocus: true,
+                # label: false,
+                placeholder: "How many years of experience do you have?",
+                input_html: { autocomplete: "years_of_experience" }%>
+
+    <%= f.input :description,
+                required: false,
+                autofocus: true,
+                # label: false,
+                placeholder: "Tell us something about yourself!",
+                input_html: { autocomplete: "description about yourself" }%>
+
+    <%= f.input :experience,
+                required: false,
+                autofocus: true,
+                # label: false,
+                placeholder: "Tell us about your experience",
+                input_html: { autocomplete: "experience" }%>
+
+    <%= f.input :availability,
+                required: true,
+                autofocus: true,
+                placeholder: "Please tell us whenever you are free for a job!",
+                input_html: { autocomplete: "availability" }%>
+
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Update", data: { turbo: false } %>
+  </div>
+<% end %>
