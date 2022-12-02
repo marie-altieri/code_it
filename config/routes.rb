@@ -11,5 +11,9 @@ Rails.application.routes.draw do
   namespace :companies do
     resources :projects
     resources :users
+    resources :users do
+      resources :reviews, only: [:new, :create]
+   end
   end
+
 end

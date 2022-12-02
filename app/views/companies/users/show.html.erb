@@ -17,7 +17,23 @@
       </div>
     </div>
     <%= link_to "Back to all coders", companies_users_path(), class:"bouton-show" %>
+<p>
+    <p><strong>Reviews: </strong></p>
+    <div>
+      <% if @coder.reviews.blank? %>
+        Leave a good review for <%= @coder.first_name %> 
+      <% else %>
+        <% @coder.reviews.each do |review| %>
+          <p><%= review.content %></p>
+        <% end %>
+      <% end %>
+    </div>
+        <%= simple_form_for([@coder, @review], url: companies_user_reviews_path([@coder, @review])) do |f|%>
+          <strong><%= f.input :content, label: "Comments" %></strong>
+          <%= f.button :submit %>
+        <% end %>
   </div>
+
 
   <div class="photo_name">
       <%= cl_image_tag @coder.photo.key, height: 350, width: 350, crop: :fill, id:"photo-coder-profile" %>
