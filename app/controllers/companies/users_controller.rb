@@ -12,6 +12,7 @@ module Companies
 
     def show
       @coder = User.find(params[:id])
+      @review = Review.new
     end
 
     private

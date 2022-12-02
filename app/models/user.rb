@@ -9,6 +9,8 @@ class User < ApplicationRecord
   has_one_attached :photo
   validates :first_name, :last_name, :username, :email, :photo, :password, :availability, presence: true
 
+  has_many :reviews
+
   def full_name
     "#{first_name} #{last_name}"
   end
