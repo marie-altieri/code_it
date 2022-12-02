@@ -16,22 +16,23 @@
     </div>
     <%= link_to "Back to all coders", companies_users_path(), class:"bouton-show bouton-show-right" %>
 <p>
-    <div class= "bouge">
-      <p><strong>Reviews: </strong></p>
-      <div>
-        <% if @coder.reviews.blank? %>
-          Leave a good review for <%= @coder.first_name %>
-        <% else %>
-          <% @coder.reviews.each do |review| %>
-            <p><%= review.content %></p>
-          <% end %>
+   <div class= "bouge">
+    <p><strong>Reviews: </strong></p>
+    <div>
+      <% if @coder.reviews.blank? %>
+        Leave a good review for <%= @coder.first_name %> 
+      <% else %>
+        <% @coder.reviews.each do |review| %>
+          <p><%= review.content %> | <%= review.rating %>💖
         <% end %>
-      </div>
-          <%= simple_form_for([@coder, @review], url: companies_user_reviews_path([@coder, @review])) do |f|%>
-            <strong><%= f.input :content, label: "Comments" %></strong>
-            <%= f.button :submit %>
-          <% end %>
+      <% end %>
     </div>
+        <%= simple_form_for([@coder, @review], url: companies_user_reviews_path([@coder, @review])) do |f|%>
+          <strong><%= f.input :content, label: "Comments" %></strong>
+          Add a rating for: <%= @coder.first_name %> <%= f.number_field :rating, max: 5, min: 0 %>
+          <p>
+          <%= f.button :submit %>
+        <% end %>
   </div>
 
 
