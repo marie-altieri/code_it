@@ -1,42 +1,32 @@
-.top_title1 {
-  margin-top: 140px;
-}
-.login_title1 {
-  margin-bottom: 50px;
-  color: #5f5e5b;
-}
-
-.container_login1 {
-  height: 100%;
+#container-company {
   display: grid;
-  background-color: red;
   grid-template-columns: 3fr 1fr;
+  height: 100vh;
 }
 
-.brown_background1 {
-  background-color: #CCC6BB;
-  min-height: 100vh;
+.login_comp {
+  background-color: #E9E0D9;
   padding-left: 200px;
   padding-right: 200px;
 }
 
-.aside1 {
-  background: white;
-  min-height: 100vh;
+.img_comp {
+  background-color: white;
 }
 
-#image_coder1 {
-  position: relative;
-  bottom: 0;
+.company_title {
+  margin-top: 140px;
+  text-align: right;
 }
 
-#submit-button-login1 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  background-color: #E9E0D9;
-  padding-left: 90px;
-  padding-right: 90px;
-  border: 1 solid #E9E0D9;
-  border-radius: 20px;
-  color: #5f5e5b
+.login_company {
+  margin-bottom: 50px;
+  color: #5f5e5b;
+  text-align: right;
+}
+
+#image_company {
+  width: 320px;
+  margin-top: 510px;
+  margin-left: 40px;
 }
