@@ -1,16 +1,22 @@
-<h1> Add a new project </h1>
-<%= simple_form_for @project , url: companies_projects_path(@project) do |f| %>
-<%= f.input :name,
-                placeholder:"What is the name of your project?" %>
-  <%= f.input :coder_id,
-              :as => :select,
-              :collection => User.all.where(role: "Coder"),
-              :label_method => :full_name,
-              :value_method => :id,
-              prompt: "Choose a coder" %>
-  <%= f.input :description,
-                placeholder:" What are you expecting from the coder? " %>
-  <%= f.input :deadline %>
-  <%= f.submit "Request a new project" %>
+<div class="container-newpro">
+  <h2 class="title-newpro"> Add a new project </h2>
 
-<% end %>
+  <div class="form-project">
+    <%= simple_form_for @project , url: companies_projects_path(@project) do |f| %>
+      <%= f.input :name,
+                  placeholder:"What is the name of your project?" %>
+      <%= f.input :coder_id,
+                  :as => :select,
+                  :collection => User.all.where(role: "Coder"),
+                  :label_method => :full_name,
+                  :value_method => :id,
+                  prompt: "Choose a coder" %>
+      <%= f.input :description,
+                    placeholder:" What are you expecting from the coder? " %>
+      <%= f.input :deadline %>
+      <div class="center-item">
+        <%= f.submit "Request a new project", id: "submit-project-new" %>
+      </div>
+    <% end %>
+  </div>
+</div>
