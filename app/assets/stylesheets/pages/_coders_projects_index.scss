@@ -1,7 +1,24 @@
-.titleproj {
-  margin: 20px;
+.coders-projects-big-title {
+  font-family: "Nunito", "Helvetica", "sans-serif";
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.coders-projects-title {
+  padding: 20px;
+  font-family: 'Hind', sans-serif;
 }
 
 .pending-box {
   background-color: #E6DCD1;
+  border-radius: 10px;
+}
+
+.coders-projects-text {
+  font-family: 'Hind', sans-serif;
+  padding-left: 20px;
+}
+
+#coders-projects-last-text {
+  padding-bottom: 20px;
 }

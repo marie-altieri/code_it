@@ -7,7 +7,7 @@ class User < ApplicationRecord
   ROLES = ['Coder', 'Company']
 
   has_one_attached :photo
-  validates :first_name, :last_name, :username, :email, :photo, :password, :availability, presence: true
+  validates :first_name, :last_name, :username, :email, :photo, :availability, presence: true
 
   has_many :reviews
 

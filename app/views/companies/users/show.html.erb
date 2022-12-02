@@ -12,12 +12,11 @@
         <p><strong>Description: </strong><%= @coder.description %></p>
       </div>
 
-      <div class="portof">
-        <p><strong>Portofolio:</strong></p>
-      </div>
+
     </div>
-    <%= link_to "Back to all coders", companies_users_path(), class:"bouton-show" %>
+    <%= link_to "Back to all coders", companies_users_path(), class:"bouton-show bouton-show-right" %>
 <p>
+   <div class= "bouge">
     <p><strong>Reviews: </strong></p>
     <div>
       <% if @coder.reviews.blank? %>
@@ -25,8 +24,6 @@
       <% else %>
         <% @coder.reviews.each do |review| %>
           <p><%= review.content %> | <%= review.rating %>💖
-</p>
-
         <% end %>
       <% end %>
     </div>
@@ -40,12 +37,13 @@
 
 
   <div class="photo_name">
-      <%= cl_image_tag @coder.photo.key, height: 350, width: 350, crop: :fill, id:"photo-coder-profile" %>
+    <%= cl_image_tag @coder.photo.key, height: 350, width: 350, crop: :fill, id:"photo-coder-profile" %>
+    <div class= "info-perso-coder">
       <h2><%= @coder.first_name.upcase %> <%= @coder.last_name.upcase %></h2>
           <p><strong> <i class="fa-solid fa-user"></i> Username: </strong><%= @coder.username %></p>
-
-    <%= link_to "Add to list", companies_users_path(), class:"bouton-show" %>
-    <%= link_to "Contact me", companies_users_path(), class:"bouton-show" %>
+      <%= link_to "Add to list", companies_users_path(), class:"bouton-show" %>
+      <%= link_to "Contact me", companies_users_path(), class:"bouton-show" %>
+    </div>
   </div>
 
 <p>

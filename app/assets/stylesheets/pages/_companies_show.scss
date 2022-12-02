@@ -1,37 +1,67 @@
 .container-coder {
   display: grid;
   grid-template-columns: 3fr 490px;
+  grid-template-areas: "photo_name" "infos-coder";
 }
 
 .photo_name {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: #CCC6BB;
+  background-color: #E6DCD1;
   padding-top: 40px;
   align-items: center;
+
+border-radius: 5px;
+
+
+  h2{
+    font-family: 'Hind', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  strong{
+    font-family: 'Hind', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
 }
 
 .infos-coder {
-  background-color: #E7E0D9;
+  background-color: #F5F5F5;
   height: 100vh;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  padding-right: 30px;
+  padding-left: 20px;
 }
 
 .cv-coder {
-  background-color: #CCC6BB;
+  background-color: #E6DCD1;
   margin: 20px;
   padding: 20px;
+  border-radius: 5px;
+  margin-right: 0px;
+
+
 }
 
 .descrip {
-  background-color: #CCC6BB;
+  background-color: #E6DCD1;
   margin: 20px;
   margin-top: 10px;
   padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+  margin-right: 0px;
+
 }
 
 .portof {
-  background-color: #CCC6BB;
+  background-color: #E6DCD1;
   margin-right: 20px;
   margin-top: 10px;
   margin-bottom: 20px;
@@ -39,6 +69,7 @@
 }
 
 #photo-coder-profile {
+
   margin-bottom: 20px;
   border-radius: 20px;
 }
@@ -50,7 +81,7 @@
 }
 
 .bouton-show {
-  background-color: #E7E0D9;
+  background-color: #E6DCD1;
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 10px;
@@ -60,4 +91,29 @@
   color: #5f5e5b;
   margin: 5px;
   text-decoration: none;
+  width: fit-content;
+  &-right {
+    place-self: flex-end;
+  }
+}
+.info-perso-coder{
+  display: contents;
+}
+
+@media only screen and (max-width: 800px) {
+  .container-coder {
+    grid-template-columns: 1fr;
+  }
+
+  .infos-coder {
+    grid-area: infos-coder;
+  }
+
+  .photo_name {
+    grid-area: photo_name;
+  }
+}
+
+.bouge{
+  padding-left: 20px;
 }
