@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   namespace :coders do
     resources :projects
+    resources :posts
     resources :users
   end
 

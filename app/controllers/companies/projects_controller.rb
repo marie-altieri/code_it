@@ -1,8 +1,7 @@
 module Companies
   class ProjectsController < ApplicationController
-
     def index
-      @projects = Project.all
+      @projects = Project.all.where(company_id: current_user.id)
     end
 
     def show
@@ -18,7 +17,7 @@ module Companies
       @project.company_id = current_user.id
 
       if @project.save
-        redirect_to coders_projects_path
+        redirect_to companies_projects_path
       else
         render "companies/projects/new", status: :unprocessable_entity
       end

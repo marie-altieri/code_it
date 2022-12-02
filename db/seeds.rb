@@ -146,4 +146,3 @@ project = Project.new(deadline: "31/12/2026",
                     #updated_at: ""
                   )
 project.save
-
