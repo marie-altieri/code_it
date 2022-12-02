@@ -12,7 +12,11 @@
 
   <body>
   <% if user_signed_in? %>
-  <%= render "shared/navbar" %>
+    <% if current_user.role == "Coder" %>
+      <%= render "shared/navbar_coder" %>
+    <% else %>
+     <%= render "shared/navbar" %>
+     <% end %>
   <% end %>
 <%= render "shared/flashes" %>
 
