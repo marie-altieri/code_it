@@ -3,15 +3,14 @@ body {
 }
 
 .container-index-company {
-  margin-right: 150px;
-  margin-left: 150px;
+  margin-right: 120px;
+  margin-left: 120px;
 }
 
 .coders-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 25px;
-  justify-content: space-between;
 }
 
 .small-content-index-company {
@@ -31,7 +30,7 @@ body {
   .card-user-name {
     position: absolute;
     top: 280px;
-    width: 37%;
+    left: 20px;
     color: white;
     font-size: 25px;
     font-weight: 700;
