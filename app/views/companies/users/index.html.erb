@@ -1,4 +1,4 @@
-<div class="container" >
+<div class="container-index-company" >
   <div class="top-container">
 
     <%= form_with url: companies_users_path, method: :get, class: "d-flex" do %>
@@ -11,21 +11,24 @@
     <% end %>
   </div>
   <p>
+
+
+
   <div class= "coders-grid">
     <% if @coders.any? %>
-      <% @coders.each do |user| %>
+      <% @coders.each do |user|%>
         <div class= "small-content-index-company">
         <%= link_to companies_user_path(user), class: "custom-links" do %>
             <div class="text-center name-picture" >
-              <h4><%= user.first_name.upcase%> <%= user.last_name.upcase %></h4>
-              <%= cl_image_tag user.photo.key, height: 200, width: 200, crop: :fill, class: "image-company-index"%>
+              <%= cl_image_tag user.photo.key, crop: :fill, class: "image-company-index"%>
+              <h4 class="card-user-name"><%= user.first_name.capitalize%></h4>
             </div>
-            <p><strong>Username: </strong><%= user.username %></p>
-            <p><strong>Experiences: </strong><%= user.experience %></p>
-            <p><strong>Languages: </strong><%= user.language %></p>
-            <div class="text-center">
+
+            <div class="text-card">
+              <p id="rating-text"><strong> ⭐️ rating </strong></p>
+              <p><%= user.experience %></p>
+              <p id="languages-known"><%= user.language %></p>
             </div>
-            <p></p>
           <% end %>
         </div>
       <% end %>

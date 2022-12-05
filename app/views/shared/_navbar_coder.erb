@@ -12,16 +12,20 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
+            <i class="fa-solid fa-bars-progress"></i>
             <%= link_to "Dashboard", "/coders/projects", class: "nav-link" %>
           </li>
           <li class="nav-item">
+            <i class="fa-solid fa-pen-to-square"></i>
             <%= link_to "Edit my profile", coders_user_path(current_user), class: "nav-link" %>
           </li>
           <li class="nav-item">
+            <i class="fa-solid fa-list-check"></i>
             <%= link_to "Posts", coders_posts_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
+            <i class="fa-solid fa-message"></i>
+            <%= link_to "Messages", chatroom_path(current_user.id), class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <%= cl_image_tag current_user.photo.key, height: 80, width: 80, crop: :fit, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">

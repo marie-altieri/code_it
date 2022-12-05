@@ -12,12 +12,15 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
+            <i class="fa-solid fa-bars-progress"></i>
             <%= link_to "Dashboard", "/companies/projects", class: "nav-link" %>
           </li>
           <li class="nav-item active">
+            <i class="fa-solid fa-plus"></i>
             <%= link_to "Create a post", "/companies/projects/new", class: "nav-link" %>
           </li>
           <li class="nav-item">
+            <i class="fa-solid fa-user"></i>
             <%= link_to "Coders", "/companies/users", class: "nav-link" %>
           </li>
 
@@ -26,6 +29,7 @@
           </li>
           
           <li class="nav-item">
+            <i class="fa-solid fa-message"></i>
             <%= link_to "Messages", "#", class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
