@@ -44,7 +44,7 @@
       <h2><%= @coder.first_name.upcase %> <%= @coder.last_name.upcase %></h2>
       <p><strong> <i class="fa-solid fa-user"></i> Username: </strong><%= @coder.username %></p>
       <%= link_to "Add to list", companies_users_path(), class:"bouton-show" %>
-      <%= link_to "Contact me", companies_users_path(), class:"bouton-show" %>
+      <%= link_to "Contact me", chatroom_path(), class:"bouton-show" %>
     </div>
   </div>
 </div>
