@@ -1,13 +1,63 @@
 .navbar-lewagon {
   justify-content: space-evenly;
-  background: white;
+  background: #201F50;
+  width: 180px;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  margin-right: 10px;
+  position: fixed;
+  height: 100vh;
+  border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  margin-top: 49px;
+  a{
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+    color: white;
+  }
+
+}
+.navbar-lewagon .navbar-collapse a:hover {
+background-color: #ddd;
+  color: black;
+}
+.navbar-lewagon .navbar-collapse a.active{
+background-color: #04AA6D;
+color: white;
 }
 
 .navbar-lewagon .navbar-brand img {
   width: 190px;
 }
+.container-fluid, .me-auto{
+flex-direction: column !important;
+}
+.navbar-lewagon .navbar-brand img{
+  width: 150px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+.main-container{
+  padding-left: 180px;
+}
 
+.nav-item{
+  display: flex;
+align-items: baseline;
+color: white;
+}
+
+.dropdown-toggle{
+position: relative;
+right: 3px;
+bottom: 263px;
+}
