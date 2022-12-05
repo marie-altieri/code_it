@@ -18,8 +18,11 @@ coder = User.new(first_name: "Marie",
                   username: "marie-altieri",
                   password: "123456",
                   email: "marie.altieri@hotmail.fr",
-                  description: "CEO of Code It. I founded the company to help people and give orders to my team",
-                  experience: "Full Stack Developper, thanks to Le Wagon",
+                  description: "
+                  Hi everyone, I'm Marie!
+                  Coming from a hospitality background with more than four years of experience, I want to learn a new skill to add to my current experience and background, in hopes to create my own business in the future.
+                  I look forward to this new adventure ! CEO of Code It. I founded the company to help people and give orders to my team.",
+                  experience: "CEO of Code It",
                   language: "HTML, CSS, JavaScript, Python",
                   availability: "ASAP",
                   role: "Coder",
@@ -27,7 +30,7 @@ coder = User.new(first_name: "Marie",
                   coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 coder.save
 
-file = URI.open("https://media-exp1.licdn.com/dms/image/C4D03AQEVlDL5vq_uiQ/profile-displayphoto-shrink_400_400/0/1574771820506?e=1675296000&v=beta&t=R-uZByHzgnU9t0hpYwOBZXVs6enpqSMpzgzFJaOryY0")
+file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t1.18169-9/10559666_428710023937626_2814290272899354317_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=19026a&_nc_ohc=FIZMlphJej4AX-8Y-sG&_nc_ht=scontent-bru2-1.xx&oh=00_AfCg6PX1YxDx962DTM8ZW0qZFYInup1MHCgf80CIhy5Ghw&oe=63B57966")
 coder = User.new(first_name: "Laura",
                   last_name: "Birkiye",
                   username: "laura_birkiye",
@@ -78,7 +81,7 @@ coder = User.new(first_name: "Benjamin",
                   username: "benboulle",
                   password: "123456",
                   email: "benjamin.boulle@gmail.com",
-                  description: "Hello everyome, I am Benjamin! I've been a fan of coding ever since my early age and code everyday as a hobby. I will nearly join the army but I am very happy to help you with any project you have.",
+                  description: "Hello everyome, I am Benjamin! I've been a fan of coding ever since my early age and code everyday as a hobby. I will nearly join the army but I am very happy to help you with any project you have. I studied civil engineering for 5 years, my options were biomedical and mechanic but I wanted to code more, this is why I started Le Wagon. After Le Wagon I want to work in a team of few people to develop websites and application.",
                   experience: "Teacher Assistant @Le Wagon",
                   language: "Ruby on Rails, SQL, Python",
                   availability: "ASAP",
@@ -147,12 +150,12 @@ coder = User.new(first_name: "Angélique",
                   coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 coder.save
 
-file = URI.open("https://media-exp1.licdn.com/dms/image/C5103AQGraK5N5lBWbg/profile-displayphoto-shrink_800_800/0/1517517329367?e=1675900800&v=beta&t=ri8AwCNHqVLcgojb1BP0BTLNbaTKjdTARhI6ZJXvm6E")
-coder = User.new(first_name: "Sabine",
-                  last_name: "Arnaud",
-                  username: "sabarnaud",
+file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/308000392_5640360126027083_7008658893780604252_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=R3DWw2r-sfwAX8o81x8&_nc_ht=scontent-bru2-1.xx&oh=00_AfBZ4ixsI9126GfgYyAafKW-b3v1f9ve1G9IL1lp5E1f6A&oe=6392A25D")
+coder = User.new(first_name: "Sébastien",
+                  last_name: "Chapel",
+                  username: "sebchapel",
                   password: "123456",
-                  email: "sabarnaud@gmail.com",
+                  email: "sebchapel@gmail.com",
                   description: "TBC",
                   experience: "Project Manager",
                   language: "SQL",
@@ -162,6 +165,50 @@ coder = User.new(first_name: "Sabine",
                   coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 coder.save
 
+file = URI.open("https://avatars.githubusercontent.com/u/115412551?v=4")
+coder = User.new(first_name: "Arthur",
+                  last_name: "Peers",
+                  username: "arthurpeers",
+                  password: "123456",
+                  email: "arthurpeers@gmail.com",
+                  description: "TBC",
+                  experience: "Front-End Developer",
+                  language: "SQL",
+                  availability: "ASAP",
+                  role: "Coder",
+                  years_of_experience: 3)
+                  coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+coder.save
+
+file = URI.open("https://media-exp1.licdn.com/dms/image/C4E03AQFeqHAFbsUzkg/profile-displayphoto-shrink_800_800/0/1603376731661?e=1675900800&v=beta&t=Yd-ye799rEXjwedKU6PJRESnH9kz9mnoaAPrE3AZFL0")
+coder = User.new(first_name: "Gideon",
+                  last_name: "Maydell",
+                  username: "gideonmaydell",
+                  password: "123456",
+                  email: "gideonmaydell@gmail.com",
+                  description: "Hi! I am Gideon, an Austrian who grew up in Vienna, Berlin and northern Italy. Did a Bachelor's Degree in History. Had multiple part-time jobs next to university since I was 19. I want to learn how to code in order to work in tech and eventually start my own project. I look forward to meeting you!",
+                  experience: "Back-End Developer",
+                  language: "SQL",
+                  availability: "ASAP",
+                  role: "Coder",
+                  years_of_experience: 3)
+                  coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+coder.save
+
+file = URI.open("https://media-exp1.licdn.com/dms/image/D4E03AQGusN5DxLRVDQ/profile-displayphoto-shrink_800_800/0/1666078414736?e=1675900800&v=beta&t=b8GbO1MIonv3vONKOs5jeQjqA5zkJemvXw7yBqZL-g4")
+coder = User.new(first_name: "Boris",
+                  last_name: "Mwanga",
+                  username: "borismwanga",
+                  password: "123456",
+                  email: "borismwanga@gmail.com",
+                  description: "Hi everyone! My current goal is to start a career as a full-stack web developer. Coming up with creative ideas to improve something, or make something new because I don’t want only to build web applications, I want to build experiences for all.",
+                  experience: "Back-End Developer",
+                  language: "SQL",
+                  availability: "ASAP",
+                  role: "Coder",
+                  years_of_experience: 3)
+                  coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+coder.save
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/D4E35AQE0g9CHlUyAoQ/profile-framedphoto-shrink_800_800/0/1664454106154?e=1670511600&v=beta&t=bAkx5DboMXoKsl0Mfkq5tUootYGDRmF9ZOOj6vjawYE")
 company = User.new(first_name: "Stan",
