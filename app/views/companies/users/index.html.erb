@@ -23,6 +23,7 @@
               <%= cl_image_tag user.photo.key, crop: :fill, class: "image-company-index"%>
               <h4 class="card-user-name"><%= user.first_name.capitalize%></h4>
             </div>
+
             <div class="text-card">
               <p id="rating-text"><strong> ⭐️ rating </strong></p>
               <p><%= user.experience %></p>

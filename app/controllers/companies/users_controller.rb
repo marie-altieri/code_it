@@ -15,6 +15,20 @@ module Companies
       @review = Review.new
     end
 
+    def update
+      add_to_favourites(params[:id])
+    end
+
+    def favourites
+      @favourites
+    end
+
+    def add_to_favourites(coder) 
+      @favourites = current_user.favourites
+      @favourites << coder
+      User.find(current_user.id).update(favourites: @favourites.uniq)
+    end
+
     private
 
     def users_params

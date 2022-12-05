@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   ROLES = ['Coder', 'Company']
+  
 
   has_one_attached :photo
   validates :first_name, :last_name, :username, :email, :photo, :availability, presence: true
