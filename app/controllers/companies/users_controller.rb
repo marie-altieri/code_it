@@ -29,6 +29,14 @@ module Companies
       User.find(current_user.id).update(favourites: @favourites.uniq)
     end
 
+    def destroy
+      @coder = User.find(params[:id])
+      @favourites = current_user.favourites
+      @favourites.delete(@coder.id.to_s)
+      User.find(current_user.id).update(favourites: @favourites.uniq)
+      redirect_to favourites_companies_users_path
+    end 
+
     private
 
     def users_params
