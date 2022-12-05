@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+puts "Destroying all Messages"
+Message.destroy_all
 puts "Destroying all projects"
 Project.destroy_all
 puts "Destroying all users................"
@@ -26,6 +28,7 @@ coder = User.new(first_name: "Marie",
                   years_of_experience: 1)
                   coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 coder.save
+Chatroom.create(id: coder.id, name: "Marie's chat")
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/C4D03AQEVlDL5vq_uiQ/profile-displayphoto-shrink_400_400/0/1574771820506?e=1675296000&v=beta&t=R-uZByHzgnU9t0hpYwOBZXVs6enpqSMpzgzFJaOryY0")
 coder = User.new(first_name: "Laura",
@@ -41,6 +44,7 @@ coder = User.new(first_name: "Laura",
                   years_of_experience: 1)
                   coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 coder.save
+Chatroom.create(id: coder.id, name: "Laura's chat")
 
 file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t31.18172-8/22254862_10159533623285066_5753923098360108724_o.jpg?_nc_cat=105&ccb=1-7&_nc_sid=174925&_nc_ohc=as_4sii4uisAX-vX7PI&_nc_ht=scontent-bru2-1.xx&oh=00_AfD51hjKAgtu-WrCcYfBBoKkAT8qdaeGdSq3MsRiZoAhXQ&oe=63B56040")
 coder = User.new(first_name: "Victor",
@@ -56,6 +60,7 @@ coder = User.new(first_name: "Victor",
                   years_of_experience: 1)
                   coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 coder.save
+Chatroom.create(id: coder.id, name: "Victor's chat")
 
 file = URI.open("https://avatars.githubusercontent.com/u/113897359?v=4")
 coder = User.new(first_name: "Daphné",
@@ -71,6 +76,7 @@ coder = User.new(first_name: "Daphné",
                   years_of_experience: 2)
                   coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 coder.save
+Chatroom.create(id: coder.id, name: "Daphne's chat")
 
 file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t1.6435-9/37974642_2208097952759146_750759686340345856_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=CrProceVQYMAX_nVVYj&_nc_ht=scontent-bru2-1.xx&oh=00_AfDD-3kM_vZXixgOZWfZA-Y7aLmZ0M3If6pcqH-wkcOpRg&oe=63B52ACD")
 coder = User.new(first_name: "Benjamin",
@@ -101,6 +107,7 @@ coder = User.new(first_name: "Pedro",
                   years_of_experience: 60)
                   coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 coder.save
+Chatroom.create(id: coder.id, name: "Pedro's chat")
 
 file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t1.6435-9/94022389_2884481661640650_4858584588554862592_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_ohc=MlXHjcXVsoMAX8HKwFN&_nc_ht=scontent-bru2-1.xx&oh=00_AfBGtiOrXeoWGFni5UiHJ0GQAGkZ9CLU8zpxeW4EOALSLA&oe=63B57940")
 coder = User.new(first_name: "Arthur",
