@@ -13,7 +13,7 @@
                   prompt: "Choose a coder" %>
       <%= f.input :description,
                     placeholder:" What are you expecting from the coder? " %>
-      <%= f.input :deadline %>
+      <%= f.input :deadline, as: :date, html5: true, label: "Deadline:"%>
       <div class="center-item">
         <%= f.submit "Request a new project", id: "submit-project-new" %>
       </div>
