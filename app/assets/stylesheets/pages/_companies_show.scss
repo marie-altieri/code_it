@@ -4,15 +4,20 @@
   grid-template-areas: "photo_name" "infos-coder";
 }
 
+#photo-coder-profile{
+  margin-top: 43px;
+  border: 1px solid #263159;
+}
+
 .photo_name {
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: #E6DCD1;
+  background-color: #F5F5F5;
   padding-top: 40px;
   align-items: center;
-
-border-radius: 5px;
+// border-left: 2px solid #495579;
 
 
   h2{
@@ -20,12 +25,17 @@ border-radius: 5px;
     font-size: 40px;
     font-weight: 700;
     letter-spacing: 1px;
+    color: #495579
   }
   strong{
     font-family: 'Hind', sans-serif;
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 1px;
+
+  }
+  p{
+    color: #495579;
   }
 }
 
@@ -35,26 +45,52 @@ border-radius: 5px;
   display: flex;
   flex-direction: column;
   padding-right: 30px;
+  padding-top: 10px;
 }
 
 .cv-coder {
-  background-color: #E6DCD1;
+  background-color:  #F5F5F5;
   margin: 20px;
   padding: 20px;
   border-radius: 5px;
   margin-right: 0px;
+  border: 1px solid #263159;
+  box-shadow: 1px 1px 1px #F5F5F5;
+
+  p{
+    color: #495579;
+    font-family: 'Hind', sans-serif;
+  }
+
+  strong{
+    color: #263159;
+    font-family: 'Hind', sans-serif;
+    font-size: 18px;
+  }
 
 
 }
 
 .descrip {
-  background-color: #E6DCD1;
+  background-color: #F5F5F5;
   margin: 20px;
   margin-top: 10px;
   padding: 20px;
   border-radius: 5px;
   width: 100%;
   margin-right: 0px;
+  border: 1px solid #263159;
+
+  p{
+    color: #495579;
+    font-family: 'Hind', sans-serif;
+  }
+
+  strong{
+    color: #263159;
+    font-family: 'Hind', sans-serif;
+    font-size: 18px;
+  }
 
 }
 
@@ -79,20 +115,25 @@ border-radius: 5px;
 }
 
 .bouton-show {
-  background-color: #E6DCD1;
+  background-color: #263159;
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 10px;
   padding-bottom: 10px;
-  border: 1px solid #5f5e5b;
+  border: 1px solid #263159;
   border-radius: 30px;
-  color: #5f5e5b;
+  color: white;
   margin: 5px;
   text-decoration: none;
   width: fit-content;
   &-right {
     place-self: flex-end;
   }
+}
+.bouton-show:hover{
+  color:white;
+  background-color: #495579;
+  transition: 0,2s;
 }
 .info-perso-coder{
   display: contents;
@@ -114,4 +155,36 @@ border-radius: 5px;
 
 .bouge{
   padding-left: 20px;
+  font-family: 'Hind', sans-serif;
+  color: #263159;
+  p{
+    color: #495579;
+  }
+}
+
+
+#create-review{
+  border: 1px solid #263159;
+background-color: #263159;
+color: white;
+border-radius: 50px;
+width: 146px;
+text-align: center;
+font-family: 'Hind', sans-serif;;
+  p{
+  color: white !important;
+  }
+  .btn{
+    color: white !important;
+    font-family: 'Hind', sans-serif;
+  }
+}
+
+#create-review:hover {
+background-color: #495579;
+transition: 0,2s;
+}
+
+#new_review{
+  color: #263159;
 }

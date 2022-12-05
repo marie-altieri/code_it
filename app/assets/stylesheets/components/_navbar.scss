@@ -61,3 +61,12 @@ position: relative;
 right: 3px;
 bottom: 263px;
 }
+.container-fluid {
+  height: 100%;
+justify-content: flex-start !important;
+}
+.navbar-collapse {
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between  !important;
+  }
