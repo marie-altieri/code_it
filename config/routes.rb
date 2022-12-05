@@ -10,10 +10,11 @@ Rails.application.routes.draw do
 
   namespace :companies do
     resources :projects
-    resources :users
     resources :users do
       resources :reviews, only: [:new, :create]
+      collection do
+        get :favourites
+      end
    end
   end
-
 end

@@ -1,0 +1,22 @@
+<h1>My List</h1>
+
+<div class= "coders-grid">
+  <% if current_user.favourites.any? %>
+  <% current_user.favourites.each do |coder| %>
+    <% user = User.find(coder.to_i) %>
+    <div class= "small-content-index-company">
+    <%= link_to companies_user_path(user), class: "custom-links" do %>
+      <div class="text-center name-picture" >
+        <h4><%= user.first_name.upcase%> <%= user.last_name.upcase %></h4>
+        <%= cl_image_tag user.photo.key, height: 200, width: 200, crop: :fill, class: "image-company-index"%>
+        </div>
+          <p><strong>Username: </strong><%= user.username %></p>
+          <p><strong>Experiences: </strong><%= user.experience %></p>
+          <p><strong>Languages: </strong><%= user.language %></p>
+          <div class="text-center">
+          </div>
+          <p></p>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>

@@ -20,7 +20,6 @@
               <h4><%= user.first_name.upcase%> <%= user.last_name.upcase %></h4>
               <%= cl_image_tag user.photo.key, height: 200, width: 200, crop: :fill, class: "image-company-index"%>
             </div>
-
             <p><strong>Username: </strong><%= user.username %></p>
             <p><strong>Experiences: </strong><%= user.experience %></p>
             <p><strong>Languages: </strong><%= user.language %></p>
