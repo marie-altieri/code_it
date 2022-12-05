@@ -2,10 +2,10 @@
   <div class="infos-coder">
     <%= link_to "Back to all coders", companies_users_path(), class:"bouton-show bouton-show-right" %>
     <div class="cv-coder">
-      <p><strong>Programming languages: </strong><%= @coder.language %></p>
-      <p><strong>Availability: </strong><%= @coder.availability %></p>
-      <p><strong>Years of experience: </strong><%= @coder.years_of_experience %></p>
-      <p><strong>Experiences: </strong><%= @coder.experience %></p>
+      <p><i class="fa-solid fa-code"></i>    <strong>Programming languages: </strong><%= @coder.language %></p>
+      <p><i class="fa-regular fa-calendar-check"></i> <strong>Availability: </strong><%= @coder.availability %></p>
+      <p><i class="fa-solid fa-terminal"></i> <strong>Years of experience: </strong><%= @coder.years_of_experience %></p>
+      <p><i class="fa-solid fa-briefcase"></i> <strong>Experiences: </strong><%= @coder.experience %></p>
     </div>
 
     <div class="block2">
@@ -29,7 +29,7 @@
         <%= simple_form_for([@coder, @review], url: companies_user_reviews_path([@coder, @review])) do |f|%>
           <strong><%= f.input :content, label: "Comments" %></strong>
           Add a rating for: <%= @coder.first_name %> <%= f.number_field :rating, max: 5, min: 0 %>
-          <p>
+          <p id= "create-review">
             <%= f.button :submit %>
           </p>
         <% end %>

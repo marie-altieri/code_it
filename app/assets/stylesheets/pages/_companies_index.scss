@@ -113,17 +113,22 @@ body {
   border-right: none;
   margin-bottom: 15px;
   margin-top: 15px;
-  border: 1px solid #CCC6BB;
-  color:#CCC6BB ;
+  border: 1px solid #263159;
+  color:#495579 ;
 }
 
 #search-button{
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
   border-left: none;
-  background-color: #CCC6BB;
-  color: black;
+  background-color: #263159;
+  color: white;
   height: 38px;
-  border: 1px solid #CCC6BB;
+  border: 1px solid #263159;
   margin-top: 15px;
+}
+#search-button:hover{
+  background-color:#495579 ;
+  color: white;
+  transition: 0,2s;
 }
