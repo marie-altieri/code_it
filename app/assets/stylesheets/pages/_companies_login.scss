@@ -5,7 +5,7 @@
 }
 
 .login_comp {
-  background-color: #E9E0D9;
+  background-color: #201F50;
   padding-left: 200px;
   padding-right: 200px;
 }
@@ -17,11 +17,12 @@
 .company_title {
   margin-top: 140px;
   text-align: right;
+  color: white;
 }
 
 .login_company {
   margin-bottom: 50px;
-  color: #5f5e5b;
+  color: #495579;
   text-align: right;
 }
 
@@ -33,7 +34,21 @@
 
 .company-sup{
   a{text-decoration: none;
-    color: black;
+    color: white;
     margin-bottom: 10px;
   }
+}
+#new_user{
+  color: white;
+}
+
+#submit-button-login{
+  background-color: white;
+  color: #495579;
+}
+
+#submit-button-login:hover {
+  background-color: #495579;
+  color: white;
+  transition: 0,1s;
 }

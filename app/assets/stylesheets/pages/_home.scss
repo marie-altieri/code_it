@@ -2,9 +2,9 @@
 
 
 .marron-claire{
-background-color: #E9E0D9;
+background-color: #201F50;
 padding: 40px;
-min-height: calc(100vh - 70px);
+min-height: 100vh;
 display: flex;
 flex-direction: column;
 
@@ -27,6 +27,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 width: 100%;
+flex-direction: column;
 }
 .button-home-coder{
   position: relative;
@@ -37,13 +38,20 @@ position: absolute;
 bottom: 137px;
 left: 282px;
 text-decoration: none;
-color: black;
-border: solid 1px black;
+color: white;
+border: solid 1px #263159;
 border-radius: 15px;
 padding: 4px;
 padding-left: 12px;
 padding-right: 12px;
-background-color: #E9E0D9;
+background-color: #263159;
+}
+
+.link-coder:hover{
+  color: white;
+  background-color: #495579;
+  border: 1px #495579;
+  transition: 0,2s;
 }
 
 .link-company{
@@ -51,18 +59,26 @@ position: absolute;
 bottom: 85px;
 right: 460px;
 text-decoration: none;
-color: black;
-border: solid 1px black;
+color: white;
+border: solid 1px #263159;
 border-radius: 15px;
 padding: 4px;
 padding-left: 6px;
 padding-right: 6px;
-background-color: #E9E0D9;
+background-color: #263159;
+}
+.link-company:hover{
+  color: white;
+  background-color: #495579;
+  border: 1px #495579;
+  transition: 0,2s;
 }
 
 .logo-home{
 width: 320px;
-position: absolute;
-top: 152px;
-right: 560px;
+margin-top: 30px;
 }
+
+// .main-container{
+//   padding-left: 0px;
+// }

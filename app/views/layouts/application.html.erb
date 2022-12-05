@@ -24,6 +24,13 @@
   <% end %>
 <%= render "shared/flashes" %>
 
-    <%= yield %>
+  <% if user_signed_in? %>
+    <div class= "main-container">
+      <%= yield %>
+    </div>
+    <% else %>
+  <%= yield %>
+    <% end %>
+
   </body>
 </html>
