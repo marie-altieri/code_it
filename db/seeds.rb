@@ -241,7 +241,7 @@ Chatroom.create(id: coder.id, name: "Angélique's chat")
 Review.create!(content: "Véritable couteau suisse, Angélique sait s’adapter à différentes situations et a une grande maîtrise de l’expérience client dans toute sa globalité.",
   rating: 2,
   user_id: coder.id)
-Review.create!(content: "C’est un plaisir quotidien que de collaborer avec Charlotte",
+Review.create!(content: "C’est un plaisir quotidien que de collaborer avec Angélique",
   rating: 2,
   user_id: coder.id)
 Review.create!(content: "Super personne très inspirante parcours admiratif",
