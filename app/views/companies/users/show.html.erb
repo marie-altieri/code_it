@@ -46,7 +46,7 @@
     <div class= "info-perso-coder">
       <h2><%= @coder.first_name.upcase %> <%= @coder.last_name.upcase %></h2>
       <p><strong> <i class="fa-solid fa-user"></i> Username: </strong><%= @coder.username %></p>
-      <%= link_to "Add to list", companies_user_path(@coder), class:"bouton-show", data: {turbo_method: :patch} %>
+      <%= link_to "Add to favorites", companies_user_path(@coder), class:"bouton-show", data: {turbo_method: :patch} %>
       <%= link_to "Contact me", chatroom_path(), class:"bouton-show" %>
       <%= link_to "Create a project with #{@coder.full_name}", new_companies_project_path(coder: @coder), class:"bouton-show" %>
     </div>
