@@ -1,43 +1,56 @@
-<div class="container">
-  <h2 class= "coders-projects-big-title">Projects</h2>
+<div class="container-index-projects">
+  <h2>Projects</h2>
 
-    <h4 class="coders-projects-title"><strong>My pending projects</strong></h4>
-  <div class="pending-box">
-    <% if @pending_projects.empty? %>
-      <p class="coders-projects-text" id="coders-projects-last-text"> You have no pending projects at the moment. A notification will inform you once you've been selected !</p>
-    <% else %>
-      <% @pending_projects.each do |project| %>
-        <div>
-          <p class="coders-projects-text"><strong>Name: </strong><%= project.name %></p>
-          <p class="coders-projects-text"><strong>Description: </strong><%= project.description %></p>
-          <p class="coders-projects-text"><strong>Deadline: </strong><%= project.deadline.strftime("%d/%m/%Y") %></p>
-          <p class="coders-projects-text" id="coders-projects-last-text"><strong>Status: </strong><%= project.status %></p>
+    <h4><strong>My pending projects</strong></h4>
+    <div class= "projects-grid">
+      <% if @pending_projects.empty? %>
+        <p> You have no pending projects at the moment. A notification will inform you once you've been selected !</p>
+      <% else %>
+        <% @pending_projects.each do |project| %>
+        <div class= "indiv-project-box">
+          <div class="box-name-picture" >
+            <%= cl_image_tag project.company.photo.key, class: "image-project-index", crop: :fill%>
+            <p class="project-name"><%= project.name %></p>
+          </div>
 
-          <p class="coders-projects-text"><%= link_to "See more about this project", coders_project_path(project) %></p>
+          <div class="text-project-card">
+            <p><strong>Description: </strong><%= project.description %></p>
+            <p><strong>Deadline: </strong><%= project.deadline.strftime("%d/%m/%Y") %></p>
+            <p><strong>Status: </strong><%= project.status %></p>
 
-          <%= link_to "Decline", coders_project_path(project), class:"coders-projects-text", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-          <%= link_to "Accept", coders_project_path(project), class:"coders-projects-text", data: {turbo_method: :patch, turbo_confirm: "Are you sure?"}%>
-          <p></p>
+            <p id="see-more-text"><%= link_to "See more", coders_project_path(project) %></p>
+
+            <div class="accept-declin">
+              <%= link_to "Decline", coders_project_path(project), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+              <%= link_to "Accept", coders_project_path(project), data: {turbo_method: :patch, turbo_confirm: "Are you sure?"}%>
+            </div>
+            <p></p>
+          </div>
         </div>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
+    </div>
 
-  <div class="pending-box">
-    <h4 class="coders-projects-title"><strong>My current projects</strong></h4>
+    <h4><strong>My current projects</strong></h4>
+    <div class= "projects-grid">
       <% if @accepted_projects.empty?  %>
-        <p class="coders-projects-text" id="coders-projects-last-text"> You will find your accepted projects in this section.</p>
+        <p> You will find your accepted projects in this section.</p>
       <% else %>
         <% @accepted_projects.each do |project| %>
-        <div>
-          <p class="coders-projects-text"><strong>Name: </strong><%= project.name %></p>
-          <p class="coders-projects-text"><strong>Description: </strong><%= project.description %></p>
-          <p class="coders-projects-text"><strong>Deadline: </strong><%= project.deadline %></p>
-          <p class="coders-projects-text" id="coders-projects-last-text"><strong>Status: </strong><%= project.status %></p>
+        <div class= "indiv-project-box">
+          <div class="box-name-picture" >
+            <%= cl_image_tag project.company.photo.key, class: "image-project-index", crop: :fill %>
+            <p class="project-name"> <%= project.name %></p>
+          </div>
+          <div class="text-project-card">
+            <p><strong>Description: </strong><%= project.description %></p>
+            <p><strong>Deadline: </strong><%= project.deadline %></p>
+            <p><strong>Status: </strong><%= project.status %></p>
 
-          <p class="coders-projects-text"><%= link_to "See more about this project", coders_project_path(project) %></p>
-          <% end %>
-      </div>
+            <p><%= link_to "See more about this project", coders_project_path(project) %></p>
+          </div>
         <% end %>
-  </div>
+        </div>
+        <% end %>
+    </div>
 </div>
