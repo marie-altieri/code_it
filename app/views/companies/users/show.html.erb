@@ -21,14 +21,17 @@
           <% if @coder.reviews.blank? %>
             Leave a good review for <%= @coder.first_name %>
           <% else %>
-            <% @coder.reviews.each do |review| %>
-              <p><%= review.content %> | <%= review.rating %>💖
+            <% @coder.reviews.each do |review| %> 
+              <p><i class="fa-solid fa-quote-left"></i> <%= review.content %> <i class="fa-solid fa-quote-right"></i> | 
+              <% review.rating.times do  %>
+                ⭐
+              <% end %>
             <% end %>
           <% end %>
         </div>
-        <%= simple_form_for([@coder, @review], url: companies_user_reviews_path([@coder, @review])) do |f|%>
-          <strong><%= f.input :content, label: "Comments" %></strong>
-          Add a rating for: <%= @coder.first_name %> <%= f.number_field :rating, max: 5, min: 0 %>
+        <%= simple_form_for([@coder, @review], url: companies_user_reviews_path([@coder, @review]), data: { controller: "form_submit" }) do |f|%>
+          <strong><%= f.input :content, label: "Comments" %></strong> 
+          <strong><%= f.input :rating, collection: (1..5).to_a, label: "Give this coder a good rate !", input_html: {data: {controller: "star-rating"}} %>
           <p id= "create-review">
             <%= f.button :submit %>
           </p>
