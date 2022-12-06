@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_05_094723) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_06_110305) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -56,6 +56,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_05_094723) do
     t.datetime "updated_at", null: false
     t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.text "description"
+    t.date "deadline"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "company_id"
+    t.string "name"
+    t.index ["company_id"], name: "index_posts_on_company_id"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -108,6 +118,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_05_094723) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
+  add_foreign_key "posts", "users", column: "company_id"
   add_foreign_key "projects", "users", column: "coder_id"
   add_foreign_key "projects", "users", column: "company_id"
   add_foreign_key "reviews", "users"
