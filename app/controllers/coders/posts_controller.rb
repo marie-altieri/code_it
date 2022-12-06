@@ -1,11 +1,11 @@
 module Coders
   class PostsController < ApplicationController
     def index
-      @posts = Project.all
+      @posts = Post.all
     end
 
     def show
-      @post = Project.find(params[:id])
+      @post = Post.find(params[:id])
     end
 
   end
