@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;600;700&family=IBM+Plex+Sans:wght@100;400&family=Monoton&family=Mukta:wght@200&family=Open+Sans:ital,wght@0,800;1,800&display=swap" rel="stylesheet">
+
+    <link href="css/star-rating.css" rel="stylesheet">
   </head>
 
   <body>
@@ -31,6 +33,11 @@
     <% else %>
   <%= yield %>
     <% end %>
+
+  <script src="js/star-rating.js"></script>
+  <script>
+    var stars = new StarRating('.star-rating');
+  </script>
 
   </body>
 </html>
