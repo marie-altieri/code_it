@@ -5,12 +5,7 @@
     <%= simple_form_for @project , url: companies_projects_path(@project) do |f| %>
       <%= f.input :name,
                   placeholder:"What is the name of your project?" %>
-      <%= f.input :coder_id,
-                  :as => :select,
-                  :collection => User.all.where(role: "Coder"),
-                  :label_method => :full_name,
-                  :value_method => :id,
-                  prompt: "Choose a coder" %>
+      <%= f.input :coder_id, input_html: { value: params[:coder].to_i, class: "d-none" }, label: false %>
       <%= f.input :description,
                     placeholder:" What are you expecting from the coder? " %>
       <%= f.input :deadline, as: :date, html5: true, label: "Deadline:"%>

@@ -1,0 +1,4 @@
+<% @chatrooms.each do |chatroom| %>
+  <%= link_to "#{User.find(chatroom.id).full_name}",chatroom_path(chatroom.id)%>
+  <br>
+<% end %>
