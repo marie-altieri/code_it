@@ -1,16 +1,26 @@
-<div class="container-newpro">
-  <h2 class="title-newpro"> Add a new post </h2>
+<div class="supp_padding">
 
-  <div>
-    <%= simple_form_for @post , url: companies_posts_path(@post) do |f| %>
-      <%= f.input :name,
-                  placeholder:"What is the name of your post?" %>
-      <%= f.input :description,
-                    placeholder:" What are you expecting from the coder? " %>
-      <%= f.input :deadline, as: :date, html5: true, label: "Deadline:"%>
-      <div class="center-item">
-        <%= f.submit "Create a new post", id: "submit-post-new" %>
-      </div>
-    <% end %>
+  <div class="container-newpro">
+    <h2 class="title-newpro"> Add a new post </h2>
+
+    <div class="form-project">
+      <%= simple_form_for @post , url: companies_posts_path(@post) do |f| %>
+        <%= f.input :name,
+                    placeholder:"What is the name of your post?" %>
+        <%= f.input :description,
+                      placeholder:" What are you expecting from the coder? " %>
+        <%= f.input :deadline, as: :date, html5: true, label: "Deadline:"%>
+        <div class="center-item">
+          <%= f.submit "Create a new post", id: "submit-post-new" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="img_coder_post">
+      <%= image_tag "Coder.png", alt: "logo" %>
+    </div>
+    <div class="img_coompanie_post">
+      <%= image_tag "Company.png", alt: "logo"%>
+    </div>
   </div>
+
 </div>
