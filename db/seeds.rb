@@ -13,6 +13,8 @@ puts "Destroying all Reviews"
 Review.destroy_all
 puts "Destroying all projects"
 Project.destroy_all
+puts "Destroying all posts"
+Post.destroy_all
 puts "Destroying all users................"
 User.destroy_all
 puts "Creating coders........"
