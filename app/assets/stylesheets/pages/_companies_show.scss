@@ -116,8 +116,12 @@
 
 .bouton-show {
   background-color: #263159;
-  padding-left: 50px;
-  padding-right: 50px;
+  width: 179px;
+  height: 46px;
+  font-size: 14px;
+  padding-left: 26px;
+  padding-right: 26px;
+  text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
   border: 1px solid #263159;
@@ -125,7 +129,8 @@
   color: white;
   margin: 5px;
   text-decoration: none;
-  width: fit-content;
+  // width: fit-content;
+
   &-right {
     place-self: flex-end;
   }
@@ -170,7 +175,9 @@ color: white;
 border-radius: 50px;
 width: 146px;
 text-align: center;
-font-family: 'Hind', sans-serif;;
+font-family: 'Hind', sans-serif;
+font-size: 14px;
+margin-top: 15px;
   p{
   color: white !important;
   }

@@ -1,15 +1,19 @@
 .container-newpro {
-  margin-top: 20px;
+  // margin-top: 20px;
   margin-bottom: 20px;
   margin-right: 350px;
   margin-left: 350px;
-  background-color: #E6DCD1;
   border-radius: 10px;
+  background: #F5F5F5;
+  border: 2px solid #495579;
+  font-family: 'Hind', sans-serif;
 }
 
 .title-newpro {
   padding-top: 20px;
   text-align: center;
+  font-family: 'Hind', sans-serif;
+  font-weight: 600;
 }
 
 .form-project {
@@ -17,13 +21,35 @@
 }
 
 #submit-project-new {
-  background-color: #5f5e5b;
   border-radius: 20px;
   color: white;
   margin: 20px;
   padding: 8px;
+  background-color: #263159;
+  border: 1px solid #263159;
+  font-family: 'Hind', sans-serif;;
+}
+
+#submit-project-new:hover{
+  background-color: #495579;
+  transition: 0,2s;
 }
 
 .center-item {
   text-align: center;
+}
+#project_name{
+  border-radius: 12px;
+}
+#project_coder_id{
+  border-radius: 12px;
+}
+#project_description{
+  border-radius: 12px;
+}
+#project_deadline{
+  border-radius: 12px;
+}
+.supp_padding{
+  padding-top: 40px;
 }

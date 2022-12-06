@@ -1,10 +1,10 @@
-<h1>My List</h1>
+<h1>My favorites</h1>
 
-<div class= "coders-grid">
+<div class= "coders-grid-favourite">
   <% if current_user.favourites.any? %>
   <% current_user.favourites.each do |coder| %>
     <% user = User.find(coder.to_i) %>
-    <div class= "small-content-index-company">
+    <div class= "small-content-index-company-favourite">
     <%= link_to companies_user_path(user), class: "custom-links" do %>
       <div class="text-center name-picture" >
         <h4><%= user.first_name.upcase%> <%= user.last_name.upcase %></h4>
