@@ -1,4 +1,11 @@
+<div class="titre">
+  <h1>My Conversations</h1>
+<p>
+</div>
+
 <% @chatrooms.each do |chatroom| %>
-  <%= link_to "#{User.find(chatroom.id).full_name}",chatroom_path(chatroom.id)%>
-  <br>
+  <%= link_to chatroom_path(chatroom.id), class: "convers" do %>
+      <%= cl_image_tag User.find(chatroom.id).photo.key %> <strong><%= User.find(chatroom.id).full_name %></strong>
+  <% end %>
 <% end %>
+
