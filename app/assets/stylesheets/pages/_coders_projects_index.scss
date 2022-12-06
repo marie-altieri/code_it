@@ -2,6 +2,17 @@
 .container-index-projects {
   margin-right: 120px;
   margin-left: 120px;
+
+  h2 {
+    padding-top: 30px;
+    font-family: 'Hind', sans-serif
+  }
+
+  h4 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Hind', sans-serif
+  }
 }
 
 .projects-grid {
@@ -52,18 +63,43 @@
   text-decoration: none;
   color: black;
   font-size: 15px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   p {
     margin-bottom: 5px;
   }
 }
 
-.accept-decline {
-align-items: center;
+#first-text {
+  padding-top: 20px;
 }
 
-#see-more-text {
-  align-items: flex-end;
+#acceptbut {
+  background-color: rgb(120, 201, 134);
+  border: 1px solid green;
+  padding: 10px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: black;
+}
+
+#declinebut {
+  background-color: rgb(247, 89, 89);
+  border: 1px solid red;
+  padding: 10px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: black;
+}
+
+.accept-decline {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.see-more-text {
+  text-decoration: none;
+  color: #201F50;
+  padding-bottom: 20px;
 }
