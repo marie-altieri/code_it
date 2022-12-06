@@ -2,10 +2,10 @@
   <h2>Projects</h2>
 
     <h4><strong>My pending projects</strong></h4>
-    <div class= "projects-grid">
       <% if @pending_projects.empty? %>
         <p> You have no pending projects at the moment. A notification will inform you once you've been selected !</p>
       <% else %>
+    <div class= "projects-grid">
         <% @pending_projects.each do |project| %>
         <div class= "indiv-project-box">
           <div class="box-name-picture" >
@@ -14,15 +14,15 @@
           </div>
 
           <div class="text-project-card">
-            <p><strong>Description: </strong><%= project.description %></p>
+            <p id="first-text"><strong>Description: </strong><%= project.description %></p>
             <p><strong>Deadline: </strong><%= project.deadline.strftime("%d/%m/%Y") %></p>
             <p><strong>Status: </strong><%= project.status %></p>
 
-            <p id="see-more-text"><%= link_to "See more", coders_project_path(project) %></p>
+            <p><%= link_to "See more", coders_project_path(project), class:"see-more-text" %></p>
 
-            <div class="accept-declin">
-              <%= link_to "Decline", coders_project_path(project), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-              <%= link_to "Accept", coders_project_path(project), data: {turbo_method: :patch, turbo_confirm: "Are you sure?"}%>
+            <div class="accept-decline">
+              <%= link_to "Decline", coders_project_path(project), id:"declinebut", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+              <%= link_to "Accept", coders_project_path(project), id:"acceptbut", data: {turbo_method: :patch, turbo_confirm: "Are you sure?"}%>
             </div>
             <p></p>
           </div>
@@ -32,25 +32,26 @@
     </div>
 
     <h4><strong>My current projects</strong></h4>
-    <div class= "projects-grid">
       <% if @accepted_projects.empty?  %>
         <p> You will find your accepted projects in this section.</p>
       <% else %>
+    <div class= "projects-grid">
         <% @accepted_projects.each do |project| %>
         <div class= "indiv-project-box">
           <div class="box-name-picture" >
             <%= cl_image_tag project.company.photo.key, class: "image-project-index", crop: :fill %>
             <p class="project-name"> <%= project.name %></p>
           </div>
+
           <div class="text-project-card">
-            <p><strong>Description: </strong><%= project.description %></p>
+            <p id="first-text"><strong>Description: </strong><%= project.description %></p>
             <p><strong>Deadline: </strong><%= project.deadline %></p>
             <p><strong>Status: </strong><%= project.status %></p>
-
-            <p><%= link_to "See more about this project", coders_project_path(project) %></p>
+            <%= link_to "See more", coders_project_path(project), class:"see-more-text" %>
+            <p></p>
           </div>
-        <% end %>
         </div>
         <% end %>
+      <% end %>
     </div>
 </div>

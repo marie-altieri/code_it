@@ -13,6 +13,8 @@ puts "Destroying all Reviews"
 Review.destroy_all
 puts "Destroying all projects"
 Project.destroy_all
+puts "Destroying all posts"
+Post.destroy_all
 puts "Destroying all users................"
 User.destroy_all
 puts "Creating coders........"
@@ -230,7 +232,7 @@ coder.save
 Chatroom.create(id: coder.id, name: "Boris's chat")
 
 file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t1.6435-9/88237179_487104992167597_8276528710992003072_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=G4J7st7kbaYAX8x2-Pj&_nc_ht=scontent-bru2-1.xx&oh=00_AfCTFAd9_N3Ev75YDXIBiZ9vQDnl92gky3BMPTkUdOEp1Q&oe=63B6B173")
-company = User.new(first_name: "Stan",
+company2 = User.new(first_name: "Stan",
                   last_name: "Stanistan",
                   username: "stan-coder-pro",
                   password: "123456",
@@ -241,11 +243,11 @@ company = User.new(first_name: "Stan",
                   availability: "ASAP",
                   role: "Company",
                   years_of_experience: 1)
-                  company.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-company.save
+                  company2.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+company2.save
 
 file = URI.open("https://images-workbench.99static.com/FudNiZXsxaORzpSvZvHDIzFG8pU=/http://s3.amazonaws.com/projects-files/130/13004/1300459/04fa5661-bbfc-4620-b9ca-f1c9ce629355.jpg")
-company = User.new(first_name: "Cassandra",
+company1 = User.new(first_name: "Cassandra",
                   last_name: "Name",
                   username: "cassandra",
                   password: "123456",
@@ -256,50 +258,43 @@ company = User.new(first_name: "Cassandra",
                   availability: "ASAP",
                   role: "Company",
                   years_of_experience: 1)
-                  company.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-company.save
+                  company1.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+company1.save
 
-post = Project.new(deadline: "31/12/2023",
-                    name: "Bueno Inc website creation",
-                    description: "We are looking for junior full stack developper. We need to create several websites for our client",
-                    status: "in progress",
-                    created_at: "31/11/2022",
-                    #updated_at: ""
-                  )
-post.save
+# post1 = Post.new(deadline: "31/12/2023",
+#                     name: "Bueno Inc website creation",
+#                     description: "We are looking for junior full stack developper. We need to create several websites for our client",
+#                     created_at: "31/11/2022",
+#                     #updated_at: ""
+#                   )
+# post1.save
 
-post = Project.new(deadline: "31/11/2022",
-                    name: "Rails project in IP sector",
-                    description: "We are looking for a senior back-end developper specialized in rails",
-                    status: "in progress",
-                    created_at: "31/11/2022",
-                    #updated_at: ""
-                  )
-post.save
+post2 = Post.new(deadline: Date.today + 20,
+                name: "Rails project in IP sector",
+                description: "We are looking for a senior back-end developper specialized in rails",
+                company_id: company1.id)
+post2.save
 
-post = Project.new(deadline: "31/12/2024",
-                    name: "Help us to grow  ",
-                    description: "We are a young start up looking for junior profile to help us to growth.",
-                    status: "in progress",
-                    created_at: "31/11/2022",
-                  # updated_at: ""
-                  )
-post.save
+post3 = Post.new(deadline: Date.today + 10,
+                    name: "Help us to grow ",
+                    description: "We are a young start up looking for junior profile to help us to grow.",
+                    company_id: company2.id)
+post3.save
 
-post = Project.new(deadline: "31/12/2025",
-                    name: "Big project for big $$$",
-                    description: "We need people to code for us, come here we have a lot of money to give you",
-                    status: "in progress",
-                    created_at: "31/11/2022",
-                    #updated_at: ""
-                  )
-post.save
+# post4 = Post.new(deadline: "31/12/2025",
+#                     name: "Big project for big $$$",
+#                     description: "We need people to code for us, come here we have a lot of money to give you",
+#                     created_at: "31/11/2022",
+#                     #updated_at: ""
+#                   )
+# post4.save
 
-post = Project.new(deadline: "31/12/2026",
-                    name: "Marie's project for world domination",
-                    description: "Our company is looking for young full stack developper to change the world, using our brand new tool that can change people life, inspired by our beloved CEO Marie",
-                    status: "in progress",
-                    created_at: "31/11/2022",
-                    #updated_at: ""
-                  )
-post.save
+# post5 = Post.new(deadline: "31/12/2026",
+#                     name: "Marie's project for world domination",
+#                     description: "Our company is looking for young full stack developper to change the world, using our brand new tool that can change people life, inspired by our beloved CEO Marie",
+#                     created_at: "31/11/2022",
+#                     #updated_at: ""
+#                   )
+# post5.save
+
+puts "done"
