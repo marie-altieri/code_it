@@ -15,8 +15,11 @@
           <p><strong>Languages: </strong><%= user.language %></p>
           <div class="text-center">
           </div>
+            <%= link_to "Delete", companies_user_path(user), class:"coders-favourites-text", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
           <p></p>
         <% end %>
       </div>
     <% end %>
   <% end %>
+
+

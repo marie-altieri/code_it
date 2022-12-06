@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+puts "Destroying all Chatrooms"
+Chatroom.destroy_all
 puts "Destroying all Reviews"
 Review.destroy_all
 puts "Destroying all Messages"
@@ -97,6 +99,7 @@ coder = User.new(first_name: "Benjamin",
                   years_of_experience: 2)
                   coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 coder.save
+Chatroom.create(id: coder.id, name: "Benjamin's chat")
 
 file = URI.open("https://avatars.githubusercontent.com/u/70776288?v=4")
 coder = User.new(first_name: "Pedro",
@@ -128,6 +131,7 @@ coder = User.new(first_name: "Arthur",
                   years_of_experience: 3)
                   coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 coder.save
+Chatroom.create(id: coder.id, name: "Arthur's chat")
 
 file = URI.open("https://scontent-ams4-1.xx.fbcdn.net/v/t1.6435-9/109311617_10158634380759777_683202610831354315_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=XSNe-YkMcjMAX85MuS1&_nc_ht=scontent-ams4-1.xx&oh=00_AfAJc6dUpi262c3QUqi-3vqMgVL9vUaQ3T8FscxTegcmbw&oe=63B55200")
 coder = User.new(first_name: "Charlotte",
@@ -143,6 +147,7 @@ coder = User.new(first_name: "Charlotte",
                   years_of_experience: 3)
                   coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 coder.save
+Chatroom.create(id: coder.id, name: "Charlotte's chat")
 
 file = URI.open("https://scontent-ams4-1.xx.fbcdn.net/v/t1.6435-9/128881480_10214441848560100_7577883150356549532_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=oJPYDHyOIegAX_Xppph&_nc_ht=scontent-ams4-1.xx&oh=00_AfCtVvM0nZiW9Elj91Ss7-4AI_OWN1MXFWkTYBILwJfsMg&oe=63B554CC")
 coder = User.new(first_name: "Angélique",
@@ -158,6 +163,7 @@ coder = User.new(first_name: "Angélique",
                   years_of_experience: 3)
                   coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 coder.save
+Chatroom.create(id: coder.id, name: "Angélique's chat")
 
 file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/308000392_5640360126027083_7008658893780604252_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=R3DWw2r-sfwAX8o81x8&_nc_ht=scontent-bru2-1.xx&oh=00_AfBZ4ixsI9126GfgYyAafKW-b3v1f9ve1G9IL1lp5E1f6A&oe=6392A25D")
 coder = User.new(first_name: "Sébastien",
@@ -173,6 +179,7 @@ coder = User.new(first_name: "Sébastien",
                   years_of_experience: 3)
                   coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 coder.save
+Chatroom.create(id: coder.id, name: "Sébastien's chat")
 
 file = URI.open("https://avatars.githubusercontent.com/u/115412551?v=4")
 coder = User.new(first_name: "Arthur",
@@ -188,6 +195,7 @@ coder = User.new(first_name: "Arthur",
                   years_of_experience: 3)
                   coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 coder.save
+Chatroom.create(id: coder.id, name: "Arthur's chat")
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/C4E03AQFeqHAFbsUzkg/profile-displayphoto-shrink_800_800/0/1603376731661?e=1675900800&v=beta&t=Yd-ye799rEXjwedKU6PJRESnH9kz9mnoaAPrE3AZFL0")
 coder = User.new(first_name: "Gideon",
@@ -203,6 +211,7 @@ coder = User.new(first_name: "Gideon",
                   years_of_experience: 3)
                   coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 coder.save
+Chatroom.create(id: coder.id, name: "Gideon's chat")
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/D4E03AQGusN5DxLRVDQ/profile-displayphoto-shrink_800_800/0/1666078414736?e=1675900800&v=beta&t=b8GbO1MIonv3vONKOs5jeQjqA5zkJemvXw7yBqZL-g4")
 coder = User.new(first_name: "Boris",
@@ -218,8 +227,9 @@ coder = User.new(first_name: "Boris",
                   years_of_experience: 3)
                   coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 coder.save
+Chatroom.create(id: coder.id, name: "Boris's chat")
 
-file = URI.open("https://media-exp1.licdn.com/dms/image/D4E35AQE0g9CHlUyAoQ/profile-framedphoto-shrink_800_800/0/1664454106154?e=1670511600&v=beta&t=bAkx5DboMXoKsl0Mfkq5tUootYGDRmF9ZOOj6vjawYE")
+file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t1.6435-9/88237179_487104992167597_8276528710992003072_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=G4J7st7kbaYAX8x2-Pj&_nc_ht=scontent-bru2-1.xx&oh=00_AfCTFAd9_N3Ev75YDXIBiZ9vQDnl92gky3BMPTkUdOEp1Q&oe=63B6B173")
 company = User.new(first_name: "Stan",
                   last_name: "Stanistan",
                   username: "stan-coder-pro",
@@ -234,47 +244,62 @@ company = User.new(first_name: "Stan",
                   company.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 company.save
 
-project = Project.new(deadline: "31/12/2023",
+file = URI.open("https://images-workbench.99static.com/FudNiZXsxaORzpSvZvHDIzFG8pU=/http://s3.amazonaws.com/projects-files/130/13004/1300459/04fa5661-bbfc-4620-b9ca-f1c9ce629355.jpg")
+company = User.new(first_name: "Cassandra",
+                  last_name: "Name",
+                  username: "cassandra",
+                  password: "123456",
+                  email: "cassandra@gmail.com",
+                  description: "God Master Coder, Full Stack Developper, I don't like front-end and I make funny jokes.",
+                  experience: "Ruby on Rails Teacher @Le Wagon",
+                  language: "HTML, CSS, JavaScript, C++, Java, Rails, Ruby",
+                  availability: "ASAP",
+                  role: "Company",
+                  years_of_experience: 1)
+                  company.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+company.save
+
+post = Project.new(deadline: "31/12/2023",
                     name: "Bueno Inc website creation",
                     description: "We are looking for junior full stack developper. We need to create several websites for our client",
                     status: "in progress",
                     created_at: "31/11/2022",
                     #updated_at: ""
                   )
-project.save
+post.save
 
-project = Project.new(deadline: "31/11/2022",
+post = Project.new(deadline: "31/11/2022",
                     name: "Rails project in IP sector",
                     description: "We are looking for a senior back-end developper specialized in rails",
                     status: "in progress",
                     created_at: "31/11/2022",
                     #updated_at: ""
                   )
-project.save
+post.save
 
-project = Project.new(deadline: "31/12/2024",
+post = Project.new(deadline: "31/12/2024",
                     name: "Help us to grow  ",
                     description: "We are a young start up looking for junior profile to help us to growth.",
                     status: "in progress",
                     created_at: "31/11/2022",
                   # updated_at: ""
                   )
-project.save
+post.save
 
-project = Project.new(deadline: "31/12/2025",
+post = Project.new(deadline: "31/12/2025",
                     name: "Big project for big $$$",
                     description: "We need people to code for us, come here we have a lot of money to give you",
                     status: "in progress",
                     created_at: "31/11/2022",
                     #updated_at: ""
                   )
-project.save
+post.save
 
-project = Project.new(deadline: "31/12/2026",
+post = Project.new(deadline: "31/12/2026",
                     name: "Marie's project for world domination",
                     description: "Our company is looking for young full stack developper to change the world, using our brand new tool that can change people life, inspired by our beloved CEO Marie",
                     status: "in progress",
                     created_at: "31/11/2022",
                     #updated_at: ""
                   )
-project.save
+post.save

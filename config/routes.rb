@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   namespace :companies do
     resources :projects
+    resources :posts
     resources :users do
       resources :reviews, only: [:new, :create]
       collection do
@@ -17,9 +18,10 @@ Rails.application.routes.draw do
       end
    end
   end
-  
-  resources :chatrooms, only: :show do
+
+  resources :chatrooms, only: [:show, :index] do
+
     resources :messages, only: :create
   end
-  
+
 end
