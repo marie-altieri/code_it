@@ -26,7 +26,7 @@ module Companies
     private
 
     def projects_params
-      params.require(:project).permit(:coder_id, :description, :deadline, :name)
+      params.require(:project).permit(:coder_id, :description, :deadline, :name, :coder)
     end
   end
 end
