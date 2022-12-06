@@ -25,7 +25,9 @@
             </div>
 
             <div class="text-card">
-              <p id="rating-text"><strong> ⭐️ rating </strong></p>
+            <% (user.reviews.map(&:rating).sum/user.reviews.count).times do %>
+              <span id="rating-text"><strong>⭐️</strong></span>
+              <% end %>
               <p><%= user.experience %></p>
               <p id="languages-known"><%= user.language %></p>
             </div>
