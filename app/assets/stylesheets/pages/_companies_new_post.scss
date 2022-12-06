@@ -1,0 +1,67 @@
+
+#post_name{
+  border-radius: 12px;
+}
+
+#post_description{
+  border-radius: 12px;
+}
+
+#post_deadline{
+  border-radius: 12px;
+}
+
+#submit-post-new{
+  width: 160px;
+  height: 46px;
+}
+
+.img_coompanie_post{
+display: flex;
+position: absolute;
+top: 240px;
+right: -387px;
+margin-top: 0px;
+margin-left: 0px;
+
+& img {
+  width: 400px;
+}
+}
+
+#submit-post-new{
+  border-radius: 20px;
+  color: white;
+  margin: 20px;
+  padding: 8px;
+  background-color: #263159;
+  border: 1px solid #263159;
+  font-family: 'Hind', sans-serif;
+  width: 180px;
+  height: 46px;
+}
+#submit-post-new:hover{
+  background-color: #495579;
+  transition: 0,2s;
+}
+
+.img_coder_post{
+  display: flex;
+  position: absolute;
+  bottom: 0px;
+  left: -356px;
+& img {
+  width: 400px;
+}
+}
+
+.container-newpro {
+  position: relative;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container-newpro {
+  margin-right: 80px;
+margin-left: 80px;
+  }
+}

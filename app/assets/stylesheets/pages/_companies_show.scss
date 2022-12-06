@@ -195,3 +195,29 @@ transition: 0,2s;
 #new_review{
   color: #263159;
 }
+
+.bouton-show-show{
+font-size: 12px;
+align-content: center;
+align-items: center;
+display: flex;
+background-color: #263159;
+width: 179px;
+height: 46px;
+font-size: 14px;
+padding-left: 26px;
+padding-right: 26px;
+text-align: center;
+padding-top: 10px;
+padding-bottom: 10px;
+border: 1px solid #263159;
+border-radius: 30px;
+color: white;
+margin: 5px;
+text-decoration: none;
+}
+.bouton-show-show:hover{
+color:white;
+background-color: #495579;
+transition: 0,2s;
+}

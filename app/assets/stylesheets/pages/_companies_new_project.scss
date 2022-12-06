@@ -27,7 +27,10 @@
   padding: 8px;
   background-color: #263159;
   border: 1px solid #263159;
-  font-family: 'Hind', sans-serif;;
+  font-family: 'Hind', sans-serif;
+  width: 180px;
+  height: 46px;
+
 }
 
 #submit-project-new:hover{
@@ -52,4 +55,39 @@
 }
 .supp_padding{
   padding-top: 40px;
+}
+
+.img_coompanie_project{
+  display: flex;
+  position: absolute;
+  top: 240px;
+  right: -387px;
+  margin-top: 0px;
+  margin-left: 0px;
+
+  & img {
+    width: 400px;
+  }
+  }
+
+
+.img_coder_project{
+  display: flex;
+  position: absolute;
+  bottom: 0px;
+  left: -356px;
+& img {
+  width: 400px;
+}
+}
+
+.container-newpro {
+  position: relative;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container-newpro {
+  margin-right: 80px;
+margin-left: 80px;
+  }
 }
