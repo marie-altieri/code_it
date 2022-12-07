@@ -1,5 +1,5 @@
 body {
-  background-color: white;
+  background-color: #F5F5F5;
 }
 
 .container-index-company {
@@ -10,7 +10,7 @@ body {
 .coders-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  // grid-gap: 25px;
+  grid-gap: 25px;
 }
 
 .small-content-index-company {
