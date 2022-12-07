@@ -356,151 +356,195 @@ Review.create!(content: "Funny and hard worker, perfect !",
 
 file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t1.6435-9/88237179_487104992167597_8276528710992003072_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=G4J7st7kbaYAX8x2-Pj&_nc_ht=scontent-bru2-1.xx&oh=00_AfCTFAd9_N3Ev75YDXIBiZ9vQDnl92gky3BMPTkUdOEp1Q&oe=63B6B173")
 company1 = User.new(first_name: "Buddy",
-                  last_name: "Buddy",
-                  username: "buddybuddy.brussels",
-                  password: "123456",
-                  email: "stan@gmail.com",
-                  description: "God Master Coder, Full Stack Developper, I don't like front-end and I make funny jokes.",
-                  experience: "Ruby on Rails Teacher @Le Wagon",
-                  language: "HTML, CSS, JavaScript, C++, Java, Rails, Ruby",
-                  availability: "ASAP",
-                  role: "Company",
-                  years_of_experience: 1)
-                  company1.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+                    last_name: "Buddy",
+                    username: "buddybuddy.brussels",
+                    password: "123456",
+                    email: "stan@gmail.com",
+                    description: "God Master Coder, Full Stack Developper, I don't like front-end and I make funny jokes.",
+                    experience: "Ruby on Rails Teacher @Le Wagon",
+                    language: "HTML, CSS, JavaScript, C++, Java, Rails, Ruby",
+                    availability: "ASAP",
+                    role: "Company",
+                    years_of_experience: 1,
+                    about_us: "Founded in January 2020, BUDDY BUDDY is Europe's first nut butter café & atelier. We
+                              began experimenting and making our own nut butters at home when we decided to transition
+                              towards a plant-based lifestyle. By taking control of the ingredients, quantities, and
+                              roasting process, we realised we could craft something special. We started sharing them
+                              with our buddies, and that's how our family business started.")
+                    company1.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 company1.save
 
 file = URI.open("https://images-workbench.99static.com/FudNiZXsxaORzpSvZvHDIzFG8pU=/http://s3.amazonaws.com/projects-files/130/13004/1300459/04fa5661-bbfc-4620-b9ca-f1c9ce629355.jpg")
 company2 = User.new(first_name: "Card",
-                  last_name: "Castle",
-                  username: "cardcastle.belgium",
-                  password: "123456",
-                  email: "test@gmail.com",
-                  description: "God Master Coder, Full Stack Developper, I don't like front-end and I make funny jokes.",
-                  experience: "Ruby on Rails Teacher @Le Wagon",
-                  language: "HTML, CSS, JavaScript, C++, Java, Rails, Ruby",
-                  availability: "ASAP",
-                  role: "Company",
-                  years_of_experience: 1)
+                    last_name: "Castle",
+                    username: "cardcastle.belgium",
+                    password: "123456",
+                    email: "test@gmail.com",
+                    description: "God Master Coder, Full Stack Developper, I don't like front-end and I make funny jokes.",
+                    experience: "Ruby on Rails Teacher @Le Wagon",
+                    language: "HTML, CSS, JavaScript, C++, Java, Rails, Ruby",
+                    availability: "ASAP",
+                    role: "Company",
+                    years_of_experience: 1,
+                    about_us: "We're a team of Magic players and Software Engineers bringing you CardCastle from our
+                              home in Canberra, Australia. We're passionate about providing MTG players around the world
+                              with the tools they need to stay organised and play better.")
                   company2.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 company2.save
 
 file = URI.open("https://images-workbench.99static.com/B5szrkizad45de7Ezbpu-2yctWo=/99designs-contests-attachments/50/50529/attachment_50529948")
 company3 = User.new(first_name: "Antidote",
-                  last_name: "Corp",
-                  username: "antidode.belgium",
-                  password: "123456",
-                  email: "test2@gmail.com",
-                  role: "Company",
-                  availability: "A")
+                    last_name: "Corp",
+                    username: "antidode.belgium",
+                    password: "123456",
+                    email: "test2@gmail.com",
+                    role: "Company",
+                    availability: "A",
+                    about_us: "Antidote is on a mission to transform the way that sponsors and patients connect in order
+                              to accelerate medical research. At Antidote, we bring together talented people with
+                              pharmaceutical, technology, business, and public health backgrounds to achieve an important
+                              mission. Along the way, we manage to have some fun, too.")
                   company3.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 company3.save
 
 file = URI.open("https://cdn.logojoy.com/wp-content/uploads/2018/05/01104612/1266.png")
 company4 = User.new(first_name: "Ebkar",
-                  last_name: "Studios",
-                  username: "ebkar.studios",
-                  password: "123456",
-                  email: "test3@gmail.com",
-                  availability: "A",
-                  role: "Company")
+                    last_name: "Studios",
+                    username: "ebkar.studios",
+                    password: "123456",
+                    email: "test3@gmail.com",
+                    availability: "A",
+                    role: "Company",
+                    about_us: "Ebkar Technology and Management Solutions helping organizations reach their goals and
+                              achieve greater effectiveness through a wide range of high quality services including
+                              consultancy, training, management software implementation, data networking and buildings
+                              security solutions. Our mission is to create value propositions for our clients and commit
+                               to effective implementation and help them to turn their current business management goals
+                               into tangible results.")
                   company4.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 company4.save
 
 file = URI.open("https://images-workbench.99static.com/NWF2et-ZbSTPmEelXIaLA5VFndw=/http://s3.amazonaws.com/projects-files/45/4501/450142/5d7907e1-fcb7-4c72-ba3f-283f089053d5.jpg")
 company5 = User.new(first_name: "Neuro",
-                  last_name: "Muscular",
-                  username: "neuro.belgium",
-                  password: "123456",
-                  email: "test4@gmail.com",
-                  availability: "A",
-                  role: "Company")
+                    last_name: "Muscular",
+                    username: "neuro.belgium",
+                    password: "123456",
+                    email: "test4@gmail.com",
+                    availability: "A",
+                    role: "Company",
+                    about_us: "Neuro Muscular is a clinical-stage biotech company founded with a focus to deliver
+                              life-transforming therapies for people living with neuromuscular diseases.
+                              We have a unique translational muscle electrophysiology platform leveraging in-depth
+                              know-how of muscle physiology and muscular disorders for discovering and developing
+                              first-in-class therapeutics in neuromuscular diseases with a significant unmet medical
+                              need.")
                   company5.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 company5.save
 
 file = URI.open("https://images-workbench.99static.com/BJKn5pgQua_rx1VQ-IYbCnYmxvI=/99designs-contests-attachments/68/68465/attachment_68465730")
 company6 = User.new(first_name: "Good",
-                  last_name: "Friends",
-                  username: "friends.belgium",
-                  password: "123456",
-                  email: "test5@gmail.com",
-                  availability: "A",
-                  role: "Company")
+                    last_name: "Friends",
+                    username: "friends.belgium",
+                    password: "123456",
+                    email: "test5@gmail.com",
+                    availability: "A",
+                    role: "Company",
+                    about_us: "Good Friend, Inc. knows there is beauty in diversity, there is strength in community,
+                              there is magic in inclusion. We are a non-profit organization using social emotional tools
+                              to establish a culture of acceptance in schools and beyond.")
                   company6.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 company6.save
 
 file = URI.open("https://images-workbench.99static.com/0j3odZ1DQW0uPlsqTL7i1qr3q24=/99designs-contests-attachments/68/68622/attachment_68622669")
 company7 = User.new(first_name: "Thayer",
-                  last_name: "Coffee",
-                  username: "coffee.belgium",
-                  password: "123456",
-                  email: "test6@gmail.com",
-                  availability: "A",
-                  role: "Company")
+                    last_name: "Coffee",
+                    username: "coffee.belgium",
+                    password: "123456",
+                    email: "test6@gmail.com",
+                    availability: "A",
+                    role: "Company",
+                    about_us: "For 30 years, we have been trying to take small steps to limit our environmental impact.
+                                We are strong believers that these small steps have a real impact. Today, we are
+                                inviting you to join us to be better together and to reduce our carbon footprint,
+                                one step at a time.")
                   company7.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 company7.save
 
 file = URI.open("https://images-platform.99static.com//ygh0vIzvNClSZIH8Zo8JwCkjhDk=/652x17:1257x622/fit-in/590x590/99designs-contests-attachments/139/139716/attachment_139716325")
 company8 = User.new(first_name: "Art",
-                  last_name: "Sigma",
-                  username: "art.belgium",
-                  password: "123456",
-                  email: "test7@gmail.com",
-                  availability: "A",
-                  role: "Company")
+                    last_name: "Sigma",
+                    username: "art.belgium",
+                    password: "123456",
+                    email: "test7@gmail.com",
+                    availability: "A",
+                    role: "Company",
+                    about_us: "Art Sigma is a manufacturing company that produces and distributes digital cameras,
+                                interchangeable lenses and photographic accessories.
+                                Since our foundation in 1961, we have exclusively produced photography- and
+                                video-related products. In other words, we are a company that focuses all its efforts
+                                on creating tools for photography.")
                   company8.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 company8.save
 
 ### POSTS ##############################################################################################################################################################################
 
 post1 = Post.new(deadline: Date.today + 20,
-                name: "Bueno Inc website creation",
-                description: "We are looking for junior full stack developper. We need to create several websites for our client",
-                company_id: company1.id)
+                 name: "Bueno Inc website creation",
+                 description: "We are looking for junior full stack developper. We need to create several websites for our client",
+                 company_id: company1.id,
+                 about_company: company1.about_us)
 post1.save
 
 post2 = Post.new(deadline: Date.today + 20,
-                name: "Rails project in IP sector",
-                description: "We are looking for a senior back-end developper specialized in rails",
-                company_id: company2.id)
+                 name: "Rails project in IP sector",
+                 description: "We are looking for a senior back-end developper specialized in rails",
+                 company_id: company2.id,
+                 about_company: company2.about_us)
 post2.save
 
 post3 = Post.new(deadline: Date.today + 10,
-                name: "Help us to grow ",
-                description: "We are a young start up looking for junior profile to help us to grow.",
-                company_id: company3.id)
+                 name: "Help us to grow ",
+                 description: "We are a young start up looking for junior profile to help us to grow.",
+                 company_id: company3.id,
+                 about_company: company3.about_us)
 post3.save
 
 post4 = Post.new(deadline: Date.today + 40,
-                name: "Big project for big $$$",
-                description: "We need people to code for us, come here we have a lot of money to give you",
-                company_id: company4.id)
+                 name: "Big project for big $$$",
+                 description: "We need people to code for us, come here we have a lot of money to give you",
+                 company_id: company4.id,
+                 about_company: company4.about_us)
 post4.save
 
 post5 = Post.new(deadline: Date.today + 80,
-                name: "Marie's project for world domination",
-                description: "Our company is looking for young full stack developper to change the world, using our brand new tool that can change people life, inspired by our beloved CEO Marie.",
-                company_id: company5.id)
+                 name: "Marie's project for world domination",
+                 description: "Our company is looking for young full stack developper to change the world, using our brand new tool that can change people life, inspired by our beloved CEO Marie.",
+                 company_id: company5.id,
+                 about_company: company5.about_us)
 post5.save
 
 post6 = Post.new(deadline: Date.today + 80,
-                name: "UX Designer",
-                description: "- Producing useful experience driven design solutions
-                - Prototyping digital UX (XD, Sketch or similar)
-                - Creating interaction design practices both web and mobile
-                - Collaborating with multiple stakeholders, end users, other designers, developers, and management",
-                company_id: company6.id)
+                 name: "UX Designer",
+                 description: "- Producing useful experience driven design solutions
+                  - Prototyping digital UX (XD, Sketch or similar)
+                  - Creating interaction design practices both web and mobile
+                  - Collaborating with multiple stakeholders, end users, other designers, developers, and management",
+                 company_id: company6.id,
+                 about_company: company6.about_us)
 post6.save
 
 post7 = Post.new(deadline: Date.today + 80,
-                name: "Full-Stack Developer",
-                description: "Our coffee brand is in new of its first e-commerce website ! We would love for a coder to work on it.",
-                company_id: company7.id)
+                 name: "Full-Stack Developer",
+                 description: "Our coffee brand is in new of its first e-commerce website ! We would love for a coder to work on it.",
+                 company_id: company7.id,
+                 about_company: company7.about_us)
 post7.save
 
 post8 = Post.new(deadline: Date.today + 80,
-                name: "BackEnd Developer",
-                description: "What they are looking for more specifically is an experienced developer who is comfortable with taking a responsible role in their backend developing team. In this task you would be working closely with product for example with different server side interfaces and Openshift UA servers.",
-                company_id: company8.id)
+                 name: "BackEnd Developer",
+                 description: "What they are looking for more specifically is an experienced developer who is comfortable with taking a responsible role in their backend developing team. In this task you would be working closely with product for example with different server side interfaces and Openshift UA servers.",
+                 company_id: company8.id,
+                 about_company: company8.about_us)
 post8.save
 
 puts "done"

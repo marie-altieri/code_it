@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_06_110305) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_07_135550) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -65,6 +65,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_110305) do
     t.datetime "updated_at", null: false
     t.bigint "company_id"
     t.string "name"
+    t.text "about_company"
     t.index ["company_id"], name: "index_posts_on_company_id"
   end
 
@@ -77,6 +78,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_110305) do
     t.bigint "company_id"
     t.bigint "coder_id"
     t.string "name"
+    t.text "about_company"
     t.index ["coder_id"], name: "index_projects_on_coder_id"
     t.index ["company_id"], name: "index_projects_on_company_id"
   end
@@ -108,8 +110,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_110305) do
     t.string "availability"
     t.string "role"
     t.integer "years_of_experience"
-    t.text "favourites", default: [], array: true
     t.string "nickname"
+    t.text "favourites", default: [], array: true
+    t.text "about_us"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
