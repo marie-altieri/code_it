@@ -18,7 +18,7 @@
     <% if @coders.any? %>
       <% @coders.each do |user|%>
         <div class= "small-content-index-company">
-        <%= link_to companies_user_path(user), class: "custom-links" do %>
+          <%= link_to companies_user_path(user), class: "custom-links" do %>
             <div class="text-center name-picture" >
               <%= cl_image_tag user.photo.key, crop: :fill, class: "image-company-index"%>
               <h4 class="card-user-name"><%= user.first_name.capitalize%></h4>
@@ -31,13 +31,13 @@
                 <% else %>
                   <% (user.reviews.map(&:rating).sum/user.reviews.count).times do %>
                     <span id="rating-text"><strong>⭐️</strong></span>
+                  <% end %>
                 <% end %>
-              <% end %>
               </div>
 
               <div class="other-text">
-                <p><%= user.experience %></p>
-                <p id="languages-known"><%= user.language %></p>
+                <p><strong>Experience: </strong><%= user.experience %></p>
+                <p id="languages-known"><strong>Language: </strong><%= user.language %></p>
               </div>
             </div>
           <% end %>
