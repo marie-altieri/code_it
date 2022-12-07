@@ -10,7 +10,7 @@ body {
 .coders-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 25px;
+  // grid-gap: 25px;
 }
 
 .small-content-index-company {
@@ -63,6 +63,9 @@ body {
   padding-left: 10px;
   padding-right: 10px;
 
+  strong{
+    padding-top: 10px;
+  }
   p {
     margin-bottom: 5px;
   }
