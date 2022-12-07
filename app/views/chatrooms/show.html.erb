@@ -1,6 +1,9 @@
-<div class="container chatroom"
+<% current_user.role == "Company" ? chat_class = "company-chat" : chat_class = "coder-chat" %>
+
+<div class="container chatroom <%= chat_class %>"
   data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
+
 >
   <div class="title-chat">
     <h1><i class="fa-solid fa-laptop"></i> <%= @chatroom.name %></h1>

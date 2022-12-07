@@ -18,3 +18,27 @@
   font-weight: 600px;
   }
 }
+
+.company-chat .company {
+  text-align: right;
+}
+
+.coder-chat .coder {
+  text-align: right;
+}
+
+.chat-photo{
+  width: 38px;
+border-radius: 50%;
+height: 38px;
+border: 1px solid black;
+}
+.company-chat > .messages > .coder > p{
+
+  margin-left: 44px;
+}
+
+.coder-chat > .messages > .company > p{
+
+  margin-left: 44px;
+}
