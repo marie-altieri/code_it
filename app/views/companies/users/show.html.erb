@@ -40,15 +40,20 @@
     </p>
   </div>
 
-
   <div class="photo_name">
     <%= cl_image_tag @coder.photo.key, height: 350, width: 350, crop: :fill, id:"photo-coder-profile" %>
     <div class= "info-perso-coder">
       <h2><%= @coder.first_name.upcase %> <%= @coder.last_name.upcase %></h2>
       <p><strong> <i class="fa-solid fa-user"></i> Username: </strong><%= @coder.username %></p>
-      <%= link_to "Add to favorites", companies_user_path(@coder), class:"bouton-show", data: {turbo_method: :patch} %>
+      
+      <% if current_user.favourites.include?(@coder.id.to_s) %>
+        <%= link_to "Added to favorites", companies_user_path(@coder), class:"bouton-show disable-button", data: {turbo_method: :patch, controller: "disable-button", action: "click->disable-button#disable"} %>
+      <% else %>
+        <%= link_to "Add to favorites", companies_user_path(@coder), class:"bouton-show", data: {turbo_method: :patch, controller: "disable-button", action: "click->disable-button#disable"} %>
+      <% end %>
+
       <%= link_to "Contact me", chatroom_path(), class:"bouton-show" %>
-      <%= link_to "Create a project with #{@coder.full_name}", new_companies_project_path(coder: @coder), class:"bouton-show-show" %>
+      <%= link_to "Create a project with me", new_companies_project_path(coder: @coder), class:"bouton-show-show" %>
     </div>
   </div>
 </div>

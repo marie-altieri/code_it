@@ -2,6 +2,7 @@ module Companies
   class ProjectsController < ApplicationController
     def index
       @projects = Project.all.where(company_id: current_user.id)
+      @posts = Post.all.where(company_id: current_user.id)
     end
 
     def show
