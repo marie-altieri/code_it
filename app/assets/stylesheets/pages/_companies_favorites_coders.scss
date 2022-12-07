@@ -1,6 +1,7 @@
 .coders-grid-favourite{
   margin-right: 120px;
   margin-left: 120px;
+
 }
 
 .favorites-title{
@@ -23,12 +24,13 @@ color: #263159;
 }
 
 .text-center-name-picture-favorite{
-  background-color: white;
-  box-shadow: 1px 1px 3px rgb(208, 208, 208);
-  border-radius: 20px;
-  position: relative;
-  transition: all 1s ease;
-  margin-bottom: 30px;
+  // background-color: white;
+  // box-shadow: 1px 1px 3px rgb(208, 208, 208);
+  // border-radius: 20px;
+  // position: relative;
+  // transition: all 1s ease;
+  // margin-bottom: 30px;
+
 
   strong{
     font-family: 'Hind', sans-serif;
@@ -61,6 +63,19 @@ color: #263159;
 }
 
 .small-content-index-company-favourite{
+
+  background-color: white;
+  box-shadow: 1px 1px 3px rgb(208, 208, 208);
+  border-radius: 20px;
+  position: relative;
+  transition: all 1s ease;
+  margin-bottom: 30px;
+  display: flex;
+flex-direction: column;
+justify-content: space-between;
+
+  // padding-left: 10px;
+  // padding-right: 10px;
   strong{
     color:black;
   }
@@ -73,3 +88,34 @@ color: #263159;
   }
 
 }
+
+.small-content-index-company-favourite:hover{
+  -webkit-transform:scale(1.1);
+  transform:scale(1.1);
+}
+
+.padding{
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.text-right{
+  text-align: right;
+  color: white;
+}
+.coders-favourites-text{
+
+color: white !important;
+margin: 20px;
+
+display: inline-block;
+padding: 7px 19px;
+background-color: #495579;
+border-radius: 50px;
+font-family: 'Hind', sans-serif;
+
+}
+.coders-favourites-text:hover{
+  background-color: #263159;
+  color: white;
+    }

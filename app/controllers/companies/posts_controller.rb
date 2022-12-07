@@ -9,7 +9,7 @@ module Companies
       @post.company_id = current_user.id
 
       if @post.save
-        redirect_to companies_posts_path
+        redirect_to companies_projects_path
       else
         render "companies/posts/new", status: :unprocessable_entity
       end

@@ -395,7 +395,7 @@ company3 = User.new(first_name: "Antidote",
                   company3.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 company3.save
 
-file = URI.open("https://images-platform.99static.com//kiFVHmRvF0zp_b6yiJu-D2riTkA=/173x138:1411x1375/fit-in/590x590/99designs-contests-attachments/88/88898/attachment_88898743")
+file = URI.open("https://cdn.logojoy.com/wp-content/uploads/2018/05/01104612/1266.png")
 company4 = User.new(first_name: "Ebkar",
                   last_name: "Studios",
                   username: "ebkar.studios",

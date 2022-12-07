@@ -1,0 +1,50 @@
+.bouton-show-coder{
+  background-color: #263159;
+  width: 190px !important;
+  height: 50px !important;
+  font-size: 14px;
+  padding-left: 35px;
+  padding-right: 35px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid #263159;
+  border-radius: 30px;
+  color: white;
+  margin: 5px;
+  text-decoration: none;
+}
+
+.bouton-show-coder:hover{
+color: white;
+background-color: #495579;
+transition: 0,2s;
+
+}
+
+#coders-description{
+  flex: revert;
+}
+
+.infos-coder{
+  margin-top: 85px;
+}
+
+.container-coder{
+  background-color: #f5f5f5;
+
+}
+.move-button{
+text-align: center;
+margin-top: 30px;
+}
+
+#change-icon{
+  i{
+    margin-right: 10px;
+  }
+}
+
+#photo-name-move{
+  margin-top: 29px;
+}

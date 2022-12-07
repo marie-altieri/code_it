@@ -1,32 +1,28 @@
 <div class="container-coder">
   <div class="infos-coder">
-    <div class="cv-coder">
-    <p><strong>Programming languages: </strong><%= @coder.language %></p>
-    <p><strong>Availability: </strong><%= @coder.availability %></p>
-    <p><strong>Years of experience: </strong><%= @coder.years_of_experience %></p>
-    <p><strong>Experiences: </strong><%= @coder.experience %></p>
+    <div class="cv-coder" id= "change-icon">
+    <p><i class="fa-solid fa-code"></i> <strong>Programming languages: </strong><%= @coder.language %></p>
+    <p><i class="fa-regular fa-calendar-check"></i> <strong>Availability: </strong><%= @coder.availability %></p>
+    <p><i class="fa-solid fa-terminal"></i> <strong>Years of experience: </strong><%= @coder.years_of_experience %></p>
+    <p><i class="fa-solid fa-briefcase"></i> <strong>Experiences: </strong><%= @coder.experience %></p>
     </div>
 
-    <div class="block2">
+    <div class="block2" id= "coders-description">
       <div class="descrip">
         <p><strong>Description: </strong><%= @coder.description %></p>
       </div>
-
-      <div class="portof">
-        <p><strong>Portofolio:</strong></p>
-      </div>
     </div>
-    
-    <% if @coder.id == current_user.id%>
-      <%= link_to "Edit my profile", edit_coders_user_path(@coder), class:"bouton-show" %>
-    <% end %>
+      <div class="move-button">
+        <% if @coder.id == current_user.id%>
+          <%= link_to "Edit my profile", edit_coders_user_path(@coder), class:"bouton-show-coder" %>
+        <% end %>
+      </div>
   </div>
 
-  <div class="photo_name">
+  <div class="photo_name" id="photo-name-move">
       <%= cl_image_tag @coder.photo.key, height: 350, width: 350, crop: :fill, id:"photo-coder-profile" %>
       <h2><%= @coder.first_name.upcase %> <%= @coder.last_name.upcase %></h2>
         <p><strong> <i class="fa-solid fa-user"></i> Username: </strong><%= @coder.username %></p>
-
   </div>
 
 </div>
