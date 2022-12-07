@@ -6,20 +6,23 @@
       <% current_user.favourites.each do |coder| %>
         <% user = User.find(coder.to_i) %>
         <div class= "small-content-index-company-favourite">
-        <%= link_to companies_user_path(user), class: "custom-links" do %>
+         <%= link_to companies_user_path(user), class: "custom-links" do %>
           <div class="text-center-name-picture-favorite" >
             <div class="picture-name-project-favorites">
-              <h4 class="company-project-first-name-favorites"><%= user.first_name.upcase%> <%= user.last_name.upcase %></h4>
+              <h4 class="company-project-first-name-favorites"><%= user.first_name%></h4>
               <%= cl_image_tag user.photo.key, height: 200, width: 200, crop: :fill, class: "image-company-index-favorite"%>
             </div>
             </div>
-              <p><strong>Username: </strong><%= user.username %></p>
-              <p><strong>Experiences: </strong><%= user.experience %></p>
-              <p><strong>Languages: </strong><%= user.language %></p>
-              <div class="text-center">
+                <div class= "padding">
+                  <p><strong>Username: </strong><%= user.username %></p>
+                  <p><strong>Experiences: </strong><%= user.experience %></p>
+                  <p><strong>Languages: </strong><%= user.language %></p>
+                  <div class="text-center">
+                </div>
               </div>
-                <%= link_to "Delete", companies_user_path(user), class:"coders-favourites-text", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-              <p></p>
+                <div class="text-right">
+                  <%= link_to "Delete", companies_user_path(user), class:"coders-favourites-text", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+                </div>
             <% end %>
           </div>
         <% end %>
