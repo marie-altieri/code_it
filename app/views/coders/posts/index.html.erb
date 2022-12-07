@@ -4,6 +4,7 @@
 
   <div class= "posts-grid">
     <% @posts.each do |post| %>
+      <%= link_to coders_post_path(post), id:"link-bottom" do %>
       <div class= "small-content-index-company">
         <div class="text-center name-picture" >
           <%= cl_image_tag post.company.photo.key, class: "image-project-index", crop: :fill%>
@@ -12,12 +13,11 @@
 
         <div class="text-card-post">
           <p id="top-p"><strong>Name: </strong><%= post.name %></p>
-          <p><strong>Description: </strong><%= post.description %></p>
+          <p id="foufou"><strong>Description: </strong><%= post.description %></p>
           <p><strong>Deadline: </strong><%= post.deadline.strftime("%d/%m/%Y") %></p>
-
-          <p><%= link_to "See more", coders_post_path(post), id:"link-bottom" %></p>
         </div>
       </div>
+      <% end %>
     <% end %>
   </div>
 </div>
