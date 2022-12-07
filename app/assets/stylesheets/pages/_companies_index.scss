@@ -72,8 +72,8 @@ body {
 }
 
 #rating-text {
-  text-align: end;
   margin-bottom: 10px;
+  margin-top: 5px;
 }
 
 #languages-known {
@@ -110,6 +110,8 @@ body {
 }
 
 #search-bar{
+  position: sticky;
+  top: 0;
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
   border-right: none;
@@ -120,6 +122,8 @@ body {
 }
 
 #search-button{
+  position: sticky;
+  top: 0;
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
   border-left: none;
@@ -133,4 +137,10 @@ body {
   background-color:#495579 ;
   color: white;
   transition: 0,2s;
+}
+
+.top-container {
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }

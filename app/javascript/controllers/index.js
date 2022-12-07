@@ -7,6 +7,9 @@ import { application } from "./application"
 import ChatroomSubscriptionController from "./chatroom_subscription_controller"
 application.register("chatroom-subscription", ChatroomSubscriptionController)
 
+import DisableButtonController from "./disable_button_controller"
+application.register("disable-button", DisableButtonController)
+
 import FormSubmitController from "./form_submit_controller"
 application.register("form-submit", FormSubmitController)
 
@@ -15,4 +18,3 @@ application.register("hello", HelloController)
 
 import StarRatingController from "./star_rating_controller"
 application.register("star-rating", StarRatingController)
-
