@@ -2,20 +2,15 @@
 .container-index-projects {
   margin-right: 120px;
   margin-left: 120px;
-
-  h2 {
-    padding-top: 30px;
-    font-family: 'Hind', sans-serif
-  }
-
-  h4 {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-family: 'Hind', sans-serif
-  }
 }
 
 .projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 25px;
+}
+
+.accepted-projects-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 25px;
@@ -101,5 +96,7 @@
 .see-more-text {
   text-decoration: none;
   color: #201F50;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row-reverse;
 }

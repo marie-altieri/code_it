@@ -20,6 +20,8 @@ User.destroy_all
 puts "Creating coders........"
 puts "Creating companies....."
 
+### CODERS ##############################################################################################################################################################################
+
 file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/274588846_10158911071134065_5127209258883963504_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=cyMiryUW4j8AX-5UEsG&_nc_ht=scontent-bru2-1.xx&oh=00_AfDKpbHDMXctu0Mxfknq2QW2urPm7GwoIlyvdtw5XiN0SQ&oe=639300F1")
 coder = User.new(first_name: "Marie",
                   last_name: "Altieri",
@@ -31,7 +33,7 @@ coder = User.new(first_name: "Marie",
                   Coming from a hospitality background with more than four years of experience, I want to learn a new skill to add to my current experience and background, in hopes to create my own business in the future.
                   I look forward to this new adventure ! CEO of Code It. I founded the company to help people and give orders to my team.",
                   experience: "CEO of Code It",
-                  language: "HTML, CSS, JavaScript, Python",
+                  language: "Python, C#",
                   availability: "ASAP",
                   role: "Coder",
                   years_of_experience: 1)
@@ -81,7 +83,7 @@ coder = User.new(first_name: "Victor",
                   email: "vic_dsp@gmail.com",
                   description: "Looking for new opportunities, because I need to money to feed my dog",
                   experience: "Front-End Developper, thanks to Le Wagon",
-                  language: "HTML, CSS, JavaScript",
+                  language: "PHP, C++",
                   availability: "ASAP",
                   role: "Coder",
                   years_of_experience: 1)
@@ -106,7 +108,7 @@ coder = User.new(first_name: "Daphné",
                   email: "daphlefevre@gmail.com",
                   description: "Hello, my name is Daphné. I come from Waterloo, meaning that I've never actually visited Brussels. What is the Sablon? Happy rrrrrhanouka !!!!",
                   experience: "Back-End Developper",
-                  language: "Ruby on Rails, C++",
+                  language: "Ruby, C++, Python",
                   availability: "ASAP",
                   role: "Coder",
                   years_of_experience: 2)
@@ -131,7 +133,7 @@ coder = User.new(first_name: "Benjamin",
                   email: "benjamin.boulle@gmail.com",
                   description: "Hello everyome, I am Benjamin! I've been a fan of coding ever since my early age and code everyday as a hobby. I will nearly join the army but I am very happy to help you with any project you have. I studied civil engineering for 5 years, my options were biomedical and mechanic but I wanted to code more, this is why I started Le Wagon. After Le Wagon I want to work in a team of few people to develop websites and application.",
                   experience: "Teacher Assistant @Le Wagon",
-                  language: "Ruby on Rails, SQL, Python",
+                  language: "Swift, Java, Go",
                   availability: "ASAP",
                   role: "Coder",
                   years_of_experience: 2)
@@ -181,7 +183,7 @@ coder = User.new(first_name: "Arthur",
                   email: "arthurvmarcke@gmail.com",
                   description: "I am a former banker, after working 5 years in management, I decided to change my career and learn to code",
                   experience: "Product Manager",
-                  language: "SQL",
+                  language: "Ruby",
                   availability: "ASAP",
                   role: "Coder",
                   years_of_experience: 3)
@@ -206,7 +208,7 @@ coder = User.new(first_name: "Charlotte",
                   email: "chaltieri@gmail.com",
                   description: "Hello everyone, I am Charlotte, I work as a consultant, I decided to learn how to code to help evenmore my clients",
                   experience: "Project Manager",
-                  language: "SQL",
+                  language: "HTML, CSS",
                   availability: "ASAP",
                   role: "Coder",
                   years_of_experience: 3)
@@ -231,7 +233,7 @@ coder = User.new(first_name: "Angélique",
                   email: "angelbagnis@gmail.com",
                   description: "Bonjour je suis Angléique, après avoir été professeur de math pendant 10 ans, j'ai décidé d'apprendre le code pour changer la direction de ma carrière",
                   experience: "Project Manager",
-                  language: "SQL",
+                  language: "JavaScript, C++, SQL",
                   availability: "ASAP",
                   role: "Coder",
                   years_of_experience: 3)
@@ -256,7 +258,7 @@ coder = User.new(first_name: "Sébastien",
                   email: "sebchapel@gmail.com",
                   description: "Hello, I am Seb. I just graduated from KU Leuven, I decided to learn to code",
                   experience: "Project Manager",
-                  language: "SQL",
+                  language: "Go, C#",
                   availability: "ASAP",
                   role: "Coder",
                   years_of_experience: 3)
@@ -281,7 +283,7 @@ coder = User.new(first_name: "Arthur",
                   email: "arthurpeers@gmail.com",
                   description: "Hello my name is Arthur I'm 22 years old. I studied economics at Solvay and then at Ichec but it was not suitable for me, so I decided to stop the university system for an apprenticeship system like the Wagon (intensive training). I chose to learn coding because it is a necessity in our generations, it was mandatory for me to know coding. What I like the most in web development is that everything is possible from the creativity level, I think that it is especially the front end that will amuse me",
                   experience: "Front-End Developer",
-                  language: "SQL",
+                  language: "HTML, CSS, JavaScript",
                   availability: "ASAP",
                   role: "Coder",
                   years_of_experience: 3)
@@ -306,7 +308,7 @@ coder = User.new(first_name: "Gideon",
                   email: "gideonmaydell@gmail.com",
                   description: "Hi! I am Gideon, an Austrian who grew up in Vienna, Berlin and northern Italy. Did a Bachelor's Degree in History. Had multiple part-time jobs next to university since I was 19. I want to learn how to code in order to work in tech and eventually start my own project. I look forward to meeting you!",
                   experience: "Back-End Developer",
-                  language: "SQL",
+                  language: "Python",
                   availability: "ASAP",
                   role: "Coder",
                   years_of_experience: 3)
@@ -323,7 +325,7 @@ Review.create!(content: "Best time with Gideon, sehr gut !",
   rating: 5,
   user_id: coder.id)
 
-file = URI.open("https://media-exp1.licdn.com/dms/image/D4E03AQGusN5DxLRVDQ/profile-displayphoto-shrink_800_800/0/1666078414736?e=1675900800&v=beta&t=b8GbO1MIonv3vONKOs5jeQjqA5zkJemvXw7yBqZL-g4")
+file = URI.open("https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1665730817/sjuqrqpbjkf9pmjnxcpo.jpg")
 coder = User.new(first_name: "Boris",
                   last_name: "Mwanga",
                   username: "borismwanga",
@@ -331,7 +333,7 @@ coder = User.new(first_name: "Boris",
                   email: "borismwanga@gmail.com",
                   description: "Hi everyone! My current goal is to start a career as a full-stack web developer. Coming up with creative ideas to improve something, or make something new because I don’t want only to build web applications, I want to build experiences for all.",
                   experience: "Back-End Developer",
-                  language: "SQL",
+                  language: "Python, Ruby, SQL",
                   availability: "ASAP",
                   role: "Coder",
                   years_of_experience: 3)
@@ -348,27 +350,16 @@ Review.create!(content: "Funny and hard worker, perfect !",
   rating: 5,
   user_id: coder.id)
 
+
+### COMPANIES ##############################################################################################################################################################################
+
+
 file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t1.6435-9/88237179_487104992167597_8276528710992003072_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=G4J7st7kbaYAX8x2-Pj&_nc_ht=scontent-bru2-1.xx&oh=00_AfCTFAd9_N3Ev75YDXIBiZ9vQDnl92gky3BMPTkUdOEp1Q&oe=63B6B173")
-company2 = User.new(first_name: "Stan",
-                  last_name: "Stanistan",
-                  username: "stan-coder-pro",
+company1 = User.new(first_name: "Buddy",
+                  last_name: "Buddy",
+                  username: "buddybuddy.brussels",
                   password: "123456",
                   email: "stan@gmail.com",
-                  description: "God Master Coder, Full Stack Developper, I don't like front-end and I make funny jokes.",
-                  experience: "Ruby on Rails Teacher @Le Wagon",
-                  language: "HTML, CSS, JavaScript, C++, Java, Rails, Ruby",
-                  availability: "ASAP",
-                  role: "Company",
-                  years_of_experience: 1)
-                  company2.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-company2.save
-
-file = URI.open("https://images-workbench.99static.com/FudNiZXsxaORzpSvZvHDIzFG8pU=/http://s3.amazonaws.com/projects-files/130/13004/1300459/04fa5661-bbfc-4620-b9ca-f1c9ce629355.jpg")
-company1 = User.new(first_name: "Cassandra",
-                  last_name: "Name",
-                  username: "cassandra",
-                  password: "123456",
-                  email: "cassandra@gmail.com",
                   description: "God Master Coder, Full Stack Developper, I don't like front-end and I make funny jokes.",
                   experience: "Ruby on Rails Teacher @Le Wagon",
                   language: "HTML, CSS, JavaScript, C++, Java, Rails, Ruby",
@@ -378,40 +369,138 @@ company1 = User.new(first_name: "Cassandra",
                   company1.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 company1.save
 
-# post1 = Post.new(deadline: "31/12/2023",
-#                     name: "Bueno Inc website creation",
-#                     description: "We are looking for junior full stack developper. We need to create several websites for our client",
-#                     created_at: "31/11/2022",
-#                     #updated_at: ""
-#                   )
-# post1.save
+file = URI.open("https://images-workbench.99static.com/FudNiZXsxaORzpSvZvHDIzFG8pU=/http://s3.amazonaws.com/projects-files/130/13004/1300459/04fa5661-bbfc-4620-b9ca-f1c9ce629355.jpg")
+company2 = User.new(first_name: "Card",
+                  last_name: "Castle",
+                  username: "cardcastle.belgium",
+                  password: "123456",
+                  email: "test@gmail.com",
+                  description: "God Master Coder, Full Stack Developper, I don't like front-end and I make funny jokes.",
+                  experience: "Ruby on Rails Teacher @Le Wagon",
+                  language: "HTML, CSS, JavaScript, C++, Java, Rails, Ruby",
+                  availability: "ASAP",
+                  role: "Company",
+                  years_of_experience: 1)
+                  company2.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+company2.save
+
+file = URI.open("https://images-workbench.99static.com/B5szrkizad45de7Ezbpu-2yctWo=/99designs-contests-attachments/50/50529/attachment_50529948")
+company3 = User.new(first_name: "Antidote",
+                  last_name: "Corp",
+                  username: "antidode.belgium",
+                  password: "123456",
+                  email: "test2@gmail.com",
+                  role: "Company",
+                  availability: "A")
+                  company3.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+company3.save
+
+file = URI.open("https://images-platform.99static.com//kiFVHmRvF0zp_b6yiJu-D2riTkA=/173x138:1411x1375/fit-in/590x590/99designs-contests-attachments/88/88898/attachment_88898743")
+company4 = User.new(first_name: "Ebkar",
+                  last_name: "Studios",
+                  username: "ebkar.studios",
+                  password: "123456",
+                  email: "test3@gmail.com",
+                  availability: "A",
+                  role: "Company")
+                  company4.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+company4.save
+
+file = URI.open("https://images-workbench.99static.com/NWF2et-ZbSTPmEelXIaLA5VFndw=/http://s3.amazonaws.com/projects-files/45/4501/450142/5d7907e1-fcb7-4c72-ba3f-283f089053d5.jpg")
+company5 = User.new(first_name: "Neuro",
+                  last_name: "Muscular",
+                  username: "neuro.belgium",
+                  password: "123456",
+                  email: "test4@gmail.com",
+                  availability: "A",
+                  role: "Company")
+                  company5.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+company5.save
+
+file = URI.open("https://images-workbench.99static.com/BJKn5pgQua_rx1VQ-IYbCnYmxvI=/99designs-contests-attachments/68/68465/attachment_68465730")
+company6 = User.new(first_name: "Good",
+                  last_name: "Friends",
+                  username: "friends.belgium",
+                  password: "123456",
+                  email: "test5@gmail.com",
+                  availability: "A",
+                  role: "Company")
+                  company6.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+company6.save
+
+file = URI.open("https://images-workbench.99static.com/0j3odZ1DQW0uPlsqTL7i1qr3q24=/99designs-contests-attachments/68/68622/attachment_68622669")
+company7 = User.new(first_name: "Thayer",
+                  last_name: "Coffee",
+                  username: "coffee.belgium",
+                  password: "123456",
+                  email: "test6@gmail.com",
+                  availability: "A",
+                  role: "Company")
+                  company7.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+company7.save
+
+file = URI.open("https://images-platform.99static.com//ygh0vIzvNClSZIH8Zo8JwCkjhDk=/652x17:1257x622/fit-in/590x590/99designs-contests-attachments/139/139716/attachment_139716325")
+company8 = User.new(first_name: "Art",
+                  last_name: "Sigma",
+                  username: "art.belgium",
+                  password: "123456",
+                  email: "test7@gmail.com",
+                  availability: "A",
+                  role: "Company")
+                  company8.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+company8.save
+
+### POSTS ##############################################################################################################################################################################
+
+post1 = Post.new(deadline: Date.today + 20,
+                name: "Bueno Inc website creation",
+                description: "We are looking for junior full stack developper. We need to create several websites for our client",
+                company_id: company1.id)
+post1.save
 
 post2 = Post.new(deadline: Date.today + 20,
                 name: "Rails project in IP sector",
                 description: "We are looking for a senior back-end developper specialized in rails",
-                company_id: company1.id)
+                company_id: company2.id)
 post2.save
 
 post3 = Post.new(deadline: Date.today + 10,
-                    name: "Help us to grow ",
-                    description: "We are a young start up looking for junior profile to help us to grow.",
-                    company_id: company2.id)
+                name: "Help us to grow ",
+                description: "We are a young start up looking for junior profile to help us to grow.",
+                company_id: company3.id)
 post3.save
 
-# post4 = Post.new(deadline: "31/12/2025",
-#                     name: "Big project for big $$$",
-#                     description: "We need people to code for us, come here we have a lot of money to give you",
-#                     created_at: "31/11/2022",
-#                     #updated_at: ""
-#                   )
-# post4.save
+post4 = Post.new(deadline: Date.today + 40,
+                name: "Big project for big $$$",
+                description: "We need people to code for us, come here we have a lot of money to give you",
+                company_id: company4.id)
+post4.save
 
-# post5 = Post.new(deadline: "31/12/2026",
-#                     name: "Marie's project for world domination",
-#                     description: "Our company is looking for young full stack developper to change the world, using our brand new tool that can change people life, inspired by our beloved CEO Marie",
-#                     created_at: "31/11/2022",
-#                     #updated_at: ""
-#                   )
-# post5.save
+post5 = Post.new(deadline: Date.today + 80,
+                name: "Marie's project for world domination",
+                description: "Our company is looking for young full stack developper to change the world, using our brand new tool that can change people life, inspired by our beloved CEO Marie.",
+                company_id: company5.id)
+post5.save
+
+post6 = Post.new(deadline: Date.today + 80,
+                name: "UX Designer",
+                description: "- Producing useful experience driven design solutions
+                - Prototyping digital UX (XD, Sketch or similar)
+                - Creating interaction design practices both web and mobile
+                - Collaborating with multiple stakeholders, end users, other designers, developers, and management",
+                company_id: company6.id)
+post6.save
+
+post7 = Post.new(deadline: Date.today + 80,
+                name: "Full-Stack Developer",
+                description: "Our coffee brand is in new of its first e-commerce website ! We would love for a coder to work on it.",
+                company_id: company7.id)
+post7.save
+
+post8 = Post.new(deadline: Date.today + 80,
+                name: "BackEnd Developer",
+                description: "What they are looking for more specifically is an experienced developer who is comfortable with taking a responsible role in their backend developing team. In this task you would be working closely with product for example with different server side interfaces and Openshift UA servers.",
+                company_id: company8.id)
+post8.save
 
 puts "done"
