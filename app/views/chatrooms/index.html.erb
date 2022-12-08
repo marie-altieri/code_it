@@ -2,10 +2,20 @@
   <h1>My Conversations</h1>
 <p>
 </div>
-
+ <div class="top-container">
+  <div class= "search-messagess">
+    <%= form_with url: chatrooms_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        id: "search-bar-message",
+        placeholder: "Search by name, surname, username ..."%>
+      <%= submit_tag "Search", class: "btn btn-primary", id: "search-button-message"%>
+    <% end %>
+  </div>
+</div>
 <% @chatrooms.each do |chatroom| %>
   <%= link_to chatroom_path(chatroom.id), class: "convers" do %>
       <%= cl_image_tag User.find(chatroom.id).photo.key %> <strong><%= User.find(chatroom.id).full_name %></strong>
   <% end %>
 <% end %>
-

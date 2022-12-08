@@ -4,7 +4,7 @@ module Companies
       @coders = User.all.where(role: "Coder")
       if params[:query].present?
         sql_query = "first_name ILIKE :query OR username ILIKE :query OR language ILIKE :query OR last_name ILIKE :query"
-        @coders = User.where(sql_query, query: "%#{params[:query]}%")
+        @coders = User.where(role: "Coder").where(sql_query, query: "%#{params[:query]}%")
       else
         @coders
       end
@@ -35,7 +35,7 @@ module Companies
       @favourites.delete(@coder.id.to_s)
       User.find(current_user.id).update(favourites: @favourites.uniq)
       redirect_to favourites_companies_users_path
-    end 
+    end
 
     private
 
