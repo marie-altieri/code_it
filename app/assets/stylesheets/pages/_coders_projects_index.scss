@@ -1,13 +1,43 @@
 
+.best-titleee{
+  h2{
+  font-family: 'Hind', sans-serif;
+  color:  #263159;
+  font-weight: 700;
+  letter-spacing: 1;
+  font-size: 35px;
+  margin-left: 0;
+  }
+}
+.favorites-subtitle{
+  color: #495579;
+  font-size: 23px;
+  font-weight: 600;
+  font-family: 'Hind', sans-serif;
+  
+  i{
+    margin-right: 3px;
+  }
+}
+
+.info-pas-project{
+  color: #201F50;
+font-style: italic;
+padding-bottom: 30px;
+margin-left: 23px;
+}
+
 .container-index-projects {
   margin-right: 120px;
   margin-left: 120px;
 }
 
-.projects-grid {
+.projects-grid-coder {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 25px;
+  margin-top: 35px;
+  margin-bottom: 10px;
 }
 
 .accepted-projects-grid {

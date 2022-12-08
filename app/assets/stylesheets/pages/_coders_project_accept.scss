@@ -2,5 +2,92 @@
   h2{
   font-family: 'Hind', sans-serif;
   color:  #263159;
+  font-weight: 700;
+  letter-spacing: 1;
+  font-size: 35px;
+  margin-left: 20px;
+
   }
+}
+
+.container-show-accept{
+padding-top: 30px;
+background-color: #f5f5f5;
+}
+
+.back-dashboard{
+
+margin-top: 30px;
+}
+
+.edit-back{
+  background-color: #263159;
+  width: 190px !important;
+  height: 50px !important;
+  font-size: 14px;
+  padding-left: 35px;
+  padding-right: 35px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid #263159;
+  border-radius: 30px;
+  color: white;
+  margin: 5px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.edit-back:hover{
+  color: white;
+background-color: #495579;
+transition: 0,2s;
+}
+
+.center-block{
+  text-align: center;
+}
+.name-company-project{
+color: #495579;
+font-weight: 600;
+font-size: 23px;
+}
+// .image-company-focus{
+// border: 1px solid #263159;
+// border-radius: 20px;
+// }
+
+.image-et-name{
+  margin-top: 20px;
+  p{
+    font-family: 'Hind', sans-serif;
+font-size: 40px;
+font-weight: 700;
+letter-spacing: 1px;
+color: #495579;
+margin-top: 20px;
+  }
+  img{
+    border: 1px solid #263159;
+border-radius: 20px;
+  }
+}
+
+.block-strong{
+background-color: #F5F5F5;
+margin: 20px;
+padding: 20px;
+border-radius: 5px;
+margin-right: 0px;
+border: 1px solid #263159;
+box-shadow: 1px 1px 1px #F5F5F5;
+i{
+  margin-right: 10px;
+  min-width: 20px;
+}
+}
+
+.big-big-box{
+  display: grid;
+grid-template-columns: 3fr 490px;
 }

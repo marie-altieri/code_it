@@ -1,12 +1,29 @@
-<div class="container">
+<div class="container-show-accept">
   <div class="the-project">
     <h2>The project</h2>
   </div>
-  <div>
-    <p><strong> Description: </strong><%= @project.description %></p>
-    <p><strong> Deadline: </strong><%= @project.deadline.strftime("%d/%m/%Y") %></p>
-    <p><strong> Status: </strong><%= @project.status %></p>
-    <p><strong> About the company: </strong><%= User.find(@project.company_id).about_us%></p>
-    <p></p>
+  <div class="big-big-box">
+    <div class="block-strong">
+      <div class="name-company-project">
+        <p><%= @project.company.full_name %></p>
+      </div>
+
+      <div class="d-flex align-items-baseline"><i class="fa-regular fa-file-lines"></i> <p><strong> Description: </strong><%= @project.description %></p></div>
+      <div class="d-flex align-items-baseline"><i class="fa-regular fa-calendar-xmark"></i> <p> <strong> Deadline: </strong><%= @project.deadline.strftime("%d/%m/%Y") %></p></div>
+      <div class="d-flex align-items-baseline"><i class="fa-solid fa-hourglass-half"></i> <p> <strong> Status: </strong><%= @project.status %></p></div>
+      <div class="d-flex align-items-baseline"><i class="fa-solid fa-users"></i> <p> <strong> About the company: </strong><%= User.find(@project.company_id).about_us%></p></div>
+      <p></p>
+    </div>
+      <div class= "center-block">
+        <div class= "image-et-name">
+          <div class="image-company-focus">
+            <%= cl_image_tag @project.company.photo.key, height: 350, width: 350, crop: :fill%>
+          </div>
+            <p><%= @project.company.full_name %></p>
+          </div>
+        <div class= "back-dashboard">
+        <%= link_to "Back to my dashboard", coders_projects_path, class: "edit-back" %>
+        </div>
+      </div>
   </div>
 </div>
