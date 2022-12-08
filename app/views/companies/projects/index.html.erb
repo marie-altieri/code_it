@@ -21,7 +21,7 @@
                 <h4 class="company-project-first-name"><%= project.name %></h4>
               </div>
 
-                <p class="company-project-first"><strong>Description: </strong><%= project.description %></p>
+                <p class="company-project-first" id="scroll-rule"><strong>Description: </strong><%= project.description %></p>
                 <p class="company-project-text"><strong>Deadline: </strong><%= project.deadline.strftime("%d/%m/%Y")  %></p>
                 <p class="company-project-text"><strong>Assigned coder: </strong><%= project.coder.full_name %></p>
                 <div class="status-item">
@@ -32,7 +32,7 @@
         </div>
       <% end %>
 
-  <h4 class= "company-project-title">My company's offers</h4>
+  <h4 class= "company-project-title">My company's job offers</h4>
       <% if @posts.empty? %>
         <p> You have not created any offers yet.</p>
       <% else %>
@@ -42,10 +42,10 @@
             <div class="box-indiv">
               <div class="picture-name-project">
                 <%= cl_image_tag post.company.photo.key, crop: :fill, class: "image-company-index-project"%>
-                <h4 class="company-project-first-name"><%= post.name %></h4>
               </div>
 
-                <p class="company-project-first"><strong>Name: </strong><%= post.description %></p>
+                <p class="company-project-first"><strong>Project: </strong><%= post.name %></p>
+                <p class="company-project-text" id="scroll-rule"><strong>Description: </strong><%= post.description %></p>
                 <p class="company-project-text"><strong>Deadline: </strong><%= post.deadline.strftime("%d/%m/%Y")  %></p>
             </div>
           <% end %>

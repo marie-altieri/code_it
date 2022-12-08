@@ -1,7 +1,7 @@
 <div class="supp_padding">
 
   <div class="container-newpro">
-    <h2 class="title-newpro"> Add a new offer </h2>
+    <h2 class="title-newpro"> Make a new job offer </h2>
 
     <div class="form-project">
       <%= simple_form_for @post , url: companies_posts_path(@post) do |f| %>
@@ -11,7 +11,7 @@
                       placeholder:" What are you expecting from the coder? " %>
         <%= f.input :deadline, as: :date, html5: true, label: "Deadline:"%>
         <div class="center-item">
-          <%= f.submit "Create a new post", id: "submit-post-new" %>
+          <%= f.submit "Send my offer", id: "submit-post-new" %>
         </div>
       <% end %>
     </div>
