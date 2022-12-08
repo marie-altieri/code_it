@@ -45,7 +45,7 @@
     <div class= "info-perso-coder">
       <h2><%= @coder.first_name.upcase %> <%= @coder.last_name.upcase %></h2>
       <p><strong> <i class="fa-solid fa-user"></i> Username: </strong><%= @coder.username %></p>
-      
+
       <% if current_user.favourites.include?(@coder.id.to_s) %>
         <%= link_to "Added to favorites", companies_user_path(@coder), class:"bouton-show disable-button", data: {turbo_method: :patch, controller: "disable-button", action: "click->disable-button#disable"} %>
       <% else %>
