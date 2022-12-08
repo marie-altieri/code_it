@@ -21,8 +21,8 @@
                   <p class="text-hover-black"><strong>Status: </strong><%= project.status %></p>
 
                   <div class="accept-decline">
-                    <%= link_to "Decline", coders_project_path(project), id:"declinebut", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-                    <%= link_to "Accept", coders_project_path(project), id:"acceptbut", data: {turbo_method: :patch, turbo_confirm: "Are you sure?"}%>
+                    <%= link_to "Decline", coders_project_path(project), id:"declinebut", data: {turbo_method: :delete} %>
+                    <%= link_to "Accept", coders_project_path(project), id:"acceptbut", data: {turbo_method: :patch}%>
                   </div>
                   <p></p>
                 </div>
