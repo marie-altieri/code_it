@@ -23,7 +23,7 @@ User.destroy_all
 puts "Creating coders........"
 
 file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/274588846_10158911071134065_5127209258883963504_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=cyMiryUW4j8AX-5UEsG&_nc_ht=scontent-bru2-1.xx&oh=00_AfDKpbHDMXctu0Mxfknq2QW2urPm7GwoIlyvdtw5XiN0SQ&oe=639300F1")
-coder = User.new(first_name: "Marie",
+coder1 = User.new(first_name: "Marie",
                 last_name: "Altieri",
                 username: "marie-altieri",
                 password: "123456",
@@ -37,21 +37,21 @@ coder = User.new(first_name: "Marie",
                 availability: "ASAP",
                 role: "Coder",
                 years_of_experience: 1)
-                coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-coder.save
-Chatroom.create(id: coder.id, name: "Marie's chat")
+                coder1.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+coder1.save
+Chatroom.create(id: coder1.id, name: "Marie's chat")
 Review.create!(content: "It was wonderful to work with Marie, this is the best boss I ever had",
 rating: 5,
-user_id: coder.id)
+user_id: coder1.id)
 Review.create!(content: "If you need a CEO, take Marie, perfect match for your company !!",
 rating: 4,
-user_id: coder.id)
+user_id: coder1.id)
 Review.create!(content: "Perfect ! I loved to work with Marie, she is patient and explains very well!",
 rating: 3,
-user_id: coder.id)
+user_id: coder1.id)
 
 file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t1.18169-9/10559666_428710023937626_2814290272899354317_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=19026a&_nc_ohc=FIZMlphJej4AX-8Y-sG&_nc_ht=scontent-bru2-1.xx&oh=00_AfCg6PX1YxDx962DTM8ZW0qZFYInup1MHCgf80CIhy5Ghw&oe=63B57966")
-coder1 = User.new(first_name: "Laura",
+coder2 = User.new(first_name: "Laura",
                 last_name: "Birkiye",
                 username: "laura_birkiye",
                 password: "123456",
@@ -62,71 +62,78 @@ coder1 = User.new(first_name: "Laura",
                 availability: "ASAP",
                 role: "Coder",
                 years_of_experience: 1)
-                coder1.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-coder1.save
-Chatroom.create(id: coder1.id, name: "Laura's chat")
+                coder2.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+coder2.save
+Chatroom.create(id: coder2.id, name: "Laura's chat")
 Review.create!(content: "It was nice to work with Laura, I recommend her if you have any work to do with Front-End",
 rating: 5,
-user_id: coder1.id)
+user_id: coder2.id)
 Review.create!(content: "Amazing cowork as well as a really good horse rider to go on weekend with !",
 rating: 4,
-user_id: coder1.id)
+user_id: coder2.id)
 Review.create!(content: "Makes a lot of jokes and disturb the peace in the room",
 rating: 3,
-user_id: coder1.id)
+user_id: coder2.id)
 
 file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t31.18172-8/22254862_10159533623285066_5753923098360108724_o.jpg?_nc_cat=105&ccb=1-7&_nc_sid=174925&_nc_ohc=as_4sii4uisAX-vX7PI&_nc_ht=scontent-bru2-1.xx&oh=00_AfD51hjKAgtu-WrCcYfBBoKkAT8qdaeGdSq3MsRiZoAhXQ&oe=63B56040")
-coder = User.new(first_name: "Victor",
+coder3 = User.new(first_name: "Victor",
                 last_name: "de Spirlet",
                 username: "vic_dsp",
                 password: "123456",
                 email: "vic_dsp@gmail.com",
-                description: "Looking for new opportunities, because I need to money to feed my dog",
-                experience: "Front-End Developper, thanks to Le Wagon",
+                description: "Hello my name is Victor, after 4 years of working within acustomer success team in Brussels and Paris, I have decided to learn how to code, to learn new skills and change my career path.",
+                experience: "Front-End Developper",
                 language: "PHP, C++",
                 availability: "ASAP",
                 role: "Coder",
                 years_of_experience: 1)
-                coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-coder.save
-Chatroom.create(id: coder.id, name: "Victor's chat")
+                coder3.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+coder3.save
+Chatroom.create(id: coder3.id, name: "Victor's chat")
 Review.create!(content: "Super coder. Il a été à l'écoute de mes demandes et m'a clarifié certains points sur Python, HTML & Rails. Je recommande !",
 rating: 5,
-user_id: coder.id)
+user_id: coder3.id)
 Review.create!(content: "Forgot our meeting",
 rating: 1,
-user_id: coder.id)
+user_id: coder3.id)
 Review.create!(content: "Bring his dog during meeting :D !",
 rating: 4,
-user_id: coder.id)
+user_id: coder3.id)
 
 file = URI.open("https://avatars.githubusercontent.com/u/113897359?v=4")
-coder = User.new(first_name: "Daphné",
+coder5 = User.new(first_name: "Daphné",
                 last_name: "Lefevre",
                 username: "daph_lefevre",
                 password: "123456",
                 email: "daphlefevre@gmail.com",
-                description: "Hello, my name is Daphné. I come from Waterloo. I studied computer science in Amsterdam for 3 years, I am a young and dynamic person ready to work hard !",
+                description: "Hello, my name is Daphné. I am a 19 year old dynamic and motivated person. I studied computer science in Amsterdam for 3 years. I am committed to my work and will do everything in my power to give the best I can. I am bilingual in French and English, learning Dutch. My young age doesn’t mean I cannot handle great responsibilities. At the age of 16 I was elected leader of a youth movement of approximately 200 children. That means I oversaw the entire process of the organization, handling the social contacts with the parents and, at the same time, managing a team of 25 monitors.
+                I am specialized in C++ and Scala programming languages.",
                 experience: "Back-End Developper",
-                language: "Ruby, C++, Python",
+                language: "Ruby, C++, Python, Scala",
                 availability: "ASAP",
                 role: "Coder",
                 years_of_experience: 2)
-                coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-coder.save
-Chatroom.create(id: coder.id, name: "Daphne's chat")
+                coder5.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+coder5.save
+Chatroom.create(id: coder5.id, name: "Daphne's chat")
 Review.create!(content: "Yound and dynamic, with great work ethics, her knowledge in computer science is incredible",
 rating: 5,
-user_id: coder.id)
-Review.create!(content: "Je recommande vivement Daphné qui m'a aidée durant l'été afin de réussir un cours en programmation. Très dynamique et passionnée, on ne s'ennuie pas avec elle. Merci encore :D",
-rating: 4,
-user_id: coder.id)
+user_id: coder5.id)
+Review.create!(content: "I highly recommend Daphné who helped me during the summer to pass a course in programming. Very dynamic and passionate, you never get bored with her. Thanks again :D",
+rating: 5,
+user_id: coder5.id)
 Review.create!(content: "Good person, I recommend",
-rating: 3,
-user_id: coder.id)
+rating: 4,
+user_id: coder5.id)
+Review.create!(content: "Perfect. Daphné saved my project and helped me put to life what I thought wasn't possible! ",
+rating: 5,
+user_id: coder5.id)
+Review.create!(content: "Kind hearted person. Daphné payed a lot of attention to the project she was given and did her best to acheive our shared objectives.",
+rating: 4,
+user_id: coder5.id)
 
 file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t1.6435-9/37974642_2208097952759146_750759686340345856_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=CrProceVQYMAX_nVVYj&_nc_ht=scontent-bru2-1.xx&oh=00_AfDD-3kM_vZXixgOZWfZA-Y7aLmZ0M3If6pcqH-wkcOpRg&oe=63B52ACD")
-coder = User.new(first_name: "Benjamin",
+coder6 = User.new(first_name: "Benjamin",
                 last_name: "Boulle",
                 username: "benboulle",
                 password: "123456",
@@ -137,21 +144,21 @@ coder = User.new(first_name: "Benjamin",
                 availability: "ASAP",
                 role: "Coder",
                 years_of_experience: 2)
-                coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-coder.save
-Chatroom.create(id: coder.id, name: "Benjamin's chat")
+                coder6.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+coder6.save
+Chatroom.create(id: coder6.id, name: "Benjamin's chat")
 Review.create!(content: "Trustworthy, really good coder, work is done on time",
 rating: 5,
-user_id: coder.id)
+user_id: coder6.id)
 Review.create!(content: "The work was done, but he missed an important deadline, still I would recommend Ben",
 rating: 3,
-user_id: coder.id)
+user_id: coder6.id)
 Review.create!(content: "Perfect if you need some help with Ruby, HTML, C++, Python",
 rating: 5,
-user_id: coder.id)
+user_id: coder6.id)
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/C4E03AQEW7mvQt58koA/profile-displayphoto-shrink_800_800/0/1646738735191?e=1675900800&v=beta&t=FmbzrrWvOF68iudtbWAb85vqxE0dBvzYmD_Dq_F3zhw")
-coder = User.new(first_name: "Pedro",
+coder7 = User.new(first_name: "Pedro",
                 last_name: "Pan",
                 username: "pedropan",
                 password: "123456",
@@ -162,21 +169,21 @@ coder = User.new(first_name: "Pedro",
                 availability: "ASAP",
                 role: "Coder",
                 years_of_experience: 60)
-                coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-coder.save
-Chatroom.create(id: coder.id, name: "Pedro's chat")
+                coder7.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+coder7.save
+Chatroom.create(id: coder7.id, name: "Pedro's chat")
 Review.create!(content: "Amazing teacher, with good solid knowledge in Rails",
 rating: 5,
-user_id: coder.id)
+user_id: coder7.id)
 Review.create!(content: "J'ai adoré bosser avec Pedro, toujours de bonne humeur et là pour aider quand on se retrouve face à un problème",
 rating: 5,
-user_id: coder.id)
+user_id: coder7.id)
 Review.create!(content: "En plus d'être un super developeur back end, Pedro connait les meilleurs restaurants dans Bruxelles, par contre ne rien demander en front end, un vrai désastre !",
 rating: 3,
-user_id: coder.id)
+user_id: coder7.id)
 
 file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t1.6435-9/94022389_2884481661640650_4858584588554862592_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_ohc=MlXHjcXVsoMAX8HKwFN&_nc_ht=scontent-bru2-1.xx&oh=00_AfBGtiOrXeoWGFni5UiHJ0GQAGkZ9CLU8zpxeW4EOALSLA&oe=63B57940")
-coder = User.new(first_name: "Arthur",
+coder8 = User.new(first_name: "Arthur",
                 last_name: "Van Marcke",
                 username: "arthurvmarcke",
                 password: "123456",
@@ -187,21 +194,21 @@ coder = User.new(first_name: "Arthur",
                 availability: "ASAP",
                 role: "Coder",
                 years_of_experience: 3)
-                coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-coder.save
-Chatroom.create(id: coder.id, name: "Arthur's chat")
+                coder8.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+coder8.save
+Chatroom.create(id: coder8.id, name: "Arthur's chat")
 Review.create!(content: "Arthur is a very talented person with a strong motivation, excellent communication skills and a high degree of professionalism",
 rating: 4,
-user_id: coder.id)
+user_id: coder8.id)
 Review.create!(content: "I really enjoyed working with Arthur while he was working with Business France as an expert of the infrastructure",
 rating: 3,
-user_id: coder.id)
+user_id: coder8.id)
 Review.create!(content: "Animé par le souci constant de satisfaire les clients, Arthur fait preuve de beaucoup de compétences et d’efficacité.",
 rating: 4,
-user_id: coder.id)
+user_id: coder8.id)
 
 file = URI.open("https://scontent-ams4-1.xx.fbcdn.net/v/t1.6435-9/109311617_10158634380759777_683202610831354315_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=XSNe-YkMcjMAX85MuS1&_nc_ht=scontent-ams4-1.xx&oh=00_AfAJc6dUpi262c3QUqi-3vqMgVL9vUaQ3T8FscxTegcmbw&oe=63B55200")
-coder = User.new(first_name: "Charlotte",
+coder9 = User.new(first_name: "Charlotte",
                 last_name: "Altieri",
                 username: "chaltieri",
                 password: "123456",
@@ -212,21 +219,21 @@ coder = User.new(first_name: "Charlotte",
                 availability: "ASAP",
                 role: "Coder",
                 years_of_experience: 3)
-                coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-coder.save
-Chatroom.create(id: coder.id, name: "Charlotte's chat")
+                coder9.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+coder9.save
+Chatroom.create(id: coder9.id, name: "Charlotte's chat")
 Review.create!(content: "Charlotte is a dream person to have in one's team. She is a very enthusiastic person which brings a lot of energy to everyone.",
 rating: 5,
-user_id: coder.id)
+user_id: coder9.id)
 Review.create!(content: "Comme manager, Charlotte a su me guider dans mes débuts et m'a permis de relever de vrais défis. Elle fait preuve de bienveillance et sait révéler le meilleur de son équipe.",
 rating: 3,
-user_id: coder.id)
+user_id: coder9.id)
 Review.create!(content: "Did not provide want we asked",
 rating: 1,
-user_id: coder.id)
+user_id: coder9.id)
 
 file = URI.open("https://scontent-ams4-1.xx.fbcdn.net/v/t1.6435-9/128881480_10214441848560100_7577883150356549532_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=oJPYDHyOIegAX_Xppph&_nc_ht=scontent-ams4-1.xx&oh=00_AfCtVvM0nZiW9Elj91Ss7-4AI_OWN1MXFWkTYBILwJfsMg&oe=63B554CC")
-coder = User.new(first_name: "Angélique",
+coder10 = User.new(first_name: "Angélique",
                 last_name: "Bagnis",
                 username: "angelbagnis",
                 password: "123456",
@@ -237,21 +244,21 @@ coder = User.new(first_name: "Angélique",
                 availability: "ASAP",
                 role: "Coder",
                 years_of_experience: 3)
-                coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-coder.save
-Chatroom.create(id: coder.id, name: "Angélique's chat")
+                coder10.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+coder10.save
+Chatroom.create(id: coder10.id, name: "Angélique's chat")
 Review.create!(content: "Véritable couteau suisse, Angélique sait s’adapter à différentes situations et a une grande maîtrise de l’expérience client dans toute sa globalité.",
 rating: 2,
-user_id: coder.id)
+user_id: coder10.id)
 Review.create!(content: "C’est un plaisir quotidien que de collaborer avec Angélique",
 rating: 2,
-user_id: coder.id)
+user_id: coder10.id)
 Review.create!(content: "Super personne très inspirante parcours admiratif",
 rating: 4,
-user_id: coder.id)
+user_id: coder10.id)
 
 file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/308000392_5640360126027083_7008658893780604252_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=R3DWw2r-sfwAX8o81x8&_nc_ht=scontent-bru2-1.xx&oh=00_AfBZ4ixsI9126GfgYyAafKW-b3v1f9ve1G9IL1lp5E1f6A&oe=6392A25D")
-coder = User.new(first_name: "Sébastien",
+coder11 = User.new(first_name: "Sébastien",
                 last_name: "Chapel",
                 username: "sebchapel",
                 password: "123456",
@@ -262,21 +269,21 @@ coder = User.new(first_name: "Sébastien",
                 availability: "ASAP",
                 role: "Coder",
                 years_of_experience: 3)
-                coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-coder.save
-Chatroom.create(id: coder.id, name: "Sébastien's chat")
+                coder11.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+coder11.save
+Chatroom.create(id: coder11.id, name: "Sébastien's chat")
 Review.create!(content: "Il est sympa, c'est un brave garçon",
 rating: 5,
-user_id: coder.id)
+user_id: coder11.id)
 Review.create!(content: "Quand il aime travailler, il ne compte pas ses heures !!",
 rating: 5,
-user_id: coder.id)
+user_id: coder11.id)
 Review.create!(content: "Très BG",
 rating: 5,
-user_id: coder.id)
+user_id: coder11.id)
 
 file = URI.open("https://avatars.githubusercontent.com/u/115412551?v=4")
-coder = User.new(first_name: "Arthur",
+coder12 = User.new(first_name: "Arthur",
                 last_name: "Peers",
                 username: "arthurpeers",
                 password: "123456",
@@ -287,21 +294,21 @@ coder = User.new(first_name: "Arthur",
                 availability: "ASAP",
                 role: "Coder",
                 years_of_experience: 3)
-                coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-coder.save
-Chatroom.create(id: coder.id, name: "Arthur's chat")
+                coder12.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+coder12.save
+Chatroom.create(id: coder12.id, name: "Arthur's chat")
 Review.create!(content: "Du haut de ses 22 ans, c'est un très charmant jeune homme",
 rating: 5,
-user_id: coder.id)
+user_id: coder12.id)
 Review.create!(content: "Il est très flemmard, mais sympa",
 rating: 1,
-user_id: coder.id)
+user_id: coder12.id)
 Review.create!(content: "Très bon developper, il vous fera des arrières plans de malade",
 rating: 3,
-user_id: coder.id)
+user_id: coder12.id)
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/C4E03AQFeqHAFbsUzkg/profile-displayphoto-shrink_800_800/0/1603376731661?e=1675900800&v=beta&t=Yd-ye799rEXjwedKU6PJRESnH9kz9mnoaAPrE3AZFL0")
-coder = User.new(first_name: "Gideon",
+coder13 = User.new(first_name: "Gideon",
                 last_name: "Maydell",
                 username: "gideonmaydell",
                 password: "123456",
@@ -312,21 +319,21 @@ coder = User.new(first_name: "Gideon",
                 availability: "ASAP",
                 role: "Coder",
                 years_of_experience: 3)
-                coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-coder.save
-Chatroom.create(id: coder.id, name: "Gideon's chat")
+                coder13.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+coder13.save
+Chatroom.create(id: coder13.id, name: "Gideon's chat")
 Review.create!(content: "After working for 10 years in Belgium, Gideon is the perfect match if you wish to code a website in German or French",
 rating: 4,
-user_id: coder.id)
+user_id: coder13.id)
 Review.create!(content: "Gideon is good in what he does but unfortunately he did not understood our project",
 rating: 2,
-user_id: coder.id)
+user_id: coder13.id)
 Review.create!(content: "Best time with Gideon, sehr gut !",
 rating: 5,
-user_id: coder.id)
+user_id: coder13.id)
 
 file = URI.open("https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1665730817/sjuqrqpbjkf9pmjnxcpo.jpg")
-coder = User.new(first_name: "Boris",
+coder14 = User.new(first_name: "Boris",
                 last_name: "Mwanga",
                 username: "borismwanga",
                 password: "123456",
@@ -337,21 +344,21 @@ coder = User.new(first_name: "Boris",
                 availability: "ASAP",
                 role: "Coder",
                 years_of_experience: 3)
-                coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-coder.save
-Chatroom.create(id: coder.id, name: "Boris's chat")
+                coder14.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+coder14.save
+Chatroom.create(id: coder14.id, name: "Boris's chat")
 Review.create!(content: "The website was really nice but it did not reflect our vision",
 rating: 2,
-user_id: coder.id)
+user_id: coder14.id)
 Review.create!(content: "Very good person to work with",
 rating: 4,
-user_id: coder.id)
+user_id: coder14.id)
 Review.create!(content: "Funny and hard worker, perfect !",
 rating: 5,
-user_id: coder.id)
+user_id: coder14.id)
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/C4D03AQG0O0HaxooGYQ/profile-displayphoto-shrink_800_800/0/1573028997068?e=1675900800&v=beta&t=8J8-jj0RID0yoaFEJOy8ECxfnXCfnLicoI_UyavU_9Q")
-coder = User.new(first_name: "Gabby",
+coder15 = User.new(first_name: "Gabby",
                 last_name: "Bordeais",
                 username: "gabbyb",
                 password: "123456",
@@ -362,21 +369,21 @@ coder = User.new(first_name: "Gabby",
                 availability: "ASAP",
                 role: "Coder",
                 years_of_experience: 3)
-                coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-coder.save
-Chatroom.create(id: coder.id, name: "gabby's chat")
+                coder15.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+coder15.save
+Chatroom.create(id: coder15.id, name: "gabby's chat")
 Review.create!(content: "Gabrielle is someone I have been the pleasure to work with on several projects. Her passion, dedication, and creativity, added to his leadership make him a driving force in any project",
 rating: 5,
-user_id: coder.id)
+user_id: coder15.id)
 Review.create!(content: "Very good person to work with",
 rating: 4,
-user_id: coder.id)
+user_id: coder15.id)
 Review.create!(content: "Funny and hard worker, perfect !",
 rating: 5,
-user_id: coder.id)
+user_id: coder15.id)
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/C4E03AQEhsDpRe-9Jrw/profile-displayphoto-shrink_800_800/0/1585152503592?e=1675900800&v=beta&t=jDbFvrAyS6NGsDhLJMvYYTPG3I5RSAVlLvk5pmJCUN4")
-coder = User.new(first_name: "Charles",
+coder16 = User.new(first_name: "Charles",
                   last_name: "Dumont-des-Lacs",
                   username: "CharDL",
                   password: "123456",
@@ -387,21 +394,21 @@ coder = User.new(first_name: "Charles",
                   availability: "ASAP",
                   role: "Coder",
                   years_of_experience: 3)
-                  coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-coder.save
-Chatroom.create(id: coder.id, name: "Boris's chat")
+                  coder16.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+coder16.save
+Chatroom.create(id: coder16.id, name: "Boris's chat")
 Review.create!(content: "working with Charles was a real pleasure, serious person and super fun to be around with",
 rating: 5,
-user_id: coder.id)
+user_id: coder16.id)
 Review.create!(content: "Very good person to work with",
 rating: 5,
-user_id: coder.id)
+user_id: coder16.id)
 Review.create!(content: "Funny and hard worker, perfect !",
 rating: 5,
-user_id: coder.id)
+user_id: coder16.id)
 
 file = URI.open("https://ca.slack-edge.com/T02NE0241-U03TF6GTUJE-d9885ba59966-512")
-coder = User.new(first_name: "Stan",
+coder17 = User.new(first_name: "Stan",
                   last_name: "Boyet",
                   username: "StanleMan",
                   password: "123456",
@@ -412,21 +419,21 @@ coder = User.new(first_name: "Stan",
                   availability: "ASAP",
                   role: "Coder",
                   years_of_experience: 3)
-                  coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-coder.save
-Chatroom.create(id: coder.id, name: "Stan's chat")
+                  coder17.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+coder17.save
+Chatroom.create(id: coder17.id, name: "Stan's chat")
 Review.create!(content: "For one year, I worked alongside Stan as Customer Success Manager. Stan is a pedagogical, patient and open-minded CTO, who succeeded in building an inclusive company culture where it feels good to work.",
 rating: 5,
-user_id: coder.id)
+user_id: coder17.id)
 Review.create!(content: "Stanislas is one of the most extraordinary person I had the chance to meet, with a very rare intelligence. In addition to his great technical capabilities, he has extremely strong communication skills. ",
 rating: 5,
-user_id: coder.id)
+user_id: coder17.id)
 Review.create!(content: "Funny and probably the best teacher at Le Wagon",
 rating: 5,
-user_id: coder.id)
+user_id: coder17.id)
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/C4D03AQHNO8GhHnDz-g/profile-displayphoto-shrink_800_800/0/1584636141723?e=1675900800&v=beta&t=iYbxp6arXUOb00U3LoW48YXAqJUkJUv2b7vpbsATcGE")
-coder = User.new(first_name: "Tancrède",
+coder18 = User.new(first_name: "Tancrède",
                       last_name: "Lynden",
                       username: "Tanlyn",
                       password: "123456",
@@ -437,21 +444,21 @@ coder = User.new(first_name: "Tancrède",
                       availability: "ASAP",
                       role: "Coder",
                       years_of_experience: 3)
-                      coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-coder.save
-Chatroom.create(id: coder.id, name: "Tancrède's chat")
+                      coder18.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+coder18.save
+Chatroom.create(id: coder18.id, name: "Tancrède's chat")
 Review.create!(content: "working with Charles was a real pleasure, serious person and super fun to be around with",
 rating: 4,
-user_id: coder.id)
+user_id: coder18.id)
 Review.create!(content: "We worked with Tancrède for 2 years, best 2 years of the company journey",
 rating: 5,
-user_id: coder.id)
+user_id: coder18.id)
 Review.create!(content: "Funny and hard worker, perfect !",
 rating: 3,
-user_id: coder.id)
+user_id: coder18.id)
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/C5603AQHEclVNfhZXbg/profile-displayphoto-shrink_800_800/0/1553709011960?e=1675900800&v=beta&t=RHpMuUdDl_ydWFIKt7Yl1lphBdrS7Iz5ygNGEWTCMyM")
-coder = User.new(first_name: "Marie",
+coder19 = User.new(first_name: "Marie",
                     last_name: "Charchalet",
                     username: "Maricha",
                     password: "123456",
@@ -462,21 +469,21 @@ coder = User.new(first_name: "Marie",
                     availability: "ASAP",
                     role: "Coder",
                     years_of_experience: 3)
-                    coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-coder.save
-Chatroom.create(id: coder.id, name: "Marie's chat")
+                    coder19.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+coder19.save
+Chatroom.create(id: coder19.id, name: "Marie's chat")
 Review.create!(content: "Marie has demonstrated an impressive way to understand Experian organization, to adapt quickly to its new business and operating model as well as its value.",
   rating: 4,
-  user_id: coder.id)
+  user_id: coder19.id)
 Review.create!(content: "I had the privilege of working with Marie since she joined EY. From day one she brought a new dynamic to the legal function.",
   rating: 5,
-  user_id: coder.id)
+  user_id: coder19.id)
 Review.create!(content: "Marie est une juriste très qualifiée, très consciencieuse, et volontaire dotée d'un véritable professionnalisme. Elle a su développer des qualités de négociatrice, tout en acquérant de nouvelles compétences, allant bien au delà du droit informatique. ",
   rating: 3,
-  user_id: coder.id)
+  user_id: coder19.id)
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/C4E03AQE8RCKGoKuWfg/profile-displayphoto-shrink_800_800/0/1616583586461?e=1675900800&v=beta&t=PIyc1shCA0FoaqFQbWg5J0vwUcfVTwgu-QU72KJAiFs")
-coder = User.new(first_name: "Harold",
+coder20 = User.new(first_name: "Harold",
                     last_name: "van de dan",
                     username: "Harry",
                     password: "123456",
@@ -487,21 +494,21 @@ coder = User.new(first_name: "Harold",
                     availability: "ASAP",
                     role: "Coder",
                     years_of_experience: 3)
-                    coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-coder.save
-Chatroom.create(id: coder.id, name: "Harold's chat")
+                    coder20.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+coder20.save
+Chatroom.create(id: coder20.id, name: "Harold's chat")
 Review.create!(content: "Harold has demonstrated an impressive way to understand Experian organization, to adapt quickly to its new business and operating model as well as its value.",
   rating: 4,
-  user_id: coder.id)
+  user_id: coder20.id)
 Review.create!(content: "I had the privilege of working with Harold since she joined Belfius. From day one she brought a new dynamic to the legal function.",
   rating: 5,
-  user_id: coder.id)
+  user_id: coder20.id)
 Review.create!(content: "personne très agréable et très pro",
   rating: 3,
-  user_id: coder.id)
+  user_id: coder20.id)
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/C5603AQG-i0kZwaUc9Q/profile-displayphoto-shrink_800_800/0/1587372990397?e=1675900800&v=beta&t=1BH_SFGPW1x8QF3PtRdi-pw-7AOSJpeCEgkWWeS0DaU")
-coder = User.new(first_name: "Pascaline",
+coder21 = User.new(first_name: "Pascaline",
                   last_name: "van Ingen",
                   username: "Pasca",
                   password: "123456",
@@ -512,21 +519,21 @@ coder = User.new(first_name: "Pascaline",
                   availability: "ASAP",
                   role: "Coder",
                   years_of_experience: 3)
-                  coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-coder.save
-Chatroom.create(id: coder.id, name: "Pascaline's chat")
+                  coder21.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+coder21.save
+Chatroom.create(id: coder21.id, name: "Pascaline's chat")
 Review.create!(content: "Personne très pro et toujours à l'écoute des autres",
 rating: 4,
-user_id: coder.id)
+user_id: coder21.id)
 Review.create!(content: "It was a pleasure to work with Pascaline",
 rating: 5,
-user_id: coder.id)
+user_id: coder21.id)
 Review.create!(content: "Best city manger at Le Wagon !",
 rating: 5,
-user_id: coder.id)
+user_id: coder21.id)
 
 file = URI.open("https://media-exp1.licdn.com/dms/image/C5603AQETEmpc-Fc4uw/profile-displayphoto-shrink_800_800/0/1632880949382?e=1675900800&v=beta&t=E2AqEd_BQ9EnyyWvwXzS0OIkObZz0ZaQXmoD0G1wgl0")
-coder = User.new(first_name: "Cassandra ",
+coder22 = User.new(first_name: "Cassandra ",
                   last_name: "Calaska",
                   username: "Casss",
                   password: "123456",
@@ -537,18 +544,18 @@ coder = User.new(first_name: "Cassandra ",
                   availability: "ASAP",
                   role: "Coder",
                   years_of_experience: 3)
-                  coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-coder.save
-Chatroom.create(id: coder.id, name: "Cassandra's chat")
+                  coder22.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+coder22.save
+Chatroom.create(id: coder22.id, name: "Cassandra's chat")
 Review.create!(content: "Great teacher, if you search the perfect match for your front end, Cassandra is your solution !",
 rating: 5,
-user_id: coder.id)
+user_id: coder22.id)
 Review.create!(content: "It was a pleasure to work with Pascaline",
 rating: 5,
-user_id: coder.id)
+user_id: coder22.id)
 Review.create!(content: "She has great expertise in analyzing, discussing and transforming the customer experience for our large public and private accounts clients.",
 rating: 5,
-user_id: coder.id)
+user_id: coder22.id)
 
 ### COMPANIES ##############################################################################################################################################################################
 puts "Creating companies....."
@@ -777,41 +784,95 @@ company15 = User.new(first_name: "Robot",
                 company15.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 company15.save
 
+file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t1.6435-9/167900375_104540168409963_6374511983341844019_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=wFnCKGsRAlwAX8bO5Y3&_nc_ht=scontent-bru2-1.xx&oh=00_AfBN2uLHiJVJJRgHEX63blLO_Q0jiI3i7tIfOoFtEx60tQ&oe=63B963AF")
+company16 = User.new(first_name: "Bulle",
+                  last_name: "Terrarium",
+                  username: "bulle.terrarium",
+                  password: "123456",
+                  email: "bulle@gmail.com",
+                  availability: "A",
+                  role: "Company",
+                  about_us: "Bulle is an ecological decoration project by two creative and dynamic young Belgians, who during a time of lockdown discovered a real passion for creating small bubbles of nature (or terrarium) of art and life. Bulle is an ecological decoration project by two creative and dynamic young Belgians, who during a time of lockdown discovered a real passion for creating small bubbles of nature (or terrarium) of art and life. Bulle offers personalized creations, small green bubbles, which require very little maintenance thanks to the natural phenomenon of self-regulation. The plants you choose will evolve in a closed environment, which, thanks to light, will cause condensation to appear which will slide along the glass and which will rehydrate the basement of your terrarium. These will bring green and warmth to your interiors. Perfect for pleasing yourself and your loved ones.")
+                company16.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+company16.save
+
+file = URI.open("https://cdn.logojoy.com/wp-content/uploads/2018/05/01123447/6113-768x591.png")
+company17 = User.new(first_name: "Infinity",
+                  last_name: "Productions",
+                  username: "infinity.prod",
+                  password: "123456",
+                  email: "infinity@gmail.com",
+                  availability: "A",
+                  role: "Company",
+                  about_us: "About us")
+                company17.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+company17.save
+
+file = URI.open("https://images-workbench.99static.com/a9BfOJsZ6nc2WoBb-1fKzWZxLHM=/99designs-contests-attachments/130/130183/attachment_130183484")
+company18 = User.new(first_name: "Kim",
+                  last_name: "Nhung",
+                  username: "kim.nhung",
+                  password: "123456",
+                  email: "kim.nhung@gmail.com",
+                  availability: "A",
+                  role: "Company",
+                  about_us: "About us")
+                company18.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+company18.save
+
 
 ### POSTS ##############################################################################################################################################################################
 puts "Creating posts......"
 
 post1 = Post.new(deadline: Date.today + 20,
-                name: "Bueno Inc website creation",
-                description: "We are looking for junior full stack developper. We need to create several websites for our client",
+                name: "FuzzyURLs",
+                description: "You will be building your own URL Shortening service from scratch and host it live on a server. Preparing the Frontend
+                Creating the Django Backend and setting up folders for Templates and Static files. Setting up views and urls to render the templates. Choosing our Database, setting up the models/schemas.
+                Implementing URL Shortening.
+                Implementing the mailing feature.
+                Linking the new and the original URL.
+                Hosting and Deployment.",
                 company_id: company1.id,
                 about_company: company1.about_us)
 post1.save
 
 post2 = Post.new(deadline: Date.today + 20,
-                name: "Rails project in IP sector",
-                description: "We are looking for a senior back-end developper specialized in rails",
+                name: "Authentication in Node.js for a web app",
+                description: "An end to end application which demonstrates how we can implement authentication in an application using Node.js and JSON Web Tokens and some good practices. Setting up Node.js and learn npm.
+                Understanding how to create a web server and create some basic REST APIs.
+                Introduction to Express.js framework and simplifying REST APIs.
+                Setting up the frontend of our application and implement public/private APIs.
+                Introduction to JWT and improving our authentication logic.
+                Learn and implement some good practices",
                 company_id: company2.id,
                 about_company: company2.about_us)
 post2.save
 
 post3 = Post.new(deadline: Date.today + 10,
-                name: "Help us to grow ",
-                description: "We are a young start up looking for junior profile to help us to grow.",
+                name: "Student Result Management System",
+                description: "You will be creating a full-stack website that uses the student information from a database as input and generates his/her result in PDF format as output which can then be downloaded and shared. Performing normalization of the database.
+                Performing various database queries.
+                Automating the addition and modification of student data.
+                Implement an authentication system for admin.
+                Generate the result in PDF format and download it.",
                 company_id: company3.id,
                 about_company: company3.about_us)
 post3.save
 
 post4 = Post.new(deadline: Date.today + 40,
-                name: "Big project for big $$$",
-                description: "We need people to code for us, come here we have a lot of money to give you",
+                name: "YouTube Transcript Summarizer",
+                description: "In this project, you will be a creating a Chrome Extension which will make a request to a backend REST API where it will perform NLP and respond with a summarized version of a YouTube transcript. Perform text summarization on obtained transcripts using HuggingFace transformers.
+                Build a Flask backend REST API to expose the summarization service to the client.
+                Develop a chrome extension which will utilize the backend API to display summarized text to the user.",
                 company_id: company4.id,
                 about_company: company4.about_us)
 post4.save
 
 post5 = Post.new(deadline: Date.today + 8,
-                name: "Marie's project for world domination",
-                description: "Our company is looking for young full stack developper to change the world, using our brand new tool that can change people life, inspired by our beloved CEO Marie.",
+                name: "Sorting Visualizer",
+                description: "Create a web application using HTML, CSS, Javascript to visualize how various sorting algorithms work. This project’s functionality will be similar to this application. Creating the website's User Interface (UI) using HTML, CSS and enhancing it further using Bootstrap; without actually implementing any of the app's core features.
+                Implementation of animations, effects and core functionalities (sorting algorithms) using JavaScript.
+                Publish to GitHub and host your project live using Netlify.",
                 company_id: company5.id,
                 about_company: company5.about_us)
 post5.save
@@ -834,8 +895,8 @@ post7 = Post.new(deadline: Date.today + 25,
 post7.save
 
 post8 = Post.new(deadline: Date.today + 10,
-                name: "BackEnd Developer",
-                description: "What they are looking for more specifically is an experienced developer who is comfortable with taking a responsible role in their backend developing team. In this task you would be working closely with product for example with different server side interfaces and Openshift UA servers.",
+                name: "Visualising and forecasting stocks using Dash",
+                description: "You will be creating a single-page web application using Dash (a python framework) and some machine learning models which will show company information (logo, registered name and description) and stock plots based on the stock code given by the user. Also the ML model will enable the user to get predicted stock prices for the date inputted by the user.",
                 company_id: company8.id,
                 about_company: company8.about_us)
 post8.save
@@ -848,10 +909,8 @@ post9 = Post.new(deadline: Date.today + 60,
 post9.save
 
 post10 = Post.new(deadline: Date.today + 55,
-  name: "PHP, Phython & Rails Developer",
-  description: "You will be part of a dynamic team where you have a lot of say, within a fast-growing company and environment, where values and collegiality are key.
-                Develop, record and maintain cutting edge PHP applications
-                Build innovative applications and collaborate with the User Experience (UX) team",
+  name: "Online Code Editor (React)",
+  description: "Create an online code-editor for HTML, CSS, JS code snippets using only HTML, CSS and React. The code editor’s functionality will be similar to that of codpen.io.",
   company_id: company10.id,
   about_company: company10.about_us)
 post10.save
@@ -897,16 +956,66 @@ post15 = Post.new(deadline: Date.today + 198,
   about_company: company15.about_us)
 post15.save
 
+post16 = Post.new(deadline: Date.today + 11,
+  name: "Codechef Notifier",
+  description: "Create a browser extension that will automatically catch the unique ID of the submissions made to the problems on Codechef and check the verdict of the judge on that submission and notify the user through desktop notification once the verdict is available.",
+  company_id: company17.id,
+  about_company: company17.about_us)
+post16.save
+
+post17 = Post.new(deadline: Date.today + 11,
+  name: "Multiplayer Game - Connect4",
+  description: "You will build a multiplayer Connect4 game from scratch in Python using PyGame and sockets.",
+  company_id: company18.id,
+  about_company: company18.about_us)
+post17.save
 
 
 ###  PROJECTS ##############################################################################################################################################################################
 puts "Creating projects....."
 
 project1 = Project.new(deadline: Date.today + 198,
-                      name: "Senior Software Engineer",
-                      description: "Passionate about clean architecture and SOLID software design principles.Experience with the Linux operating system.
-                                    Strong knowledge of Python and Java.",
+                      name: "Amazon clone using React",
+                      description: "You will be building an e-commerce application using React, which is inspired by Amazon. Create header/navigation bar to navigate between pages.
+                      Create a home page to display products.
+                      Create a login page for user login.
+                      Add functionalities like basket, payment and authentication.",
                       company_id: company15.id,
-                      coder_id: coder1.id,
-                      about_company: company15.about_us)
+                      coder_id: coder5.id,
+                      about_company: company15.about_us,
+                      status: "Approved")
 project1.save
+
+project2 = Project.new(deadline: Date.today + 18,
+                      name: "JavaScript Codechef Notifier",
+                      description: "Create a browser extension that will automatically catch the unique ID of the submissions made to the problems on Codechef and check the verdict of the judge on that submission and notify the user through desktop notification once the verdict is available",
+                      company_id: company1.id,
+                      coder_id: coder5.id,
+                      about_company: company1.about_us,
+                      status: "Approved")
+project2.save
+
+project3 = Project.new(deadline: Date.today + 20,
+                      name: "OurApp - a social media web app in NodeJS",
+                      description: "Build a full stack web application - OurApp (a social media app) using Node.JS, Express.Js, MongoDB, EJS (Template Engine for server side rendering) and deploying the application to Heroku. HTML, CSS, Bootstrap: Building the UI of the application
+                      Serving HTML dynamically and use of EJS (template engine)
+                      Familiarising the NodeJS environment
+                      ExpressJS: Framework for creating servers.
+                      MongoDB: Using NoSQL Database.
+                      Socket.IO: Building live chatting feature
+                      GitHub: To publish your project.
+                      Heroku: Deploy the full stack application.",
+                      company_id: company9.id,
+                      coder_id: coder5.id,
+                      about_company: company9.about_us,
+                      status: "Approved")
+project3.save
+
+project4 = Project.new(deadline: Date.today + 20,
+                      name: "My very first website",
+                      description: "A simple web e-commerce app that shows all the possible paths a user can take from buying a terrarium to personnalizing the exact terrarium. The app will be a visualisation of our brand 'Bulle'.",
+                      company_id: company16.id,
+                      coder_id: coder3.id,
+                      about_company: company16.about_us,
+                      status: "Approved")
+project4.save
