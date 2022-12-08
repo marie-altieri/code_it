@@ -1,5 +1,18 @@
 <div class="container-index-company">
   <h2 class="posts-title">All job offers</h2>
+
+  <div class="top-container">
+
+    <%= form_with url: coders_posts_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        id: "search-bar",
+        placeholder: "Search by companies name  ..."%>
+      <%= submit_tag "Search", class: "btn btn-primary", id: "search-button"%>
+    <% end %>
+  </div>
+
   <h4 class="text-under-title">Find your next challenge !</h4>
 
   <div class= "posts-grid">
