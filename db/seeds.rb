@@ -17,10 +17,10 @@ puts "Destroying all posts"
 Post.destroy_all
 puts "Destroying all users................"
 User.destroy_all
-puts "Creating coders........"
-puts "Creating companies....."
+
 
 ### CODERS ##############################################################################################################################################################################
+puts "Creating coders........"
 
 file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/274588846_10158911071134065_5127209258883963504_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=cyMiryUW4j8AX-5UEsG&_nc_ht=scontent-bru2-1.xx&oh=00_AfDKpbHDMXctu0Mxfknq2QW2urPm7GwoIlyvdtw5XiN0SQ&oe=639300F1")
 coder = User.new(first_name: "Marie",
@@ -51,7 +51,7 @@ rating: 3,
 user_id: coder.id)
 
 file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t1.18169-9/10559666_428710023937626_2814290272899354317_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=19026a&_nc_ohc=FIZMlphJej4AX-8Y-sG&_nc_ht=scontent-bru2-1.xx&oh=00_AfCg6PX1YxDx962DTM8ZW0qZFYInup1MHCgf80CIhy5Ghw&oe=63B57966")
-coder = User.new(first_name: "Laura",
+coder1 = User.new(first_name: "Laura",
                 last_name: "Birkiye",
                 username: "laura_birkiye",
                 password: "123456",
@@ -62,18 +62,18 @@ coder = User.new(first_name: "Laura",
                 availability: "ASAP",
                 role: "Coder",
                 years_of_experience: 1)
-                coder.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-coder.save
-Chatroom.create(id: coder.id, name: "Laura's chat")
+                coder1.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+coder1.save
+Chatroom.create(id: coder1.id, name: "Laura's chat")
 Review.create!(content: "It was nice to work with Laura, I recommend her if you have any work to do with Front-End",
 rating: 5,
-user_id: coder.id)
+user_id: coder1.id)
 Review.create!(content: "Amazing cowork as well as a really good horse rider to go on weekend with !",
 rating: 4,
-user_id: coder.id)
+user_id: coder1.id)
 Review.create!(content: "Makes a lot of jokes and disturb the peace in the room",
 rating: 3,
-user_id: coder.id)
+user_id: coder1.id)
 
 file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t31.18172-8/22254862_10159533623285066_5753923098360108724_o.jpg?_nc_cat=105&ccb=1-7&_nc_sid=174925&_nc_ohc=as_4sii4uisAX-vX7PI&_nc_ht=scontent-bru2-1.xx&oh=00_AfD51hjKAgtu-WrCcYfBBoKkAT8qdaeGdSq3MsRiZoAhXQ&oe=63B56040")
 coder = User.new(first_name: "Victor",
@@ -551,7 +551,7 @@ rating: 5,
 user_id: coder.id)
 
 ### COMPANIES ##############################################################################################################################################################################
-
+puts "Creating companies....."
 
 file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t1.6435-9/88237179_487104992167597_8276528710992003072_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=G4J7st7kbaYAX8x2-Pj&_nc_ht=scontent-bru2-1.xx&oh=00_AfCTFAd9_N3Ev75YDXIBiZ9vQDnl92gky3BMPTkUdOEp1Q&oe=63B6B173")
 company1 = User.new(first_name: "Buddy",
@@ -693,8 +693,8 @@ company9 = User.new(first_name: "Basil",
                   email: "BT@gmail.com",
                   availability: "A",
                   role: "Company",
-                  about_us: "We are an integrated bank-insurance group, catering mainly for retail, private banking, SME and mid-cap clients. 
-                            Our core markets are Belgium, the Czech Republic, Slovakia, Hungary and Bulgaria. 
+                  about_us: "We are an integrated bank-insurance group, catering mainly for retail, private banking, SME and mid-cap clients.
+                            Our core markets are Belgium, the Czech Republic, Slovakia, Hungary and Bulgaria.
                             We are present to a limited extent in several other countries.")
                 company9.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 company9.save
@@ -707,7 +707,7 @@ company10 = User.new(first_name: "BAD",
                   email: "db@gmail.com",
                   availability: "A",
                   role: "Company",
-                  about_us: "Bad Day Box is designed to send self-care to your friend’s doorstep and bring them some sunshine on a dark day. 
+                  about_us: "Bad Day Box is designed to send self-care to your friend’s doorstep and bring them some sunshine on a dark day.
                             Whether they’re angry, devastated, disappointed or sad, they’ll know that they are not alone.")
                 company10.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 company10.save
@@ -747,7 +747,7 @@ company13 = User.new(first_name: "Bio",
                   availability: "A",
                   role: "Company",
                   about_us: "Bio Line propose depuis 2017 un large éventail de solutions pour faciliter la gestion de vos espaces verts d'intérieurs.
-                  Dans notre jardinerie urbaine, nous créons entre autre, pour les particuliers et les entreprises, des petits écosystèmes d'agrément qui reproduisent des paysages naturels invitant à la relaxation, 
+                  Dans notre jardinerie urbaine, nous créons entre autre, pour les particuliers et les entreprises, des petits écosystèmes d'agrément qui reproduisent des paysages naturels invitant à la relaxation,
                   à la contemplation et qui ne nécessitent que très peu d'eau et d'entretien.")
                 company13.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 company13.save
@@ -772,13 +772,14 @@ company15 = User.new(first_name: "Robot",
                   email: "robot@gmail.com",
                   availability: "A",
                   role: "Company",
-                  about_us: "Robot & Technics mission is to imagine and create exceptional robots that enrich people’s lives. 
+                  about_us: "Robot & Technics mission is to imagine and create exceptional robots that enrich people’s lives.
                             Building machines that can approximate the mobility, dexterity and agility of people and animals is a grand challenge.")
                 company15.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 company15.save
 
 
 ### POSTS ##############################################################################################################################################################################
+puts "Creating posts......"
 
 post1 = Post.new(deadline: Date.today + 20,
                 name: "Bueno Inc website creation",
@@ -865,8 +866,8 @@ post11.save
 
 post12 = Post.new(deadline: Date.today + 23,
   name: "Events & Community Manager",
-  description: "In order to support our expansion in Porto, we are now looking for a driven and hands-on Events and Community Manager who will join the 
-                Porto team to grow our unique brand and increase the number of students in the city. Organize, run and promote marketing events, using external and internal channels to showcase 
+  description: "In order to support our expansion in Porto, we are now looking for a driven and hands-on Events and Community Manager who will join the
+                Porto team to grow our unique brand and increase the number of students in the city. Organize, run and promote marketing events, using external and internal channels to showcase
                 Le Wagon and generate/convert leads (eg. workshops, webinars, talks)",
   company_id: company12.id,
   about_company: company12.about_us)
@@ -882,7 +883,7 @@ post13.save
 
 post14 = Post.new(deadline: Date.today + 77,
   name: "Analytics and Revenue Strategist",
-  description: "You support our customers on a daily basis by making recommendations and creating business value out of data. 
+  description: "You support our customers on a daily basis by making recommendations and creating business value out of data.
                 You therefore understand their business challenges, identify potential risks and provide solutions.",
   company_id: company14.id,
   about_company: company14.about_us)
@@ -896,4 +897,16 @@ post15 = Post.new(deadline: Date.today + 198,
   about_company: company15.about_us)
 post15.save
 
-puts "done"
+
+
+###  PROJECTS ##############################################################################################################################################################################
+puts "Creating projects....."
+
+project1 = Project.new(deadline: Date.today + 198,
+                      name: "Senior Software Engineer",
+                      description: "Passionate about clean architecture and SOLID software design principles.Experience with the Linux operating system.
+                                    Strong knowledge of Python and Java.",
+                      company_id: company15.id,
+                      coder_id: coder1.id,
+                      about_company: company15.about_us)
+project1.save
