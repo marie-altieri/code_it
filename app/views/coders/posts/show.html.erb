@@ -1,11 +1,26 @@
-<div class="container">
-  <h2>The offer</h2>
-    <div>
-      <p><strong> Company's name: </strong><%= @post.company.full_name %></p>
-      <p><strong> Name: </strong><%= @post.name %></p>
-      <p><strong> Description: </strong><%= @post.description %></p>
-      <p><strong> Deadline: </strong><%= @post.deadline.strftime("%d/%m/%Y") %></p>
-      <p><strong> About us: </strong><%= @post.about_company %></p>
+<div class="container-postss">
+  <div class="the-post">
+    <h2>The offer</h2>
+  </div>
+  <div class="big-big-post">
+    <div class="block-strong-post">
+      <div class="name-company-post">
+        <p><%= @post.company.full_name %></p>
+      </div>
+      <p><i class="fa-solid fa-file-signature"></i> <strong> Name: </strong><%= @post.name %></p>
+      <p><i class="fa-regular fa-file-lines"></i> <strong> Description: </strong><%= @post.description %></p>
+      <p><i class="fa-regular fa-calendar-xmark"></i> <strong> Deadline: </strong><%= @post.deadline.strftime("%d/%m/%Y") %></p>
+      <p><i class="fa-solid fa-users"></i> <strong> About us: </strong><%= @post.about_company %></p>
       <p></p>
     </div>
+    <div class="image-company-focus-post">
+      <div class="image-name-post">
+        <%= cl_image_tag @post.company.photo.key, height: 350, width: 350, crop: :fill%>
+        <p><%= @post.company.full_name %></p>
+      </div>
+      <div class= "back-job-offers">
+        <%= link_to "Back to my job offers", coders_posts_path, class: "edit-back-job" %>
+      </div>
+    </div>
+  </div>
 </div>

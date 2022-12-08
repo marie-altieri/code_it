@@ -1,11 +1,14 @@
 <div class="container-index-projects">
-  <h2 class= "favorites-title">Projects</h2>
-
-    <h4 class= "favorites-title"><strong>My pending projects</strong></h4>
+    <div class= "best-titleee">
+      <h2 class= "favorites-title">Projects</h2>
+    </div>
+    <h4 class= "favorites-subtitle"><i class="fa-solid fa-lock"></i> <strong>My pending projects</strong></h4>
       <% if @pending_projects.empty? %>
-        <p> You have no pending projects at the moment. A notification will inform you once you've been selected !</p>
+        <div class="info-pas-project">
+          <p> You have no pending projects at the moment. A notification will inform you once you've been selected !</p>
+        </div>
       <% else %>
-        <div class= "projects-grid">
+        <div class= "projects-grid-coder">
           <% @pending_projects.each do |project| %>
             <div class= "indiv-project-box">
               <%= link_to coders_project_path(project), class: "custom-links" do %>
@@ -31,9 +34,11 @@
         </div>
       <% end %>
 
-    <h4 class= "favorites-title"><strong>My current projects</strong></h4>
+    <h4 class= "favorites-subtitle"><i class="fa-solid fa-unlock"></i> <strong>My current projects</strong></h4>
       <% if @accepted_projects.empty?  %>
-        <p> You will find your accepted projects in this section.</p>
+        <div class="info-pas-project">
+          <p> You will find your accepted projects in this section.</p>
+        </div>
       <% else %>
         <div class= "accepted-projects-grid">
             <% @accepted_projects.each do |project| %>
