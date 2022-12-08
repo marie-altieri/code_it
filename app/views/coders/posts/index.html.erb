@@ -13,7 +13,7 @@
 
         <div class="text-card-post">
           <p id="top-p"><strong>Project: </strong><%= post.name %></p>
-          <p id="scroll-rule1"><strong>Description: </strong><%= post.description %></p>
+          <p><strong>Description: </strong><%= truncate(post.description, length: 70) %></p>
           <p><strong>Deadline: </strong><%= post.deadline.strftime("%d/%m/%Y") %></p>
         </div>
       </div>

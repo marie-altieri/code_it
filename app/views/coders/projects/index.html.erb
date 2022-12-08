@@ -16,7 +16,7 @@
 
                 <div class="text-project-card">
                   <p class="text-hover-black" id="first-text"><strong>Project: </strong><%= project.name %></p>
-                  <p class="text-hover-black" id="scroll-rule2"><strong>Description: </strong><%= project.description %></p>
+                  <p class="text-hover-black"><strong>Description: </strong><%= truncate(project.description, length: 70) %></p>
                   <p class="text-hover-black"><strong>Deadline: </strong><%= project.deadline.strftime("%d/%m/%Y") %></p>
                   <p class="text-hover-black"><strong>Status: </strong><%= project.status %></p>
 
@@ -47,7 +47,7 @@
 
                   <div class="text-project-card">
                     <p id="first-text"><strong>Project: </strong><%= project.name %></p>
-                    <p id="scroll-rule2"><strong>Description: </strong><%= project.description %></p>
+                    <p><strong>Description: </strong><%= truncate(project.description, length: 70) %></p>
                     <p><strong>Deadline: </strong><%= project.deadline %></p>
                     <p><strong>Status: </strong><%= project.status %></p>
                     <p></p>
