@@ -45,7 +45,7 @@
               </div>
 
                 <p class="company-project-first"><strong>Project: </strong><%= post.name %></p>
-                <p class="company-project-text" id="scroll-rule"><strong>Description: </strong><%= post.description %></p>
+                <p class="company-project-text"><strong>Description: </strong><%= truncate(post.description, length: 70) %></p>
                 <p class="company-project-text"><strong>Deadline: </strong><%= post.deadline.strftime("%d/%m/%Y")  %></p>
             </div>
           <% end %>
