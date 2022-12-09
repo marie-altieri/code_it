@@ -22,7 +22,7 @@ User.destroy_all
 ### CODERS ##############################################################################################################################################################################
 puts "Creating coders........"
 
-file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/274588846_10158911071134065_5127209258883963504_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=cyMiryUW4j8AX-5UEsG&_nc_ht=scontent-bru2-1.xx&oh=00_AfDKpbHDMXctu0Mxfknq2QW2urPm7GwoIlyvdtw5XiN0SQ&oe=639300F1")
+file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/274588846_10158911071134065_5127209258883963504_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Ns37XXBAAbEAX9rB_lt&_nc_ht=scontent-bru2-1.xx&oh=00_AfBbfrJSUFWzWUtVlm5MHb4ZyzBx85xC12IX9a1TF-9XyQ&oe=6398EFB1")
 coder1 = User.new(first_name: "Marie",
                 last_name: "Altieri",
                 username: "marie-altieri",
@@ -39,6 +39,7 @@ coder1 = User.new(first_name: "Marie",
                 years_of_experience: 1)
                 coder1.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 coder1.save
+puts " coder 1"
 Chatroom.create(id: coder1.id, name: "Marie's chat")
 Review.create!(content: "It was wonderful to work with Marie, this is the best boss I ever had",
 rating: 5,
@@ -64,6 +65,7 @@ coder2 = User.new(first_name: "Laura",
                 years_of_experience: 1)
                 coder2.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 coder2.save
+puts " coder 2"
 Chatroom.create(id: coder2.id, name: "Laura's chat")
 Review.create!(content: "It was nice to work with Laura, I recommend her if you have any work to do with Front-End",
 rating: 5,
