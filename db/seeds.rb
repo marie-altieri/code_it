@@ -1013,7 +1013,7 @@ project3.save
 
 project4 = Project.new(deadline: Date.today + 20,
                       name: "My very first website",
-                      description: "A simple web e-commerce app that shows all the possible paths a user can take from buying a terrarium to personnalizing the exact terrarium. The app will be a visualisation of our brand 'Bulle'.",
+                      description: "A simple web e--commerce app that shows all the possible paths a user can take from buying a terrarium to personnalizing the exact terrarium. The app will be a visualisation of our brand 'Bulle'.",
                       company_id: company16.id,
                       coder_id: coder3.id,
                       about_company: company16.about_us,
