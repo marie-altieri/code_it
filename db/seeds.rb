@@ -259,7 +259,7 @@ Review.create!(content: "Super personne très inspirante parcours admiratif",
 rating: 4,
 user_id: coder10.id)
 
-file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/308000392_5640360126027083_7008658893780604252_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=R3DWw2r-sfwAX8o81x8&_nc_ht=scontent-bru2-1.xx&oh=00_AfBZ4ixsI9126GfgYyAafKW-b3v1f9ve1G9IL1lp5E1f6A&oe=6392A25D")
+file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/308000392_5640360126027083_7008658893780604252_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=TWlI5Qgkk3kAX8ikk-Z&_nc_ht=scontent-bru2-1.xx&oh=00_AfBaiVYD-jOlukHGM_S2H6LXWw6ivp_22KeT37DwLIeooA&oe=6398911D")
 coder11 = User.new(first_name: "Sébastien",
                 last_name: "Chapel",
                 username: "sebchapel",
