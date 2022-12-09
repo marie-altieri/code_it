@@ -22,34 +22,6 @@ User.destroy_all
 ### CODERS ##############################################################################################################################################################################
 puts "Creating coders........"
 
-file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/274588846_10158911071134065_5127209258883963504_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Ns37XXBAAbEAX9rB_lt&_nc_ht=scontent-bru2-1.xx&oh=00_AfBbfrJSUFWzWUtVlm5MHb4ZyzBx85xC12IX9a1TF-9XyQ&oe=6398EFB1")
-coder1 = User.new(first_name: "Marie",
-                last_name: "Altieri",
-                username: "marie-altieri",
-                password: "123456",
-                email: "marie.altieri@hotmail.fr",
-                description: "
-                Hi everyone, I'm Marie!
-                Coming from a hospitality background with more than four years of experience, I want to learn a new skill to add to my current experience and background, in hopes to create my own business in the future.
-                I look forward to this new adventure ! CEO of Code It. I founded the company to help people and give orders to my team.",
-                experience: "CEO of Code It",
-                language: "Python, C#",
-                availability: "ASAP",
-                role: "Coder",
-                years_of_experience: 1)
-                coder1.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-coder1.save
-puts " coder 1"
-Chatroom.create(id: coder1.id, name: "Marie's chat")
-Review.create!(content: "It was wonderful to work with Marie, this is the best boss I ever had",
-rating: 5,
-user_id: coder1.id)
-Review.create!(content: "If you need a CEO, take Marie, perfect match for your company !!",
-rating: 4,
-user_id: coder1.id)
-Review.create!(content: "Perfect ! I loved to work with Marie, she is patient and explains very well!",
-rating: 3,
-user_id: coder1.id)
 
 file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t1.18169-9/10559666_428710023937626_2814290272899354317_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=19026a&_nc_ohc=FIZMlphJej4AX-8Y-sG&_nc_ht=scontent-bru2-1.xx&oh=00_AfCg6PX1YxDx962DTM8ZW0qZFYInup1MHCgf80CIhy5Ghw&oe=63B57966")
 coder2 = User.new(first_name: "Laura",
@@ -77,7 +49,7 @@ Review.create!(content: "Makes a lot of jokes and disturb the peace in the room"
 rating: 3,
 user_id: coder2.id)
 
-file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t31.18172-8/22254862_10159533623285066_5753923098360108724_o.jpg?_nc_cat=105&ccb=1-7&_nc_sid=174925&_nc_ohc=as_4sii4uisAX-vX7PI&_nc_ht=scontent-bru2-1.xx&oh=00_AfD51hjKAgtu-WrCcYfBBoKkAT8qdaeGdSq3MsRiZoAhXQ&oe=63B56040")
+file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t31.18172-8/22254862_10159533623285066_5753923098360108724_o.jpg?_nc_cat=105&ccb=1-7&_nc_sid=174925&_nc_ohc=DR1lX4HZzuQAX9TF1KE&_nc_ht=scontent-bru2-1.xx&oh=00_AfBTg01slJ0ej6lTQPttwAi-67Z4m7tOXoZtVvBhObf3QQ&oe=63BA6E00")
 coder3 = User.new(first_name: "Victor",
                 last_name: "de Spirlet",
                 username: "vic_dsp",
@@ -118,7 +90,7 @@ coder5 = User.new(first_name: "Daphné",
                 coder5.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
 coder5.save
 Chatroom.create(id: coder5.id, name: "Daphne's chat")
-Review.create!(content: "Yound and dynamic, with great work ethics, her knowledge in computer science is incredible",
+Review.create!(content: "Young and dynamic, with great work ethics, her knowledge in computer science is incredible",
 rating: 5,
 user_id: coder5.id)
 Review.create!(content: "I highly recommend Daphné who helped me during the summer to pass a course in programming. Very dynamic and passionate, you never get bored with her. Thanks again :D",
@@ -134,7 +106,7 @@ Review.create!(content: "Kind hearted person. Daphné payed a lot of attention t
 rating: 4,
 user_id: coder5.id)
 
-file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t1.6435-9/37974642_2208097952759146_750759686340345856_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=CrProceVQYMAX_nVVYj&_nc_ht=scontent-bru2-1.xx&oh=00_AfDD-3kM_vZXixgOZWfZA-Y7aLmZ0M3If6pcqH-wkcOpRg&oe=63B52ACD")
+file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t1.6435-9/37974642_2208097952759146_750759686340345856_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=7EOt58idaYoAX-U6ARx&_nc_ht=scontent-bru2-1.xx&oh=00_AfAuUTs1yEjvf9vIa7IRqCTuQH9PJ_W0tV5Pze1Q2v-GSw&oe=63BA70CD")
 coder6 = User.new(first_name: "Benjamin",
                 last_name: "Boulle",
                 username: "benboulle",
@@ -158,31 +130,6 @@ user_id: coder6.id)
 Review.create!(content: "Perfect if you need some help with Ruby, HTML, C++, Python",
 rating: 5,
 user_id: coder6.id)
-
-file = URI.open("https://media-exp1.licdn.com/dms/image/C4E03AQEW7mvQt58koA/profile-displayphoto-shrink_800_800/0/1646738735191?e=1675900800&v=beta&t=FmbzrrWvOF68iudtbWAb85vqxE0dBvzYmD_Dq_F3zhw")
-coder7 = User.new(first_name: "Pedro",
-                last_name: "Pan",
-                username: "pedropan",
-                password: "123456",
-                email: "pedropan@hotmail.fr",
-                description: "Hi folks, I'm Pedro. Pretty sure that I am the best coder around Brussels. Contact me if you need any help developing your nonesense.",
-                experience: "Teacher @Le Wagon",
-                language: "Ruby on Rails, JavaScript, SQL",
-                availability: "ASAP",
-                role: "Coder",
-                years_of_experience: 60)
-                coder7.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-coder7.save
-Chatroom.create(id: coder7.id, name: "Pedro's chat")
-Review.create!(content: "Amazing teacher, with good solid knowledge in Rails",
-rating: 5,
-user_id: coder7.id)
-Review.create!(content: "J'ai adoré bosser avec Pedro, toujours de bonne humeur et là pour aider quand on se retrouve face à un problème",
-rating: 5,
-user_id: coder7.id)
-Review.create!(content: "En plus d'être un super developeur back end, Pedro connait les meilleurs restaurants dans Bruxelles, par contre ne rien demander en front end, un vrai désastre !",
-rating: 3,
-user_id: coder7.id)
 
 file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t1.6435-9/94022389_2884481661640650_4858584588554862592_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_ohc=MlXHjcXVsoMAX8HKwFN&_nc_ht=scontent-bru2-1.xx&oh=00_AfBGtiOrXeoWGFni5UiHJ0GQAGkZ9CLU8zpxeW4EOALSLA&oe=63B57940")
 coder8 = User.new(first_name: "Arthur",
@@ -558,6 +505,61 @@ user_id: coder22.id)
 Review.create!(content: "She has great expertise in analyzing, discussing and transforming the customer experience for our large public and private accounts clients.",
 rating: 5,
 user_id: coder22.id)
+
+# file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/274588846_10158911071134065_5127209258883963504_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Ns37XXBAAbEAX9rB_lt&_nc_ht=scontent-bru2-1.xx&oh=00_AfBbfrJSUFWzWUtVlm5MHb4ZyzBx85xC12IX9a1TF-9XyQ&oe=6398EFB1")
+# coder1 = User.new(first_name: "Marie",
+#                 last_name: "Altieri",
+#                 username: "marie-altieri",
+#                 password: "123456",
+#                 email: "marie.altieri@hotmail.fr",
+#                 description: "
+#                 Hi everyone, I'm Marie!
+#                 Coming from a hospitality background with more than four years of experience, I want to learn a new skill to add to my current experience and background, in hopes to create my own business in the future.
+#                 I look forward to this new adventure ! CEO of Code It. I founded the company to help people and give orders to my team.",
+#                 experience: "CEO of Code It",
+#                 language: "Python, C#",
+#                 availability: "ASAP",
+#                 role: "Coder",
+#                 years_of_experience: 1)
+#                 coder1.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+# coder1.save
+# puts " coder 1"
+# Chatroom.create(id: coder1.id, name: "Marie's chat")
+# Review.create!(content: "It was wonderful to work with Marie, this is the best boss I ever had",
+# rating: 5,
+# user_id: coder1.id)
+# Review.create!(content: "If you need a CEO, take Marie, perfect match for your company !!",
+# rating: 4,
+# user_id: coder1.id)
+# Review.create!(content: "Perfect ! I loved to work with Marie, she is patient and explains very well!",
+# rating: 3,
+# user_id: coder1.id)
+
+# file = URI.open("https://media-exp1.licdn.com/dms/image/C4E03AQEW7mvQt58koA/profile-displayphoto-shrink_800_800/0/1646738735191?e=1675900800&v=beta&t=FmbzrrWvOF68iudtbWAb85vqxE0dBvzYmD_Dq_F3zhw")
+# coder7 = User.new(first_name: "Pedro",
+#                 last_name: "Pan",
+#                 username: "pedropan",
+#                 password: "123456",
+#                 email: "pedropan@hotmail.fr",
+#                 description: "Hi folks, I'm Pedro. Pretty sure that I am the best coder around Brussels. Contact me if you need any help developing your nonesense.",
+#                 experience: "Teacher @Le Wagon",
+#                 language: "Ruby on Rails, JavaScript, SQL",
+#                 availability: "ASAP",
+#                 role: "Coder",
+#                 years_of_experience: 60)
+#                 coder7.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+# coder7.save
+# Chatroom.create(id: coder7.id, name: "Pedro's chat")
+# Review.create!(content: "Amazing teacher, with good solid knowledge in Rails",
+# rating: 5,
+# user_id: coder7.id)
+# Review.create!(content: "J'ai adoré bosser avec Pedro, toujours de bonne humeur et là pour aider quand on se retrouve face à un problème",
+# rating: 5,
+# user_id: coder7.id)
+# Review.create!(content: "En plus d'être un super developeur back end, Pedro connait les meilleurs restaurants dans Bruxelles, par contre ne rien demander en front end, un vrai désastre !",
+# rating: 3,
+# user_id: coder7.id)
+
 
 ### COMPANIES ##############################################################################################################################################################################
 puts "Creating companies....."
