@@ -206,30 +206,30 @@ Review.create!(content: "Super personne très inspirante parcours admiratif",
 rating: 4,
 user_id: coder10.id)
 
-file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/308000392_5640360126027083_7008658893780604252_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=TWlI5Qgkk3kAX8ikk-Z&_nc_ht=scontent-bru2-1.xx&oh=00_AfBaiVYD-jOlukHGM_S2H6LXWw6ivp_22KeT37DwLIeooA&oe=6398911D")
-coder11 = User.new(first_name: "Sébastien",
-                last_name: "Chapel",
-                username: "sebchapel",
-                password: "123456",
-                email: "sebchapel@gmail.com",
-                description: "Hello, I am Seb. I just graduated from KU Leuven, I decided to learn to code",
-                experience: "Project Manager",
-                language: "Go, C#",
-                availability: "ASAP",
-                role: "Coder",
-                years_of_experience: 3)
-                coder11.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
-coder11.save
-Chatroom.create(id: coder11.id, name: "Sébastien's chat")
-Review.create!(content: "Il est sympa, c'est un brave garçon",
-rating: 5,
-user_id: coder11.id)
-Review.create!(content: "Quand il aime travailler, il ne compte pas ses heures !!",
-rating: 5,
-user_id: coder11.id)
-Review.create!(content: "Très BG",
-rating: 5,
-user_id: coder11.id)
+# file = URI.open("https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/308000392_5640360126027083_7008658893780604252_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=TWlI5Qgkk3kAX8ikk-Z&_nc_ht=scontent-bru2-1.xx&oh=00_AfBaiVYD-jOlukHGM_S2H6LXWw6ivp_22KeT37DwLIeooA&oe=6398911D")
+# coder11 = User.new(first_name: "Sébastien",
+#                 last_name: "Chapel",
+#                 username: "sebchapel",
+#                 password: "123456",
+#                 email: "sebchapel@gmail.com",
+#                 description: "Hello, I am Seb. I just graduated from KU Leuven, I decided to learn to code",
+#                 experience: "Project Manager",
+#                 language: "Go, C#",
+#                 availability: "ASAP",
+#                 role: "Coder",
+#                 years_of_experience: 3)
+#                 coder11.photo.attach(io: file, filename: "profile.png", content_type: "image/png")
+# coder11.save
+# Chatroom.create(id: coder11.id, name: "Sébastien's chat")
+# Review.create!(content: "Il est sympa, c'est un brave garçon",
+# rating: 5,
+# user_id: coder11.id)
+# Review.create!(content: "Quand il aime travailler, il ne compte pas ses heures !!",
+# rating: 5,
+# user_id: coder11.id)
+# Review.create!(content: "Très BG",
+# rating: 5,
+# user_id: coder11.id)
 
 file = URI.open("https://avatars.githubusercontent.com/u/115412551?v=4")
 coder12 = User.new(first_name: "Arthur",
